@@ -1,0 +1,47 @@
+<mat-card>
+    <mat-card-content>
+        <mat-toolbar>
+            <span>Configure</span>
+            <span>
+                <button
+                    (click)="onDrawingConfigurationSelection(true)"
+                    mat-button
+                    color="primary">
+                    SelectAll
+                </button>
+            </span>
+            <span>
+                <button
+                    (click)="onDrawingConfigurationSelection(false)"
+                    mat-button
+                    color="primary">
+                    UnselectAll
+                </button>
+            </span>
+        </mat-toolbar>
+        <mat-card>
+            <mat-card-subtitle>Configuration</mat-card-subtitle>
+            <mat-form-field>
+                <mat-label>Select Graph Layout...</mat-label>
+                <mat-select [value]="layout" (selectionChange)="onChangeLayout($event.value)">
+                    <mat-option 
+                        *ngFor="let layoutKey of layoutsKey" 
+                        [value]="layoutKey">
+                        {{layouts[layoutKey]}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </mat-card>
+        <mat-list role="list">
+            <mat-list-item 
+                *ngFor="let component of configurationItems"
+                role="listitem">
+                <mat-checkbox
+                    [checked]="component.isChecked"
+                    (change)="onConfigurationChanged(component,$event)">
+                    {{component.name}}
+                </mat-checkbox>
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content> 
+</mat-card>

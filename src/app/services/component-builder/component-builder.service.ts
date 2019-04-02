@@ -1,15 +1,15 @@
 import * as d3 from 'd3';
-import { SVGConfig } from '../models/svg-config';
-import { ItemRegistry } from './item-registry';
-import { GraphData } from '../models/graph-data';
-import { getTransformation, polygon } from './utils';
-import { DiagramComponent } from '../models/diagram-component';
-import { Service } from '../models/service';
+import { SVGConfig } from '../../models/svg-config';
+import { ItemRegistry } from '../../models/item-registry';
+import { GraphData } from '../../models/graph-data';
+import { getTransformation, polygon } from '../../utils/utils';
+import { DiagramComponent } from '../../models/diagram-component';
+import { Service } from '../../models/service';
 
 import dagre from 'dagre';
-import { filter } from 'rxjs/operators';
+import { ComponentDiagramGraphLayout } from 'src/app/enums/component-diagram-graph-layout.enum';
 
-class ComponentBuilder {
+export class ComponentBuilderService {
     public domItemRegistry: ItemRegistry;
     private innerContainer: any;
 
@@ -246,10 +246,3 @@ class ComponentBuilder {
             .attr('class', 'arrow');
     }
 }
-
-enum ComponentDiagramGraphLayout {
-    Circle,
-    LargeScaleNetwork,
-}
-
-export { ComponentBuilder, SVGConfig, GraphData, ComponentDiagramGraphLayout };

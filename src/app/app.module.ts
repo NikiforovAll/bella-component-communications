@@ -22,12 +22,16 @@ import {
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { ComponentDiagramComponent } from './components/smart/component-diagram/component-diagram.component';
 import { ComponentDataComponent } from './components/smart/component-data/component-data.component';
+import { DiagramComponent } from './components/dumb/diagram/diagram.component';
+import { ListComponent } from './components/dumb/list/list.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         ComponentDiagramComponent,
         ComponentDataComponent,
+        DiagramComponent,
+        ListComponent,
     ],
     imports: [
         BrowserModule,
