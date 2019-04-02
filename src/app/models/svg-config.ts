@@ -1,8 +1,9 @@
-import { ComponentConfig } from "./component-config";
+import { ComponentConfig } from './component-config';
+
 export interface SVGConfig {
     width: number;
     height: number;
     margin: number;
-    componentConfig: ComponentConfig
+    componentConfig: ComponentConfig;
     textPadding: number;
 }
