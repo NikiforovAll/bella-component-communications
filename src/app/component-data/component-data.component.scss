@@ -1,0 +1,12 @@
+.component-container
+{
+    height: 600px;
+}
+.service-container
+{
+    min-height: 300px;
+    width: 400px;
+    .service-hosted-on{
+        color: red;
+    }
+}
