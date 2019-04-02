@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
-import { ComponentDrawingConfigurationItem } from 'src/app/models/component-drawing-configuration-item';
-import { ComponentDiagramGraphLayout } from 'src/app/enums/component-diagram-graph-layout.enum';
+import { ComponentDrawingConfigurationItem } from '../../../models/component-drawing-configuration-item';
+import { ComponentDiagramGraphLayout } from '../../../enums/component-diagram-graph-layout.enum';
 
 @Component({
     selector: 'app-list',

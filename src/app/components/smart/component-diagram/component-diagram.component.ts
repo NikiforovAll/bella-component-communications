@@ -2,11 +2,10 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { StorageService } from '../../../services/storage/storage.service';
 import { GraphData } from '../../../models/graph-data';
 import { SVGConfig } from '../../../models/svg-config';
-import { BaseConfig } from 'src/app/configs/base.config';
-import { ComponentDrawingConfigurationItem } from 'src/app/models/component-drawing-configuration-item';
+import { BaseConfig } from '../../../configs/base.config';
+import { ComponentDrawingConfigurationItem } from '../../../models/component-drawing-configuration-item';
 import { BehaviorSubject } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { ComponentDiagramGraphLayout } from 'src/app/enums/component-diagram-graph-layout.enum';
+import { ComponentDiagramGraphLayout } from '../../../enums/component-diagram-graph-layout.enum';
 
 @Component({
     selector: 'app-component-diagram',

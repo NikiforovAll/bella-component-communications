@@ -9,12 +9,12 @@ import {
     OnChanges,
     AfterViewInit,
 } from '@angular/core';
-import { ComponentDrawingConfigurationItem } from 'src/app/models/component-drawing-configuration-item';
+import { ComponentDrawingConfigurationItem } from '../../../models/component-drawing-configuration-item';
 import { SVGConfig } from '../../../models/svg-config';
 import { BaseConfig } from '../../../configs/base.config';
 import { ComponentBuilderService } from '../../../services/component-builder/component-builder.service';
 import { GraphData } from '../../../models/graph-data';
-import { ComponentDiagramGraphLayout } from 'src/app/enums/component-diagram-graph-layout.enum';
+import { ComponentDiagramGraphLayout } from '../../../enums/component-diagram-graph-layout.enum';
 
 @Component({
     selector: 'app-diagram',
