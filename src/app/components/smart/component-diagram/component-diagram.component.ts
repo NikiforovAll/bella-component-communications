@@ -39,8 +39,6 @@ export class ComponentDiagramComponent implements OnInit {
     }
 
     public onDrawingConfigurationSelection(value: boolean): void {
-        console.log(this.configurationItems$.getValue().map(node => ({ ...node, isChecked: value })));
-
         this.configurationItems$.next(
             this.configurationItems$.getValue()
                 .map(node => ({ ...node, isChecked: value }))
