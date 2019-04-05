@@ -1,3 +1,6 @@
+import { GraphData } from '../models/graph-data';
+import dagre from 'dagre';
+
 export function getTransformation(transform: string) {
     // Create a dummy g for calculation purposes only. This will never
     // be appended to the DOM and will be discarded once this function
@@ -67,4 +70,32 @@ export function polygon(x: number, y: number, radius: number, sides: number) {
         crd.push([x + Math.sin((2 * Math.PI * i) / sides) * radius, y - Math.cos((2 * Math.PI * i) / sides) * radius]);
     }
     return crd;
+}
+
+export function generateLargeScaleGraph(data: GraphData, svgConfig: any): any {
+    const g = new dagre.graphlib.Graph();
+    g.setGraph({});
+    g.setDefaultEdgeLabel(() => ({}));
+
+    data.nodes.forEach(component =>
+        g.setNode(component.name, {
+            label: component.name,
+            width: svgConfig.componentConfig.width,
+            height: svgConfig.componentConfig.height,
+        }),
+    );
+    data.nodes.forEach(component => {
+        for (const service of component.consumes) {
+            if (data.nodes.some(component2 => component2.services.some(service2 => service2.name === service.name))) {
+                const result = data.nodes.filter(component2 => component2.services.some(service2 => service2.name === service.name));
+                g.setEdge(component.name, result[0].name);
+            }
+        }
+    });
+    dagre.layout(g);
+    return g.nodes().map(v => [g.node(v).x, g.node(v).y]);
+}
+
+export function buildTransformTemplate(x: any, y: any): string {
+    return `translate(${x}, ${y})`;
 }

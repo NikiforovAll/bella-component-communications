@@ -12,9 +12,10 @@ import {
 import { ComponentDrawingConfigurationItem } from '../../../models/component-drawing-configuration-item';
 import { SVGConfig } from '../../../models/svg-config';
 import { BaseConfig } from '../../../configs/base.config';
-import { ComponentBuilderService } from '../../../services/component-builder/component-builder.service';
+import { ComponentBuilderService } from '../../../services/component-builder/component-builder.service2';
 import { GraphData } from '../../../models/graph-data';
 import { ComponentDiagramGraphLayout } from '../../../enums/component-diagram-graph-layout.enum';
+import { IComponentBuilder } from 'src/app/interfaces/IComponentBuilder';
 
 @Component({
     selector: 'app-diagram',
@@ -35,11 +36,11 @@ export class DiagramComponent implements OnChanges, AfterViewInit {
     public svgConfig: SVGConfig = BaseConfig.svgConfig;
     public isEmptyComponentDiagram: boolean;
 
-    private builder: ComponentBuilderService;
+    private builder: IComponentBuilder;
 
     public ngOnChanges(_: SimpleChanges): void {
         this.svgConfig.width = this.container.nativeElement.clientWidth;
-        //using default height
+        // using default height
         // this.svgConfig.height = this.container.nativeElement.clientHeight;
         if (!!this.builder) {
             this.initDrawing();

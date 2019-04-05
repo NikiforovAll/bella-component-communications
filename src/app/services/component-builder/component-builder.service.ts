@@ -5,11 +5,11 @@ import { GraphData } from '../../models/graph-data';
 import { getTransformation, polygon } from '../../utils/utils';
 import { DiagramComponent } from '../../models/diagram-component';
 import { Service } from '../../models/service';
-
+import { IComponentBuilder } from '../../interfaces/IComponentBuilder';
 import dagre from 'dagre';
 import { ComponentDiagramGraphLayout } from 'src/app/enums/component-diagram-graph-layout.enum';
 
-export class ComponentBuilderService {
+export class ComponentBuilderService implements IComponentBuilder {
     public domItemRegistry: ItemRegistry;
     private innerContainer: any;
 
@@ -34,13 +34,11 @@ export class ComponentBuilderService {
     public buildFromLayout(data: GraphData, layout: ComponentDiagramGraphLayout) {
         this.innerContainer = this.svg.append('g');
         this.defineAdditionalElements();
-        this.initializeDOM(data, layout);
         data.nodes.forEach(node => this.drawNode(node));
+        this.initializeDOM(data, layout);
         this.connectComponents(data.nodes);
 
         this.applyZoom();
-        // console.log("data", data);
-        // console.log("registry", this.domItemRegistry);
     }
 
     public generateLayout(data: GraphData) {
