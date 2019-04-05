@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col configure-block">
+        <app-list
+            [configurationItems]="configurationItems$ | async"
+            [layout]="layout$ | async"
+            (changeConfigSelection)="onDrawingConfigurationSelection($event)"
+            (componentChecked)="onConfigurationChanged($event)"
+            (changeLayout)="onChangeLayout($event)">
+        </app-list>
+    </div>
+    <div class="col main-block">
+        <app-diagram
+            [configurationItems]="configurationItems$ | async"
+            [layout]="layout$ | async"
+            [graphData]="graphData">
+        </app-diagram>
+    </div>
+</div>

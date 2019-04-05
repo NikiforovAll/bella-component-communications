@@ -4,23 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ComponentDiagramComponent } from './component-diagram/component-diagram.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatExpansionModule, MatCardModule, MatGridListModule, MatTabsModule, MatCheckboxModule, MatLabel, MatSelectModule } from '@angular/material';
-import { ComponentDataComponent } from './component-data/component-data.component';
-import { ScrollingModule } from '@angular/cdk/scrolling';
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    ComponentDiagramComponent,
-    ComponentDataComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    LayoutModule,
+import {
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
@@ -29,13 +14,45 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatExpansionModule,
     MatCardModule,
     MatGridListModule,
-    MatListModule,
     MatTabsModule,
     MatCheckboxModule,
+    MatLabel,
     MatSelectModule,
-    ScrollingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+} from '@angular/material';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { ComponentDiagramComponent } from './components/smart/component-diagram/component-diagram.component';
+import { ComponentDataComponent } from './components/smart/component-data/component-data.component';
+import { DiagramComponent } from './components/dumb/diagram/diagram.component';
+import { ListComponent } from './components/dumb/list/list.component';
+
+@NgModule({
+    declarations: [
+        AppComponent,
+        ComponentDiagramComponent,
+        ComponentDataComponent,
+        DiagramComponent,
+        ListComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        LayoutModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        MatExpansionModule,
+        MatCardModule,
+        MatGridListModule,
+        MatListModule,
+        MatTabsModule,
+        MatCheckboxModule,
+        MatSelectModule,
+        ScrollingModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

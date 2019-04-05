@@ -28,13 +28,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## TODO
 
-* add proper way to handle styling for svg, use encapsulation, not global config, or consider to move styles in lib 
-  * current approach is bad, need to refactor code.
 * add layout for large graphs - ✔
-  * <http://kateto.net/netscix2016>
-  * <https://news.ycombinator.com/item?id=17946383>
 * Add sidebar with possibility to select components - ✔
-* Add possibility to see data contracts from diagram 
 * Fetch definition of component communication form source - ✔
-* zooming, proper size selection.
   * <https://stackoverflow.com/questions/16178366/d3-js-set-initial-zoom-level>
+* Component is not re-drawing diagram correctly - ✔
+* Fix length of main container, should fit screen - ✔
+* bug with layout changes - ✔
+* zooming, proper size selection.
+* Add possibility to see data contracts from diagram.

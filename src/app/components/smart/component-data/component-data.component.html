@@ -1,0 +1,51 @@
+<mat-toolbar>
+    <span>Component List</span>
+</mat-toolbar>
+
+<cdk-virtual-scroll-viewport itemSize="50" class="component-container">
+    <div *cdkVirtualFor="let component of data.nodes">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{ component.name }}
+                </mat-panel-title>
+                <!-- <mat-panel-description>
+              </mat-panel-description> -->
+            </mat-expansion-panel-header>
+            <mat-grid-list cols="2" rowHeight="2:1">
+                <mat-grid-tile>
+                    <mat-card>
+                        <mat-toolbar>
+                            <span>Exposes</span>
+                        </mat-toolbar>
+                        <cdk-virtual-scroll-viewport itemSize="50" class="service-container">
+                            <mat-list>
+                                <mat-list-item *cdkVirtualFor="let service of component.services">
+                                    <span
+                                        >{{ service.name }} on <span class="service-hosted-on">{{ service.on }}</span></span
+                                    >
+                                </mat-list-item>
+                            </mat-list>
+                        </cdk-virtual-scroll-viewport>
+                    </mat-card>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-card>
+                        <mat-toolbar>
+                            <span>Consumes</span>
+                        </mat-toolbar>
+                        <cdk-virtual-scroll-viewport itemSize="50" class="service-container">
+                            <mat-list>
+                                <mat-list-item *cdkVirtualFor="let service of component.consumes">
+                                    <span
+                                        >{{ service.name }} on <span class="service-hosted-on">{{ service.on }}</span></span
+                                    >
+                                </mat-list-item>
+                            </mat-list>
+                        </cdk-virtual-scroll-viewport>
+                    </mat-card>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-expansion-panel>
+    </div>
+</cdk-virtual-scroll-viewport>
