@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col">
+    <div class="col configure-block">
         <app-list
             [configurationItems]="configurationItems$ | async"
             [layout]="layout$ | async"
@@ -8,7 +8,7 @@
             (changeLayout)="onChangeLayout($event)">
         </app-list>
     </div>
-    <div class="col">
+    <div class="col main-block">
         <app-diagram
             [configurationItems]="configurationItems$ | async"
             [layout]="layout$ | async"

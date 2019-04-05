@@ -32,16 +32,19 @@
                 </mat-select>
             </mat-form-field>
         </mat-card>
-        <mat-list role="list">
-            <mat-list-item 
-                *ngFor="let component of configurationItems"
-                role="listitem">
-                <mat-checkbox
-                    [checked]="component.isChecked"
-                    (change)="onConfigurationChanged(component,$event)">
-                    {{component.name}}
-                </mat-checkbox>
-            </mat-list-item>
-        </mat-list>
+        <cdk-virtual-scroll-viewport itemSize="50" class="configuration-items-container">
+                <mat-list role="list">
+                    <div *cdkVirtualFor="let component of configurationItems">
+                        <mat-list-item 
+                            role="listitem">
+                            <mat-checkbox
+                                [checked]="component.isChecked"
+                                (change)="onConfigurationChanged(component,$event)">
+                                {{component.name}}
+                            </mat-checkbox>
+                        </mat-list-item>
+                    </div>
+                </mat-list>
+        </cdk-virtual-scroll-viewport>
     </mat-card-content> 
 </mat-card>

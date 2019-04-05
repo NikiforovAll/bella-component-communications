@@ -28,6 +28,6 @@ export class ListComponent {
     }
 
     public onChangeLayout(newLayout: ComponentDiagramGraphLayout): void {
-        this.changeLayout.next(newLayout);
+        this.changeLayout.next(+newLayout);
     }
 }

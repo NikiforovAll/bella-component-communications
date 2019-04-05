@@ -6,4 +6,10 @@ export class ItemRegistry {
         this.components = {};
         this.services = {};
     }
+
+    public clear()
+    {
+        this.components = {};
+        this.services = {};
+    }
 }

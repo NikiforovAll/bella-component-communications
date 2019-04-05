@@ -70,7 +70,7 @@ export class ComponentBuilderService {
             for (const service of component.consumes) {
                 if (data.nodes.some(component2 => component2.services.some(service2 => service2.name === service.name))) {
                     const result = data.nodes.filter(component2 => component2.services.some(service2 => service2.name === service.name));
-                    console.log(`Edge: from ${component.name} to -> ${result[0].name}`);
+                    // console.log(`Edge: from ${component.name} to -> ${result[0].name}`);
                     g.setEdge(component.name, result[0].name);
                 }
             }
@@ -89,6 +89,7 @@ export class ComponentBuilderService {
 
     public clear() {
         this.svg.selectAll('*').remove();
+        this.domItemRegistry.clear();
     }
 
     private initializeDOM(data: GraphData, layout: ComponentDiagramGraphLayout): void {
@@ -219,7 +220,7 @@ export class ComponentBuilderService {
         function zoomed() {
             ctx.attr('transform', d3.event.transform);
         }
-        const scale = 0.5;
+        const scale = 0.4;
         const zoomWidth = (this.svgConfig.width - scale * this.svgConfig.width) / 2;
         const zoomHeight = (this.svgConfig.height - scale * this.svgConfig.height) / 2;
         // this.svg.call(zoom)

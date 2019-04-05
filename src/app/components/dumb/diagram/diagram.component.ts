@@ -29,12 +29,18 @@ export class DiagramComponent implements OnChanges, AfterViewInit {
 
     @ViewChild('diagramContainer') diagramContainer: ElementRef<SVGElement>;
 
+    @ViewChild('container') container: ElementRef<HTMLDivElement>;
+
+
     public svgConfig: SVGConfig = BaseConfig.svgConfig;
     public isEmptyComponentDiagram: boolean;
 
     private builder: ComponentBuilderService;
 
     public ngOnChanges(_: SimpleChanges): void {
+        this.svgConfig.width = this.container.nativeElement.clientWidth;
+        //using default height
+        // this.svgConfig.height = this.container.nativeElement.clientHeight;
         if (!!this.builder) {
             this.initDrawing();
         }
