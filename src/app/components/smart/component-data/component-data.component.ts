@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from '../../../services/storage/storage.service';
-import { GraphData } from '../../../models/graph-data';
+import { GraphData } from '../../../models/storage-models/graph-data';
 
 @Component({
     selector: 'app-component-data',

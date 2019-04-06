@@ -1,4 +1,4 @@
-import { GraphData } from '../models/graph-data';
+import { GraphData } from '../models/storage-models/graph-data';
 import { ComponentDiagramGraphLayout } from '../enums/component-diagram-graph-layout.enum';
 
 export interface IComponentBuilder {

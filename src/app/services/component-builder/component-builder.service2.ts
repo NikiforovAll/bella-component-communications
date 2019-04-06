@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 import { SVGConfig } from '../../models/svg-config';
 import { ItemRegistry } from '../../models/item-registry';
-import { GraphData } from '../../models/graph-data';
+import { GraphData } from '../../models/storage-models/graph-data';
 import {
     getTransformation,
     polygon,
@@ -11,13 +11,17 @@ import {
 import { IComponentBuilder } from '../../interfaces/IComponentBuilder';
 import { ComponentDiagramGraphLayout } from 'src/app/enums/component-diagram-graph-layout.enum';
 import { serializePath } from '@angular/router/src/url_tree';
+import { DiagramService } from '../../models/diagram-service';
+import { ElementCoordinate } from '../../models/element-coordinate';
+import { VirtualDOM } from '../../models/virtual-dom';
+import { DiagramComponent } from '../../models/diagram-component';
 
 export class ComponentBuilderService implements IComponentBuilder {
 
     public domItemRegistry: ItemRegistry;
     private innerContainer: any;
 
-    get componentLineHeight(): number {
+    public get componentLineHeight(): number {
         return this.svgConfig.componentConfig.textLineHeight;
     }
 
@@ -27,20 +31,20 @@ export class ComponentBuilderService implements IComponentBuilder {
         // TODO: this code has issue with data and representation separation.
     }
 
-    build(data: GraphData): void {
+    public build(data: GraphData): void {
         this.buildFromLayout(data, ComponentDiagramGraphLayout.Circle);
     }
 
-    buildFromLayout(data: GraphData, layout: ComponentDiagramGraphLayout): void {
+    public buildFromLayout(data: GraphData, layout: ComponentDiagramGraphLayout): void {
         this.innerContainer = this.svg.append('g').attr('class', 'diagram-root');
         this.defineAdditionalElements();
         const dom = this.initializeVirtualDOM(data, layout);
         dom.nodes.forEach(element => {
-            let diagramComponent = element as DiagramComponent;
-            this.drawComponentElement(diagramComponent)
+            const diagramComponent = element as DiagramComponent;
+            this.drawComponentElement(diagramComponent);
             diagramComponent.services.forEach(
                 virtualService => {
-                    let service = virtualService as DiagramService;
+                    const service = virtualService as DiagramService;
                     this.drawServiceElement(diagramComponent, service);
                 }
             );
@@ -50,7 +54,7 @@ export class ComponentBuilderService implements IComponentBuilder {
         console.log('domItemRegistry', this.domItemRegistry);
     }
 
-    clear(): void {
+    public clear(): void {
         this.svg.selectAll('*').remove();
         this.domItemRegistry.clear();
     }
@@ -59,6 +63,11 @@ export class ComponentBuilderService implements IComponentBuilder {
         const container = this.innerContainer
             .append('g')
             .attr('transform', buildTransformTemplate(component.coordinates.x, component.coordinates.y));
+        container
+            .append('rect')
+            .attr('height', component.frameHeight)
+            .attr('width', component.frameWidth)
+            .attr('class', 'component-container');
         container
             .append('text')
             .text(component.title)
@@ -74,10 +83,82 @@ export class ComponentBuilderService implements IComponentBuilder {
             .append('g')
             .attr('id', service.title)
             .attr('transform', buildTransformTemplate(0, service.coordinates.y));
+        const itemContainer = serviceItemContainer
+            .append('g')
+            .attr('transform', buildTransformTemplate(0, this.componentLineHeight / 2));
+        itemContainer
+            .append('rect')
+            .attr('height', service.frameHeight)
+            .attr('width', service.frameWidth)
+            .attr('class', 'service-container');
+        serviceItemContainer
+            .append('text')
+            .text(service.title)
+            .attr('y', this.componentLineHeight - this.svgConfig.textPadding / 4)
+            .attr('x', this.svgConfig.textPadding);
+        itemContainer
+            .append('circle')
+            .attr('cx', this.svgConfig.componentConfig.width)
+            .attr('cy', this.componentLineHeight / 2)
+            .attr('r', this.componentLineHeight / 4)
+            .attr('class', 'service-connector');
         this.domItemRegistry.registerService(service.title, service, serviceItemContainer);
     }
 
+    private drawServiceLink() {
+        //TODO: 
+    }
+
     private initializeVirtualDOM(data: GraphData, layout: ComponentDiagramGraphLayout): VirtualDOM {
+        const coordinates = this.calculateComponentCoordinates(data, layout);
+        const components = data.nodes.map((componentData, componentIndex) => {
+            const diagramComponent = new DiagramComponent(
+                componentData.name,
+                coordinates[componentIndex],
+                {
+                    frame: {
+                        start: {
+                            x: 0,
+                            y: 0
+                        },
+                        end: {
+                            x: this.svgConfig.componentConfig.width,
+                            y: this.componentLineHeight * (componentData.services.length + 1) + this.svgConfig.textPadding * 3
+                        }
+                    }
+                }
+            );
+            diagramComponent.services = componentData
+                .services
+                .map(
+                    (serviceData, serviceIndex) => new DiagramService(
+                        serviceData.name,
+                        {
+                            coordinates: { x: 0, y: this.componentLineHeight * (serviceIndex + 1) },
+                            hostedOn: serviceData.on,
+                            frame: {
+                                start: {
+                                    x: 0,
+                                    y: 0
+                                },
+                                end: {
+                                    x: this.svgConfig.componentConfig.width,
+                                    y: this.componentLineHeight
+                                }
+                            }
+                        }
+                    )
+                );
+            return diagramComponent;
+        });
+
+        return {
+            nodes: components,
+            type: layout
+        };
+    }
+
+    private calculateComponentCoordinates(data: GraphData, layout: ComponentDiagramGraphLayout) {
         let coordinates: ElementCoordinate[];
         const mapFromArrayToCoordinate =
             (array: any[]) => array.map(
@@ -96,20 +177,11 @@ export class ComponentBuilderService implements IComponentBuilder {
                 break;
             }
             default: {
-                throw new Error("Layout was not found");
+                throw new Error('Layout was not found');
                 break;
             }
         }
-        const components = data.nodes.map((componentData, i) => {
-            const diagramComponent = new DiagramComponent(componentData.name, coordinates[i]);
-            diagramComponent.services = componentData.services.map(serviceData => new DiagramService(serviceData.name));
-            return diagramComponent;
-        });
-
-        return {
-            nodes: components,
-            type: layout
-        };
+        return coordinates;
     }
 
     private defineAdditionalElements() {
@@ -142,85 +214,11 @@ export class ComponentBuilderService implements IComponentBuilder {
         }
         if (dom.type === ComponentDiagramGraphLayout.LargeScaleNetwork) {
             const scale = 0.3;
-            let minWidth = Math.min(...dom.nodes.map(el => el.coordinates.x)) - this.svgConfig.margin;
+            const minWidth = Math.min(...dom.nodes.map(el => el.coordinates.x)) - this.svgConfig.margin;
             const minHeight = Math.min(...dom.nodes.map(el => el.coordinates.y)) - this.svgConfig.margin;
 
             this.svg.call(zoom.transform, d3.zoomIdentity.translate(-minWidth, -minHeight).scale(scale));
         }
         this.svg.call(zoom);
     }
-}
-
-class VirtualDOM {
-    nodes: IVirtualNode[];
-    type: ComponentDiagramGraphLayout;
-}
-class DiagramComponent implements IDiagramComponent {
-    services: IDiagramService[];
-    links: IDiagramLink[];
-    coordinates: ElementCoordinate;
-    title: string;
-    frame: IElementFrame;
-    nodeClass: string;
-
-
-    constructor(title: string, coordinates: ElementCoordinate) {
-        this.coordinates = coordinates;
-        this.title = title;
-        this.nodeClass = 'diagram-component';
-        this.services = [];
-        this.links = [];
-        this.frame = {
-            start: { x: 0, y: 0 },
-            end: { x: 0, y: 0 }
-        };
-    }
-}
-
-class DiagramService implements IDiagramService{
-    hostedOn: string;
-    coordinates: ElementCoordinate;
-    title: string;
-    frame: IElementFrame;
-    nodeClass: string;
-    constructor(title: string) {
-        this.title = title;
-        this.nodeClass = 'diagram-service';
-        this.frame = {
-            start: { x: 0, y: 0 },
-            end: { x: 0, y: 0 }
-        };
-    }
-}
-
-interface IVirtualNode {
-    coordinates: ElementCoordinate;
-    title: string;
-    frame: IElementFrame;
-    nodeClass: string;
-    // build(): void;
-}
-
-
-interface IDiagramComponent extends IVirtualNode {
-    services: IDiagramService[];
-    links: IDiagramLink[];
-}
-
-interface IDiagramService extends IVirtualNode {
-}
-
-interface IDiagramLink {
-    start: ElementCoordinate;
-    end: ElementCoordinate;
-}
-
-interface IElementFrame {
-    start: ElementCoordinate;
-    end: ElementCoordinate;
-}
-
-interface ElementCoordinate {
-    x: number;
-    y: number;
 }

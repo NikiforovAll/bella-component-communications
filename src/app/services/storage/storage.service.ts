@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import data from '../../data.json';
-import { GraphData } from '../../models/graph-data';
+import { GraphData } from '../../models/storage-models/graph-data';
 
 @Injectable({
     providedIn: 'root',

@@ -1,4 +1,4 @@
-import { GraphData } from '../models/graph-data';
+import { GraphData } from '../models/storage-models/graph-data';
 import dagre from 'dagre';
 
 export function getTransformation(transform: string) {

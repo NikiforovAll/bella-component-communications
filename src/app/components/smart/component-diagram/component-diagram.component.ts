@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { StorageService } from '../../../services/storage/storage.service';
-import { GraphData } from '../../../models/graph-data';
+import { GraphData } from '../../../models/storage-models/graph-data';
 import { SVGConfig } from '../../../models/svg-config';
 import { BaseConfig } from '../../../configs/base.config';
 import { ComponentDrawingConfigurationItem } from '../../../models/component-drawing-configuration-item';

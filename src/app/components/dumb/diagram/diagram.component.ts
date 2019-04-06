@@ -13,7 +13,7 @@ import { ComponentDrawingConfigurationItem } from '../../../models/component-dra
 import { SVGConfig } from '../../../models/svg-config';
 import { BaseConfig } from '../../../configs/base.config';
 import { ComponentBuilderService } from '../../../services/component-builder/component-builder.service2';
-import { GraphData } from '../../../models/graph-data';
+import { GraphData } from '../../../models/storage-models/graph-data';
 import { ComponentDiagramGraphLayout } from '../../../enums/component-diagram-graph-layout.enum';
 import { IComponentBuilder } from 'src/app/interfaces/IComponentBuilder';
 
