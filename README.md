@@ -35,6 +35,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * Component is not re-drawing diagram correctly - ✔
 * Fix length of main container, should fit screen - ✔
 * bug with layout changes - ✔
-* Consider to preserve zoom.
-* zooming, proper size selection.
+* zooming, proper size selection. - ✔
+
 * Add possibility to see data contracts from diagram.

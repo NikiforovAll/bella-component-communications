@@ -12,10 +12,11 @@ import {
 import { ComponentDrawingConfigurationItem } from '../../../models/component-drawing-configuration-item';
 import { SVGConfig } from '../../../models/svg-config';
 import { BaseConfig } from '../../../configs/base.config';
-import { ComponentBuilderService } from '../../../services/component-builder/component-builder.service2';
+import { ComponentBuilderService } from '../../../services/component-builder/component-builder.service';
 import { GraphData } from '../../../models/storage-models/graph-data';
 import { ComponentDiagramGraphLayout } from '../../../enums/component-diagram-graph-layout.enum';
 import { IComponentBuilder } from 'src/app/interfaces/IComponentBuilder';
+import { ComponentInformationSidebarService } from 'src/app/component-information-sidebar.service';
 
 @Component({
     selector: 'app-diagram',
@@ -32,7 +33,12 @@ export class DiagramComponent implements OnChanges, AfterViewInit {
 
     @ViewChild('container') container: ElementRef<HTMLDivElement>;
 
-
+    /**
+     *
+     */
+    constructor(private service: ComponentInformationSidebarService) {
+        service.openSidebar();
+    }
     public svgConfig: SVGConfig = BaseConfig.svgConfig;
     public isEmptyComponentDiagram: boolean;
 

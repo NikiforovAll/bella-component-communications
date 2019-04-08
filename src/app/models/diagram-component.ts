@@ -8,16 +8,12 @@ export class DiagramComponent implements IDiagramComponent {
     services: IDiagramService[];
     links: IDiagramLink[];
     subscribedLinks: IDiagramLink[];
-    coordinates: ElementCoordinate;
-    title: string;
     frame: IElementFrame;
     nodeClass: string;
     implementation?: any;
     updateCallback?: VirtualNodeUpdate;
 
-    constructor(title: string, coordinates: ElementCoordinate, init?: Partial<DiagramComponent>) {
-        this.coordinates = coordinates;
-        this.title = title;
+    constructor(public title: string, public coordinates: ElementCoordinate, init?: Partial<DiagramComponent>) {
         this.nodeClass = 'diagram-component';
         this.services = [];
         this.links = [];

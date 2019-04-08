@@ -1,7 +1,9 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { ComponentInformationSidebarService } from './component-information-sidebar.service';
+import { EventEmitter } from 'events';
 
 @Component({
     selector: 'app-root',
@@ -18,5 +20,13 @@ export class AppComponent {
             map(result => result.matches)
         );
 
-    constructor(private breakpointObserver: BreakpointObserver) {}
+    isComponentInfoDisplayed$ = new BehaviorSubject<boolean>(false);
+
+    constructor(private breakpointObserver: BreakpointObserver, private sidebarService: ComponentInformationSidebarService) {
+        this.sidebarService.setEmitter(this.isComponentInfoDisplayed$);
+    }
+
+    onSidebarOpenChanged($event) {
+        this.sidebarService.setSidebarState($event);
+    }
 }

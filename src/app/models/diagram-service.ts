@@ -4,10 +4,10 @@ import { IDiagramService } from '../interfaces/IDiagramService';
 export class DiagramService implements IDiagramService {
     hostedOn: string;
     coordinates: ElementCoordinate;
-    title: string;
     frame: IElementFrame;
     nodeClass: string;
-    constructor(title: string, init?: Partial<DiagramService>) {
+
+    constructor(public title: string, init?: Partial<DiagramService>) {
         this.title = title;
         this.nodeClass = 'diagram-service';
         this.frame = {
