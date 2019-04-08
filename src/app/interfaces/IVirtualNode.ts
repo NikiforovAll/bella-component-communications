@@ -5,4 +5,5 @@ export interface IVirtualNode {
     title: string;
     frame: IElementFrame;
     nodeClass: string;
+    implementation?: any;
 }

@@ -25,4 +25,8 @@ export class DiagramService implements IDiagramService {
     public get frameHeight(): number {
         return Math.abs(this.frame.start.y - this.frame.end.y);
     }
+
+    public getConnector(): ElementCoordinate {
+        return { x: this.coordinates.x + this.frameWidth, y: this.coordinates.y};
+    }
 }

@@ -1,5 +1,9 @@
 import { GraphData } from '../models/storage-models/graph-data';
 import dagre from 'dagre';
+import { IDiagramComponent } from '../interfaces/IDiagramComponent';
+import { IDiagramService } from '../interfaces/IDiagramService';
+import { DiagramService } from '../models/diagram-service';
+import { ElementCoordinate } from '../models/element-coordinate';
 
 export function getTransformation(transform: string) {
     // Create a dummy g for calculation purposes only. This will never
@@ -80,8 +84,8 @@ export function generateLargeScaleGraph(data: GraphData, svgConfig: any): any {
     data.nodes.forEach(component =>
         g.setNode(component.name, {
             label: component.name,
-            width: svgConfig.componentConfig.width,
-            height: svgConfig.componentConfig.height,
+            width: svgConfig.componentConfig.width * 1.5,
+            height: svgConfig.componentConfig.height * 1.5,
         }),
     );
     data.nodes.forEach(component => {
@@ -98,4 +102,9 @@ export function generateLargeScaleGraph(data: GraphData, svgConfig: any): any {
 
 export function buildTransformTemplate(x: any, y: any): string {
     return `translate(${x}, ${y})`;
+}
+
+export function calculateAbsoluteServiceConnector(component: IDiagramComponent, service: DiagramService): ElementCoordinate {
+    const { x: x1, y: y1 } = component.coordinates;
+    return { x: x1 + service.getConnector().x, y: y1 + service.getConnector().y + service.frameHeight };
 }

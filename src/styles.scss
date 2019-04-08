@@ -40,40 +40,56 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
     /* border: 1px solid black; */
 }
 
-.component-container
-{
-    fill: whitesmoke;
-    fill-opacity: 0.2;
-    stroke:green;
-    stroke-width:3
-}
-.service-container
-{
-    fill-opacity: 0.1;
-    stroke:green; 
-    stroke-linecap:"round";
-    stroke-width:1;
-}
-.component-header-line
-{
-    stroke: rgb(10, 48, 10);
-    stroke-width: 3
-}
 
-.service-link
-{
-    stroke: rgb(10, 48, 10);
-    stroke-width: 1;
-    stroke-dasharray: 5 5
-}
+.diagram-root{
 
-.service-connector
-{
-    fill: orangered;
-}
-.component-connector
-{
-    fill: rgb(10, 48, 10);
+    .component-container {
+        rect {
+            fill: whitesmoke;
+            fill-opacity: 0.2;
+            stroke:green;
+            stroke-width:3;
+            
+        }
+    }
+
+    .drag-active.component-container {
+        rect {
+            stroke:rgb(21, 75, 21);
+            stroke-width:5;
+        }
+    }
+    
+    .service-container {
+        rect
+        {
+            fill-opacity: 0.1;
+            stroke:green; 
+            stroke-linecap:"round";
+            stroke-width:1;
+        }
+        
+    }
+    .component-header-line
+    {
+        stroke: rgb(10, 48, 10);
+        stroke-width: 3
+    }
+    .service-link
+    {
+        stroke: rgb(10, 48, 10);
+        stroke-width: 1;
+        stroke-dasharray: 5 5
+    }
+    
+    .service-connector
+    {
+        fill: orangered;
+    }
+    .component-connector
+    {
+        fill: rgb(10, 48, 10);
+    }
 }
 
 body{
