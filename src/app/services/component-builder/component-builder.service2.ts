@@ -282,13 +282,15 @@ export class ComponentBuilderService implements IComponentBuilder {
             ctx.attr('transform', d3.event.transform);
         }
         if (dom.type === ComponentDiagramGraphLayout.Circle) {
-            const scale = 0.4;
+            let scale = 0.4;
+            scale = Math.max(scale, 0.55 - 0.01 * dom.nodes.length);
             const zoomWidth = (this.svgConfig.width - scale * this.svgConfig.width) / 2;
             const zoomHeight = (this.svgConfig.height - scale * this.svgConfig.height) / 2;
             this.svg.call(zoom.transform, d3.zoomIdentity.translate(zoomWidth, zoomHeight).scale(scale));
         }
         if (dom.type === ComponentDiagramGraphLayout.LargeScaleNetwork) {
-            const scale = 0.3;
+            let scale = 0.3;
+            scale = Math.max(0.3, 1 - 0.05 * dom.nodes.length);
             const minWidth = Math.min(...dom.nodes.map(el => el.coordinates.x)) - this.svgConfig.margin;
             const minHeight = Math.min(...dom.nodes.map(el => el.coordinates.y)) - this.svgConfig.margin;
 
