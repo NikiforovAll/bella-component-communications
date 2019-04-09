@@ -1,0 +1,54 @@
+<mat-toolbar>
+  
+  <div class="component-toolbar">
+      <div>
+          Component:
+      </div>
+      <div>
+          <span class="component-name">{{selectedDiagramComponent?.name}}</span>
+      </div>
+      <div>
+          <button mat-button (click)="openComponentDocumentation(selectedDiagramComponent)">
+              <mat-icon>link</mat-icon>
+          </button>
+      </div>
+  </div>
+</mat-toolbar>
+
+
+<mat-tab-group>
+  <mat-tab label="Exposes">
+    <mat-card>
+      <mat-list>
+          <mat-list-item *ngFor="let service of selectedDiagramComponent?.services">
+              <div class="component-row">
+                  <div>
+                      {{ service.name }}
+                  </div>
+                  <div>
+                      <button mat-button (click)="openComponentDocumentation(service, 'service')">
+                          <mat-icon>link</mat-icon>
+                      </button>
+                  </div>
+              </div>
+          </mat-list-item>
+      </mat-list>
+    </mat-card>
+  </mat-tab>
+  <mat-tab label="Consumes">
+    <mat-card>
+        <mat-list-item *ngFor="let service of selectedDiagramComponent?.consumes">
+            <div class="component-row">
+                <div>
+                    {{ service.name }}
+                </div>
+                <div>
+                    <button mat-button (click)="openComponentDocumentation(service)">
+                        <mat-icon>link</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </mat-list-item>
+    </mat-card>
+  </mat-tab>
+</mat-tab-group>

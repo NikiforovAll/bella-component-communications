@@ -1,0 +1,18 @@
+.component-container
+{
+    height: 600px;
+}
+.service-container
+{
+    min-height: 300px;
+    width: 400px;
+    .service-hosted-on{
+        color: red;
+    }
+}
+
+.panel-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

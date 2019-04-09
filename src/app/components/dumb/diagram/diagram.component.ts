@@ -8,14 +8,18 @@ import {
     ElementRef,
     OnChanges,
     AfterViewInit,
+    Output,
+    EventEmitter
 } from '@angular/core';
 import { ComponentDrawingConfigurationItem } from '../../../models/component-drawing-configuration-item';
 import { SVGConfig } from '../../../models/svg-config';
 import { BaseConfig } from '../../../configs/base.config';
 import { ComponentBuilderService } from '../../../services/component-builder/component-builder.service';
-import { GraphData } from '../../../models/graph-data';
+import { GraphData } from '../../../models/storage-models/graph-data';
 import { ComponentDiagramGraphLayout } from '../../../enums/component-diagram-graph-layout.enum';
-
+import { IComponentBuilder } from 'src/app/interfaces/IComponentBuilder';
+import { ComponentInformationSidebarService } from 'src/app/services/component-information-sidebar.service';
+import { DiagramComponent as StorageDiagramComponent } from 'src/app/models/storage-models/diagram-component';
 @Component({
     selector: 'app-diagram',
     templateUrl: './diagram.component.html',
@@ -26,20 +30,22 @@ export class DiagramComponent implements OnChanges, AfterViewInit {
     @Input() configurationItems: ComponentDrawingConfigurationItem[];
     @Input() graphData: GraphData;
     @Input() layout: ComponentDiagramGraphLayout = ComponentDiagramGraphLayout.Circle;
+    @Output() public componentSelected = new EventEmitter<StorageDiagramComponent>();
 
     @ViewChild('diagramContainer') diagramContainer: ElementRef<SVGElement>;
 
     @ViewChild('container') container: ElementRef<HTMLDivElement>;
-
-
     public svgConfig: SVGConfig = BaseConfig.svgConfig;
     public isEmptyComponentDiagram: boolean;
 
-    private builder: ComponentBuilderService;
+    private builder: IComponentBuilder;
+
+    constructor(private sidebarService: ComponentInformationSidebarService) {
+    }
 
     public ngOnChanges(_: SimpleChanges): void {
         this.svgConfig.width = this.container.nativeElement.clientWidth;
-        //using default height
+        // using default height
         // this.svgConfig.height = this.container.nativeElement.clientHeight;
         if (!!this.builder) {
             this.initDrawing();
@@ -47,7 +53,13 @@ export class DiagramComponent implements OnChanges, AfterViewInit {
     }
 
     public ngAfterViewInit(): void {
-        this.builder = new ComponentBuilderService(this.svgConfig, this.diagramContainer.nativeElement);
+        const builderImpl = new ComponentBuilderService(this.svgConfig, this.diagramContainer.nativeElement);
+        this.builder = builderImpl;
+        builderImpl.componentSelected$.subscribe(cmpId => {
+            const selectedComponent: StorageDiagramComponent = this.graphData.nodes.find(component => component.name === cmpId);
+            this.sidebarService.setSidebarComponent(selectedComponent);
+            this.sidebarService.openSidebar();
+        });
         this.initDrawing();
     }
 

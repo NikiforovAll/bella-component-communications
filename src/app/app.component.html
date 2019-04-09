@@ -13,6 +13,21 @@
             <a mat-list-item routerLink="/data">View Components</a>
         </mat-nav-list>
     </mat-sidenav>
+    <mat-sidenav
+        position="end"
+        class="sidenav"
+        fixedInViewport="true"
+        [mode]="'over'"
+        [opened]="sidebarService.sidebarState$ | async"
+        (openedChange)="onSidebarOpenChanged($event)"
+        role="region"
+        class="sidenav-info"
+    >
+    <app-component-information 
+        [selectedDiagramComponent]="sidebarService.selectedComponent$ | async">
+    </app-component-information>
+    </mat-sidenav>
+
     <mat-sidenav-content>
         <mat-toolbar color="primary">
             <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="(isHandset$ | async)">

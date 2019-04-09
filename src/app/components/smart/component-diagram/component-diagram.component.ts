@@ -1,11 +1,12 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ChangeDetectionStrategy } from '@angular/core';
 import { StorageService } from '../../../services/storage/storage.service';
-import { GraphData } from '../../../models/graph-data';
+import { GraphData } from '../../../models/storage-models/graph-data';
 import { SVGConfig } from '../../../models/svg-config';
 import { BaseConfig } from '../../../configs/base.config';
 import { ComponentDrawingConfigurationItem } from '../../../models/component-drawing-configuration-item';
 import { BehaviorSubject } from 'rxjs';
 import { ComponentDiagramGraphLayout } from '../../../enums/component-diagram-graph-layout.enum';
+import { DiagramUsageService } from 'src/app/services/diagram-usage/diagram-usage.service';
 
 @Component({
     selector: 'app-component-diagram',
@@ -13,13 +14,13 @@ import { ComponentDiagramGraphLayout } from '../../../enums/component-diagram-gr
     styleUrls: ['./component-diagram.component.less'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ComponentDiagramComponent implements OnInit {
+export class ComponentDiagramComponent implements OnInit, AfterViewInit {
     public graphData: GraphData;
     public svgConfig: SVGConfig;
     public configurationItems$ = new BehaviorSubject<ComponentDrawingConfigurationItem[]>([]);
     public layout$ = new BehaviorSubject<ComponentDiagramGraphLayout>(ComponentDiagramGraphLayout.Circle);
 
-    constructor(private storageService: StorageService) {}
+    constructor(private storageService: StorageService, private diagramUsageService: DiagramUsageService) {}
 
     public ngOnInit(): void {
         this.svgConfig = BaseConfig.svgConfig;
@@ -27,6 +28,12 @@ export class ComponentDiagramComponent implements OnInit {
         this.configurationItems$.next(
             this.graphData.nodes.map(node => ({ name: node.name, isChecked: true }))
         );
+    }
+
+    public ngAfterViewInit(): void {
+        setTimeout(() => {
+            this.diagramUsageService.show();
+          });
     }
 
     public onConfigurationChanged({ name, isChecked }: ComponentDrawingConfigurationItem): void {
