@@ -18,8 +18,8 @@ import { ComponentBuilderService } from '../../../services/component-builder/com
 import { GraphData } from '../../../models/storage-models/graph-data';
 import { ComponentDiagramGraphLayout } from '../../../enums/component-diagram-graph-layout.enum';
 import { IComponentBuilder } from 'src/app/interfaces/IComponentBuilder';
-import { ComponentInformationSidebarService } from 'src/app/component-information-sidebar.service';
-import { DiagramComponent as StorageDiagramComponent } from "src/app/models/storage-models/diagram-component";
+import { ComponentInformationSidebarService } from 'src/app/services/component-information-sidebar.service';
+import { DiagramComponent as StorageDiagramComponent } from 'src/app/models/storage-models/diagram-component';
 @Component({
     selector: 'app-diagram',
     templateUrl: './diagram.component.html',
@@ -40,7 +40,7 @@ export class DiagramComponent implements OnChanges, AfterViewInit {
 
     private builder: IComponentBuilder;
 
-    constructor(private service: ComponentInformationSidebarService) {
+    constructor(private sidebarService: ComponentInformationSidebarService) {
     }
 
     public ngOnChanges(_: SimpleChanges): void {
@@ -53,7 +53,13 @@ export class DiagramComponent implements OnChanges, AfterViewInit {
     }
 
     public ngAfterViewInit(): void {
-        this.builder = new ComponentBuilderService(this.svgConfig, this.diagramContainer.nativeElement);
+        const builderImpl = new ComponentBuilderService(this.svgConfig, this.diagramContainer.nativeElement);
+        this.builder = builderImpl;
+        builderImpl.componentSelected$.subscribe(cmpId => {
+            const selectedComponent: StorageDiagramComponent = this.graphData.nodes.find(component => component.name === cmpId);
+            this.sidebarService.setSidebarComponent(selectedComponent);
+            this.sidebarService.openSidebar();
+        });
         this.initDrawing();
     }
 

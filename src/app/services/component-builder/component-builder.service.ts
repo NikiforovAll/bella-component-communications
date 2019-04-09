@@ -15,19 +15,24 @@ import { ElementCoordinate } from '../../models/element-coordinate';
 import { VirtualDOM } from '../../models/virtual-dom';
 import { DiagramComponent } from '../../models/diagram-component';
 import { DiagramLink } from 'src/app/models/diagram-link';
+import { Subject, Observable } from 'rxjs';
 
 export class ComponentBuilderService implements IComponentBuilder {
 
     public domItemRegistry: ItemRegistry;
-    private innerContainer: any;
+    componentSelected$: Observable<string>;
 
     public get componentLineHeight(): number {
         return this.svgConfig.componentConfig.textLineHeight;
     }
 
+    private componentSelectedSource = new Subject<string>();
+    private innerContainer: any;
+
     constructor(private svgConfig: SVGConfig, private svg: any) {
         this.domItemRegistry = new ItemRegistry();
         this.svg = d3.select(svg);
+        this.componentSelected$ = this.componentSelectedSource.asObservable();
     }
 
     public build(data: GraphData): void {
@@ -55,7 +60,7 @@ export class ComponentBuilderService implements IComponentBuilder {
         });
         this.applyZoom(dom);
         this.applyDraggable();
-        console.log('domItemRegistry', this.domItemRegistry);
+        // console.log('domItemRegistry', this.domItemRegistry);
     }
 
     public clear(): void {
@@ -89,6 +94,11 @@ export class ComponentBuilderService implements IComponentBuilder {
             .attr('r', this.componentLineHeight / 4)
             .attr('class', 'component-connector');
         component.implementation = container;
+        const ctx = this;
+        container.on('dblclick', function(d) {
+            const componentId = d3.select(this).attr('id');
+            ctx.componentSelectedSource.next(componentId);
+        });
         this.domItemRegistry.registerComponent(component.title, component, container);
     }
 
@@ -211,9 +221,9 @@ export class ComponentBuilderService implements IComponentBuilder {
                             toService: toService.title,
                             updateCallback: (ctx, linkImpl) => {
                                 linkImpl.attr('x1', ctx.start.x)
-                                .attr('y1', ctx.start.y)
-                                .attr('x2', ctx.end.x)
-                                .attr('y2', ctx.end.y);
+                                    .attr('y1', ctx.start.y)
+                                    .attr('x2', ctx.end.x)
+                                    .attr('y2', ctx.end.y);
                             }
                         }
                     );
@@ -292,7 +302,7 @@ export class ComponentBuilderService implements IComponentBuilder {
 
             this.svg.call(zoom.transform, d3.zoomIdentity.translate(-minWidth, -minHeight).scale(scale));
         }
-        this.svg.call(zoom);
+        this.svg.call(zoom).on('dblclick.zoom', null);
     }
 
     private applyDraggable() {
@@ -306,7 +316,7 @@ export class ComponentBuilderService implements IComponentBuilder {
             component = component as DiagramComponent;
             component.setCoordinates(d3.event.x - component.frameWidth / 2, d3.event.y - component.frameHeight / 2);
             component.links.forEach((link: DiagramLink) => {
-                const {x: x1, y: y1} = component.getConnector();
+                const { x: x1, y: y1 } = component.getConnector();
                 link.setCoordinates(x1, y1, link.end.x, link.end.y);
             });
             component.subscribedLinks.forEach((link: DiagramLink) => {

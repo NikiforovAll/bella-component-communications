@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { DiagramComponent } from './components/dumb/diagram/diagram.component';
+import { DiagramComponent } from '../models/storage-models/diagram-component';
 
 @Injectable({
   providedIn: 'root'

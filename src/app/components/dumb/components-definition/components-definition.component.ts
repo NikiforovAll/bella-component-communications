@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 import { GraphData } from 'src/app/models/storage-models/graph-data';
-import { ComponentInformationSidebarService } from 'src/app/component-information-sidebar.service';
-import { DiagramComponent } from '../diagram/diagram.component';
+import { ComponentInformationSidebarService } from 'src/app/services/component-information-sidebar.service';
+import { DiagramComponent } from '../../../models/storage-models/diagram-component';
 
 @Component({
   selector: 'app-components-definition',

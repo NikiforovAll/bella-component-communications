@@ -44,6 +44,7 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 .diagram-root{
 
     .component-container {
+        cursor: pointer;
         rect {
             fill: whitesmoke;
             fill-opacity: 0.2;

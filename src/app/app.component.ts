@@ -2,7 +2,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { ComponentInformationSidebarService } from './component-information-sidebar.service';
+import { ComponentInformationSidebarService } from './services/component-information-sidebar.service';
 import { EventEmitter } from 'events';
 
 @Component({

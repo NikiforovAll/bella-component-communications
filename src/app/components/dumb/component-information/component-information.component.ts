@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 import { DiagramComponent } from "src/app/models/storage-models/diagram-component";
-import { ComponentInformationSidebarService } from 'src/app/component-information-sidebar.service';
+import { ComponentInformationSidebarService } from 'src/app/services/component-information-sidebar.service';
 import { Service } from 'src/app/models/storage-models/service';
 import { BaseConfig, ExternalDocumentationConfig } from "src/app/configs/base.config";
 @Component({
