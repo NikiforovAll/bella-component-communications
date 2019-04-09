@@ -19,7 +19,7 @@ export class DiagramUsageService {
    */
   public show() {
     if (this.strategy.isNotified()) {
-      this.snackBar.open('Double click to open component details 👋', '', {
+      this.snackBar.open('Double click on component to see details     👋', '', {
         duration: 3 * 1000
       });
     }

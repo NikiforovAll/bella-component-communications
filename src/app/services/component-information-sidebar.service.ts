@@ -24,6 +24,17 @@ export class ComponentInformationSidebarService {
   }
 
   public setSidebarComponent(component: DiagramComponent) {
+
+    // TODO: consider deep copy to prevent source data mutation.
+    const serviceComparer = (s1, s2) => {
+      const n1 = s1.name;
+      const n2 = s2.name;
+      if (n1 > n2) { return 1; }
+      if (n1 < n2) { return -1; }
+      return 0;
+    };
+    component.services = component.services.sort(serviceComparer);
+    component.consumes = component.consumes.sort(serviceComparer);
     this.selectedComponent$.next(component);
   }
 }
