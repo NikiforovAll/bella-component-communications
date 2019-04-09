@@ -18,12 +18,14 @@
         class="sidenav"
         fixedInViewport="true"
         [mode]="'over'"
-        [opened]="isComponentInfoDisplayed$ | async"
+        [opened]="sidebarService.sidebarState$ | async"
         (openedChange)="onSidebarOpenChanged($event)"
         role="region"
         class="sidenav-info"
     >
-    <mat-toolbar>Component Information</mat-toolbar>
+    <app-component-information 
+        [selectedDiagramComponent]="sidebarService.selectedComponent$ | async">
+    </app-component-information>
     </mat-sidenav>
 
     <mat-sidenav-content>

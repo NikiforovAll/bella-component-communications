@@ -24,6 +24,8 @@ import { ComponentDiagramComponent } from './components/smart/component-diagram/
 import { ComponentDataComponent } from './components/smart/component-data/component-data.component';
 import { DiagramComponent } from './components/dumb/diagram/diagram.component';
 import { ListComponent } from './components/dumb/list/list.component';
+import { ComponentInformationComponent } from './components/dumb/component-information/component-information.component';
+import { ComponentsDefinitionComponent } from './components/dumb/components-definition/components-definition.component';
 
 @NgModule({
     declarations: [
@@ -32,6 +34,8 @@ import { ListComponent } from './components/dumb/list/list.component';
         ComponentDataComponent,
         DiagramComponent,
         ListComponent,
+        ComponentInformationComponent,
+        ComponentsDefinitionComponent,
     ],
     imports: [
         BrowserModule,

@@ -12,4 +12,12 @@ export class BaseConfig {
         },
         textPadding: 5,
     };
+
+    public static externalDocumentationConfig: Readonly<ExternalDocumentationConfig> = {
+        baseUrl: 'https://condescending-bhaskara-2cb98d.netlify.com/'
+    };
+}
+
+export interface ExternalDocumentationConfig {
+    baseUrl: string;
 }

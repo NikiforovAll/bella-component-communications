@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { DiagramComponent } from './components/dumb/diagram/diagram.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ComponentInformationSidebarService {
 
-  private emitter: BehaviorSubject<boolean>;
-  state: boolean;
-  constructor() { }
+  public sidebarState$: BehaviorSubject<boolean>;
+  public selectedComponent$: BehaviorSubject<DiagramComponent>;
 
-  public setEmitter(emitter: BehaviorSubject<boolean>) {
-    this.emitter = emitter;
+  constructor() {
+    this.sidebarState$ = new BehaviorSubject<boolean>(false);
+    this.selectedComponent$ = new BehaviorSubject<DiagramComponent>(null);
   }
 
   public openSidebar() {
@@ -19,8 +20,10 @@ export class ComponentInformationSidebarService {
   }
 
   public setSidebarState(state: boolean) {
-    this.state = state;
-    this.emitter.next(state);
+    this.sidebarState$.next(state);
   }
 
+  public setSidebarComponent(component: DiagramComponent) {
+    this.selectedComponent$.next(component);
+  }
 }

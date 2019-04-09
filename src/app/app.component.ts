@@ -20,10 +20,7 @@ export class AppComponent {
             map(result => result.matches)
         );
 
-    isComponentInfoDisplayed$ = new BehaviorSubject<boolean>(false);
-
     constructor(private breakpointObserver: BreakpointObserver, private sidebarService: ComponentInformationSidebarService) {
-        this.sidebarService.setEmitter(this.isComponentInfoDisplayed$);
     }
 
     onSidebarOpenChanged($event) {

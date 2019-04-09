@@ -8,6 +8,8 @@ import {
     ElementRef,
     OnChanges,
     AfterViewInit,
+    Output,
+    EventEmitter
 } from '@angular/core';
 import { ComponentDrawingConfigurationItem } from '../../../models/component-drawing-configuration-item';
 import { SVGConfig } from '../../../models/svg-config';
@@ -17,7 +19,7 @@ import { GraphData } from '../../../models/storage-models/graph-data';
 import { ComponentDiagramGraphLayout } from '../../../enums/component-diagram-graph-layout.enum';
 import { IComponentBuilder } from 'src/app/interfaces/IComponentBuilder';
 import { ComponentInformationSidebarService } from 'src/app/component-information-sidebar.service';
-
+import { DiagramComponent as StorageDiagramComponent } from "src/app/models/storage-models/diagram-component";
 @Component({
     selector: 'app-diagram',
     templateUrl: './diagram.component.html',
@@ -28,21 +30,18 @@ export class DiagramComponent implements OnChanges, AfterViewInit {
     @Input() configurationItems: ComponentDrawingConfigurationItem[];
     @Input() graphData: GraphData;
     @Input() layout: ComponentDiagramGraphLayout = ComponentDiagramGraphLayout.Circle;
+    @Output() public componentSelected = new EventEmitter<StorageDiagramComponent>();
 
     @ViewChild('diagramContainer') diagramContainer: ElementRef<SVGElement>;
 
     @ViewChild('container') container: ElementRef<HTMLDivElement>;
-
-    /**
-     *
-     */
-    constructor(private service: ComponentInformationSidebarService) {
-        service.openSidebar();
-    }
     public svgConfig: SVGConfig = BaseConfig.svgConfig;
     public isEmptyComponentDiagram: boolean;
 
     private builder: IComponentBuilder;
+
+    constructor(private service: ComponentInformationSidebarService) {
+    }
 
     public ngOnChanges(_: SimpleChanges): void {
         this.svgConfig.width = this.container.nativeElement.clientWidth;
