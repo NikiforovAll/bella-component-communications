@@ -18,6 +18,7 @@ import {
     MatCheckboxModule,
     MatLabel,
     MatSelectModule,
+    MatSnackBarModule,
 } from '@angular/material';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { ComponentDiagramComponent } from './components/smart/component-diagram/component-diagram.component';
@@ -54,6 +55,7 @@ import { ComponentsDefinitionComponent } from './components/dumb/components-defi
         MatTabsModule,
         MatCheckboxModule,
         MatSelectModule,
+        MatSnackBarModule,
         ScrollingModule,
     ],
     providers: [],
