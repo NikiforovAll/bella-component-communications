@@ -20,7 +20,7 @@ export class AppComponent {
             map(result => result.matches)
         );
 
-    constructor(private breakpointObserver: BreakpointObserver, private sidebarService: ComponentInformationSidebarService) {
+    constructor(private breakpointObserver: BreakpointObserver, public sidebarService: ComponentInformationSidebarService) {
     }
 
     onSidebarOpenChanged($event) {

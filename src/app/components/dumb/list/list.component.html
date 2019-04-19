@@ -1,23 +1,37 @@
 <mat-card>
     <mat-card-content>
         <mat-toolbar>
-            <span>Configure</span>
-            <span>
-                <button
-                    (click)="onDrawingConfigurationSelection(true)"
-                    mat-button
-                    color="primary">
-                    SelectAll
-                </button>
-            </span>
-            <span>
-                <button
-                    (click)="onDrawingConfigurationSelection(false)"
-                    mat-button
-                    color="primary">
-                    UnselectAll
-                </button>
-            </span>
+                <mat-toolbar-row>
+                    <span>Configure</span>
+                </mat-toolbar-row>
+                <mat-toolbar-row >
+                    <span>
+                        <button
+                            (click)="onDrawingConfigurationSelection(true)"
+                            mat-button
+                            color="primary">
+                            SelectAll
+                        </button>
+                    </span>
+                    <span>
+                        <button
+                            (click)="onDrawingConfigurationSelection(false)"
+                            mat-button
+                            color="primary">
+                            UnselectAll
+                        </button>
+                    </span>
+                    <span>
+                        <button
+                            color="primary"
+                            matTooltip="Completes diagram based on currently selected elements and first level dependencies."
+                            matTooltipPosition="below"
+                            aria-label="Button that displays a tooltip when focused or hovered over"
+                            mat-button>
+                            Complete
+                        </button>
+                    </span>
+                </mat-toolbar-row>
         </mat-toolbar>
         <mat-card>
             <mat-card-subtitle>Configuration</mat-card-subtitle>

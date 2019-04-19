@@ -1,11 +1,13 @@
 import { ElementCoordinate } from './element-coordinate';
 import { IElementFrame } from '../interfaces/IElementFrame';
 import { IDiagramService } from '../interfaces/IDiagramService';
+import { DiagramComponent } from "../models/diagram-component";
 export class DiagramService implements IDiagramService {
     hostedOn: string;
     coordinates: ElementCoordinate;
     frame: IElementFrame;
     nodeClass: string;
+    parentComponent?: DiagramComponent;
 
     constructor(public title: string, init?: Partial<DiagramService>) {
         this.title = title;

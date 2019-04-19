@@ -183,7 +183,8 @@ export class ComponentBuilderService implements IComponentBuilder {
                                     x: this.svgConfig.componentConfig.width,
                                     y: this.componentLineHeight
                                 }
-                            }
+                            },
+                            parentComponent: diagramComponent
                         }
                     )
                 );

@@ -14,7 +14,8 @@ export class BaseConfig {
     };
 
     public static externalDocumentationConfig: Readonly<ExternalDocumentationConfig> = {
-        baseUrl: 'https://condescending-bhaskara-2cb98d.netlify.com/'
+        // baseUrl: 'https://condescending-bhaskara-2cb98d.netlify.com/'
+        baseUrl: 'http://localhost:8000'
     };
 }
 

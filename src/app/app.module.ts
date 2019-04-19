@@ -16,7 +16,7 @@ import {
     MatGridListModule,
     MatTabsModule,
     MatCheckboxModule,
-    MatLabel,
+    MatTooltipModule,
     MatSelectModule,
     MatSnackBarModule,
 } from '@angular/material';
@@ -54,6 +54,7 @@ import { ComponentsDefinitionComponent } from './components/dumb/components-defi
         MatListModule,
         MatTabsModule,
         MatCheckboxModule,
+        MatTooltipModule,
         MatSelectModule,
         MatSnackBarModule,
         ScrollingModule,
