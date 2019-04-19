@@ -33,14 +33,18 @@ export class ComponentDiagramComponent implements OnInit, AfterViewInit {
     public ngAfterViewInit(): void {
         setTimeout(() => {
             this.diagramUsageService.show();
-          });
+        });
     }
 
-    public onConfigurationChanged({ name, isChecked }: ComponentDrawingConfigurationItem): void {
-        this.configurationItems$.next(
+    public onConfigurationChanged(item: ComponentDrawingConfigurationItem): void {
+        this.onConfigurationChangedBulk([item]);
+    }
+
+    public onConfigurationChangedBulk(configurationItems: ComponentDrawingConfigurationItem[]): void {
+            this.configurationItems$.next(
             this.configurationItems$.getValue()
-                .map(node => node.name === name
-                    ? { ...node, isChecked }
+                .map(node => configurationItems.map(el => el.name).includes(node.name)
+                    ? { ...node, isChecked: configurationItems.find(ci => ci.name === node.name).isChecked }
                     : node)
         );
     }

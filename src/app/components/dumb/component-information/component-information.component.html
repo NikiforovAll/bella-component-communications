@@ -15,7 +15,7 @@
 </mat-toolbar>
 
 <mat-tab-group>
-    <mat-tab label="Exposes">
+    <mat-tab label="ExposesServices">
         <mat-card>
             <mat-list>
                 <mat-list-item *ngFor="let service of currentDiagramComponent?.servicesExtended">
@@ -33,15 +33,29 @@
             </mat-list>
         </mat-card>
     </mat-tab>
-    <mat-tab label="Consumes">
+    <mat-tab label="ConsumesServices">
         <mat-card>
             <mat-list-item *ngFor="let service of currentDiagramComponent?.consumesExtended">
                 <div class="component-row">
-                    <div>
-                        {{service.parentComponent}}:{{ service.name }}
-                    </div>
+                    <div>{{ !!service.parentComponent ? service.parentComponent : '{external}' }}:{{ service.name }}</div>
                     <div>
                         <button mat-button (click)="openComponentDocumentation(service)">
+                            <mat-icon>link</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </mat-list-item>
+        </mat-card>
+    </mat-tab>
+    <mat-tab label="UsedByComponents">
+        <mat-card>
+            <mat-list-item *ngFor="let component of currentDiagramComponent?.consumedBy">
+                <div class="component-row">
+                    <div>
+                        {{ component.name }}
+                    </div>
+                    <div>
+                        <button mat-button (click)="openComponentDocumentation(component)">
                             <mat-icon>link</mat-icon>
                         </button>
                     </div>

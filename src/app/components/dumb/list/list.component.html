@@ -27,6 +27,7 @@
                             matTooltip="Completes diagram based on currently selected elements and first level dependencies."
                             matTooltipPosition="below"
                             aria-label="Button that displays a tooltip when focused or hovered over"
+                            (click)="onBuildDependencies()"
                             mat-button>
                             Complete
                         </button>

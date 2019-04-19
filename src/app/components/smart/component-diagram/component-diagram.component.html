@@ -5,6 +5,7 @@
             [layout]="layout$ | async"
             (changeConfigSelection)="onDrawingConfigurationSelection($event)"
             (componentChecked)="onConfigurationChanged($event)"
+            (componentsChecked)="onConfigurationChangedBulk($event)"
             (changeLayout)="onChangeLayout($event)">
         </app-list>
     </div>

@@ -4,7 +4,7 @@ import { StorageService } from 'src/app/services/storage/storage.service';
 import { GraphData } from 'src/app/models/storage-models/graph-data';
 import { DiagramComponent } from 'src/app/models/storage-models/diagram-component';
 import { Service } from 'src/app/models/storage-models/service';
-import { findComponentForServiceByName } from 'src/app/utils/storage-data.utils';
+import { findComponentForServiceByName, findUsedByComponents} from 'src/app/utils/storage-data.utils';
 @Component({
     selector: 'app-component-information',
     templateUrl: './component-information.component.html',
@@ -17,25 +17,21 @@ export class ComponentInformationComponent implements OnInit {
         if (!value) {
             return;
         }
-        const assignComponent =
-          s => {
+        const assignComponent = s => {
             const toComponent = findComponentForServiceByName(this.cachedData.nodes, s.name);
-
-            return Object.assign(
-              { parentComponent: toComponent && toComponent.name || '',
-                ...s
-              });
-          };
+            return Object.assign({ parentComponent: toComponent && toComponent.name, ...s });
+        };
         this.currentDiagramComponent = Object.assign({}, value);
         this.currentDiagramComponent.consumesExtended = this.currentDiagramComponent.consumes.map(assignComponent);
         this.currentDiagramComponent.servicesExtended = this.currentDiagramComponent.services.map(assignComponent);
+        this.currentDiagramComponent.consumedBy = findUsedByComponents(this.cachedData.nodes, this.currentDiagramComponent.name);
     }
 
     get selectedDiagramComponent(): DiagramComponent {
         return this.currentDiagramComponent;
     }
 
-    private currentDiagramComponent: DiagramComponent & ServiceExtension;
+    public currentDiagramComponent: DiagramComponent & ServiceExtension;
     private externalDocsConfig: ExternalDocumentationConfig;
     private cachedData: GraphData;
 
@@ -52,10 +48,8 @@ export class ComponentInformationComponent implements OnInit {
             const selectedService = baseElement as (Service & ExtendedService);
             const urlTokens = [
                 this.externalDocsConfig.baseUrl,
-                '/components-api/',
-                selectedService.parentComponent,
-                '.html#',
-                selectedService.name.toLocaleLowerCase(),
+                !!selectedService.parentComponent ? `/components-api/${selectedService.parentComponent}.html` : '/component-api-list.html',
+                `#${selectedService.name.toLocaleLowerCase()}`,
             ];
             window.open(urlTokens.join(''), '_blank');
         }
@@ -69,6 +63,7 @@ export class ComponentInformationComponent implements OnInit {
 interface ServiceExtension {
     consumesExtended?: ExtendedService[];
     servicesExtended?: ExtendedService[];
+    consumedBy?: DiagramComponent[];
 }
 
 interface ExtendedService {
