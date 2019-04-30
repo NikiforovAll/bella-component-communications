@@ -13,8 +13,9 @@ export class BaseConfig {
         textPadding: 5,
     };
 
-    public static externalDocumentationConfig: Readonly<ExternalDocumentationConfig> = {
-        baseUrl: 'https://condescending-bhaskara-2cb98d.netlify.com/'
+    // TODO: not read-only config anymore, consider to provide it as service with getter.
+    public static externalDocumentationConfig: ExternalDocumentationConfig = {
+        baseUrl: ''
     };
 }
 

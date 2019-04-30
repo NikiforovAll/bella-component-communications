@@ -1,0 +1,11 @@
+{
+    "nodes": [
+        { "name": "Test1", "services": [{ "name": "Test1", "on": "Test1" }], "consumes": [] },
+        {
+            "name": "Test2",
+            "services": [{ "name": "Test2", "on": "Test2" }],
+            "consumes": [{ "name": "Test1", "on": "Test1" }, { "name": "Test3", "on": "Test3" }]
+        },
+        { "name": "Test3", "services": [{ "name": "Test3", "on": "Test3" }], "consumes": [] }
+    ]
+}
