@@ -1,5 +1,6 @@
 import { DiagramComponent } from '../models/storage-models/diagram-component';
 import { Service } from '../models/storage-models/service';
+import { MethodCall, MethodReference } from '../models/storage-models/method-call';
 
 export function findComponentForServiceByName(components: DiagramComponent[], serviceName: string): DiagramComponent {
     const toComponent = components.find(el => el.services.map(s => s.name).includes(serviceName));
@@ -8,8 +9,12 @@ export function findComponentForServiceByName(components: DiagramComponent[], se
 
 export function findUsedByComponents(components: DiagramComponent[], componentName: string): DiagramComponent[] {
     const component = components.find(c => c.name === componentName);
-    return components.filter(c => hasSameServiceAccounts(c.consumes, component.services) ||
-        hasSameServiceAccounts(c.services, component.consumes));
+    return components.filter(c => hasSameServiceAccounts(c.consumes, component.services) || hasSameServiceAccounts(c.services, component.consumes));
+}
+export function getServiceReferences(hostComponentName: string, serviceName: string, source: MethodCall[]): MethodReference[] {
+    let mc = source.find(c => c.componentName === hostComponentName).references;
+    const result = mc.filter(r => r.serviceName === serviceName);
+    return result;
 }
 
 function hasSameServiceAccounts(array1: Service[], array2: Service[]): boolean {
