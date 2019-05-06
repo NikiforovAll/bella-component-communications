@@ -8,7 +8,8 @@ export function findComponentForServiceByName(components: DiagramComponent[], se
 
 export function findUsedByComponents(components: DiagramComponent[], componentName: string): DiagramComponent[] {
     const component = components.find(c => c.name === componentName);
-    return components.filter(c => hasSameServiceAccounts(c.consumes, component.services));
+    return components.filter(c => hasSameServiceAccounts(c.consumes, component.services) ||
+        hasSameServiceAccounts(c.services, component.consumes));
 }
 
 function hasSameServiceAccounts(array1: Service[], array2: Service[]): boolean {

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +27,8 @@ import { DiagramComponent } from './components/dumb/diagram/diagram.component';
 import { ListComponent } from './components/dumb/list/list.component';
 import { ComponentInformationComponent } from './components/dumb/component-information/component-information.component';
 import { ComponentsDefinitionComponent } from './components/dumb/components-definition/components-definition.component';
+import { AppConfiguration } from './services/app-config.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -39,6 +41,7 @@ import { ComponentsDefinitionComponent } from './components/dumb/components-defi
         ComponentsDefinitionComponent,
     ],
     imports: [
+        HttpClientModule,
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
@@ -59,7 +62,20 @@ import { ComponentsDefinitionComponent } from './components/dumb/components-defi
         MatSnackBarModule,
         ScrollingModule,
     ],
-    providers: [],
+    providers: [
+        [
+            AppConfiguration,
+            {
+                provide: APP_INITIALIZER,
+                useFactory: AppConfigurationFactory,
+                deps: [AppConfiguration, HttpClient],
+                multi: true,
+            },
+        ],
+    ],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
+export function AppConfigurationFactory(appConfig: AppConfiguration) {
+    return () => appConfig.ensureInit();
+}
