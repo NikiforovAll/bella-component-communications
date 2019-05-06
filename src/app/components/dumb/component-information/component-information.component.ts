@@ -4,7 +4,8 @@ import { StorageService } from 'src/app/services/storage/storage.service';
 import { GraphData } from 'src/app/models/storage-models/graph-data';
 import { DiagramComponent } from 'src/app/models/storage-models/diagram-component';
 import { Service } from 'src/app/models/storage-models/service';
-import { findComponentForServiceByName, findUsedByComponents} from 'src/app/utils/storage-data.utils';
+import { findComponentForServiceByName, findUsedByComponents, getServiceReferences } from 'src/app/utils/storage-data.utils';
+import { MethodCall, MethodReference } from 'src/app/models/storage-models/method-call';
 @Component({
     selector: 'app-component-information',
     templateUrl: './component-information.component.html',
@@ -19,7 +20,11 @@ export class ComponentInformationComponent implements OnInit {
         }
         const assignComponent = s => {
             const toComponent = findComponentForServiceByName(this.cachedData.nodes, s.name);
-            return Object.assign({ parentComponent: toComponent && toComponent.name, ...s });
+            return Object.assign({
+                parentComponent: toComponent && toComponent.name,
+                reference: getServiceReferences(value.name, s.name, this.methodCallCachedData),
+                ...s,
+            });
         };
         this.currentDiagramComponent = Object.assign({}, value);
         this.currentDiagramComponent.consumesExtended = this.currentDiagramComponent.consumes.map(assignComponent);
@@ -34,16 +39,25 @@ export class ComponentInformationComponent implements OnInit {
     public currentDiagramComponent: DiagramComponent & ServiceExtension;
     private externalDocsConfig: ExternalDocumentationConfig;
     private cachedData: GraphData;
+    methodCallCachedData: MethodCall[];
 
     constructor(storageService: StorageService) {
         this.externalDocsConfig = BaseConfig.externalDocumentationConfig;
         this.cachedData = storageService.getComponentData();
+        this.methodCallCachedData = storageService.getMethodCallData();
     }
 
     ngOnInit() {}
-    openComponentDocumentation(baseElement: any) {
+    openComponentDocumentation(baseElement: any, component: string) {
         if (this.instanceOfDiagramComponent(baseElement)) {
             window.open(`${this.externalDocsConfig.baseUrl}/components-api/${baseElement.name}.html#service-reference`, '_blank');
+        } else if (this.instanceOfMethodReference(baseElement)) {
+            const urlTokens = [
+                this.externalDocsConfig.baseUrl,
+                !!component ? `/components-api/${component}.html` : '/component-api-list.html',
+                `#${baseElement.methodName.toLocaleLowerCase()}`,
+            ];
+            window.open(urlTokens.join(''), '_blank');
         } else {
             const selectedService = baseElement as (Service & ExtendedService);
             const urlTokens = [
@@ -58,6 +72,10 @@ export class ComponentInformationComponent implements OnInit {
     private instanceOfDiagramComponent(object: any): object is Service {
         return 'services' in object;
     }
+
+    private instanceOfMethodReference(object: any): object is MethodReference {
+        return 'context' in object;
+    }
 }
 
 interface ServiceExtension {
@@ -68,4 +86,5 @@ interface ServiceExtension {
 
 interface ExtendedService {
     parentComponent: string;
+    reference?: MethodReference[];
 }
