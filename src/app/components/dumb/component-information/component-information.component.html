@@ -7,7 +7,7 @@
             <span class="component-name">{{ selectedDiagramComponent?.name }}</span>
         </div>
         <div>
-            <button mat-button (click)="openComponentDocumentation(selectedDiagramComponent)">
+            <button mat-button (click)="openComponentDocumentation(selectedDiagramComponent, '')">
                 <mat-icon>link</mat-icon>
             </button>
         </div>
@@ -17,107 +17,39 @@
 <mat-tab-group>
     <mat-tab label="ExposesServices">
         <mat-card>
-            <mat-list>
-                <mat-list-item *ngFor="let service of currentDiagramComponent?.servicesExtended">
-                    <div class="component-row">
-                        <div>
-                            {{ service.name }}
-                        </div>
-                        <div>
-                            <button mat-button (click)="openComponentDocumentation(service)">
-                                <mat-icon>link</mat-icon>
-                            </button>
-                        </div>
-                    </div>
-                </mat-list-item>
-            </mat-list>
+            <div *ngFor="let service of currentDiagramComponent?.servicesExtended">
+                    <app-method-reference-info-card 
+                        [entityName]="service.name"
+                        [entityUrl]="generateDocumentationUrl(service)"
+                        [methodReference]="service?.reference"
+                        [component]="service.parentComponent"
+                        [isLazyLoaded]="true">
+                    </app-method-reference-info-card>
+            </div>
         </mat-card>
     </mat-tab>
     <mat-tab label="ConsumesServices">
-        
         <mat-card>
-            <mat-expansion-panel *ngFor="let service of currentDiagramComponent?.consumesExtended">
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        <div class="panel-container">
-                            <div>
-                                {{ !!service.parentComponent ? service.parentComponent : '{external}' }}:{{ service.name }}
-                            </div>
-                            <div>
-                                <button mat-button (click)="openComponentDocumentation(service)">
-                                    <mat-icon>link</mat-icon>
-                                </button>
-                            </div>
-                        </div>
-                    </mat-panel-title>
-                    <!-- <mat-panel-description>
-                        Methods: []
-                    </mat-panel-description> -->
-                </mat-expansion-panel-header>
-                    <mat-expansion-panel *ngFor="let ref of service?.reference">
-                            <mat-expansion-panel-header>
-                                <mat-panel-title>
-                                    <div class="panel-container">
-                                        <div>
-                                            {{ ref.methodName }}
-                                        </div>
-                                        <div>
-                                            <button mat-button (click)="openComponentDocumentation(ref, service.parentComponent)">
-                                                <mat-icon>link</mat-icon>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </mat-panel-title>
-                            </mat-expansion-panel-header>
-                            <div>
-                                <b>Source</b>
-                            </div>
-                            <div>
-                                {{ref.file}}, line: {{ref.line}}
-                            </div>
-                            <mat-divider></mat-divider>
-                            <div>
-                                <b>Context</b>
-                            </div>
-                            <div>
-                                {{ ref.context}}
-                            </div>
-                            
-                    </mat-expansion-panel>
-                    <div [hidden]="service?.reference.length > 0" align="center" class="empty-diagram-placeholder">
-                            <svg height="10pt" viewBox="-78 -18 560 560.00187" width="100%" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="m260.722656 3.878906-.128906-.125c-2.355469-2.429687-5.605469-3.7890622-8.996094-3.74999975-.417968-.01953125-.839844.01953125-1.25.12890575h-191.953125c-34.503906.007813-62.46875 27.976563-62.484375 62.484376v399.898437c.015625 34.503906 27.980469 62.472656 62.484375 62.484375h278.308594c34.503906-.011719 62.472656-27.980469 62.484375-62.484375v-315.175781c-.023438-3.308594-1.320312-6.484375-3.625-8.867188zm3.371094 38.742188 92.726562 92.476562h-55.234374c-20.679688-.0625-37.433594-16.8125-37.492188-37.488281zm72.734375 457.261718h-278.433594c-20.679687-.058593-37.425781-16.8125-37.492187-37.492187v-399.902344c.066406-20.675781 16.8125-37.429687 37.492187-37.488281h180.707031v72.609375c.011719 34.5 27.980469 62.46875 62.484376 62.484375h72.609374v302.296875c.039063 20.671875-16.695312 37.464844-37.367187 37.492187zm0 0" />
-                            </svg>
-                            <div>No References!</div>
-                    </div>
-            </mat-expansion-panel>
-            <!-- <mat-list-item *ngFor="let service of currentDiagramComponent?.consumesExtended">
-                <div class="component-row">
-                    <div>{{ !!service.parentComponent ? service.parentComponent : '{external}' }}:{{ service.name }}</div>
-                    <div>
-                        <button mat-button (click)="openComponentDocumentation(service)">
-                            <mat-icon>link</mat-icon>
-                        </button>
-                    </div>
-                </div>
-            </mat-list-item> -->
+            <div *ngFor="let service of currentDiagramComponent?.consumesExtended">
+                <app-method-reference-info-card 
+                    [entityName]="((!!service.parentComponent ? service.parentComponent : '{external}') + ':' + service.name)"
+                    [entityUrl]="generateDocumentationUrl(service)"
+                    [methodReference]="service?.reference"
+                    [component]="service.parentComponent">
+                </app-method-reference-info-card>
+            </div>
         </mat-card>
     </mat-tab>
     <mat-tab label="UsedByComponents">
         <mat-card>
-            <mat-list-item *ngFor="let component of currentDiagramComponent?.consumedBy">
-                <div class="component-row">
-                    <div>
-                        {{ component.name }}
-                    </div>
-                    <div>
-                        <button mat-button (click)="openComponentDocumentation(component)">
-                            <mat-icon>link</mat-icon>
-                        </button>
-                    </div>
-                </div>
-            </mat-list-item>
+            <div *ngFor="let component of currentDiagramComponent?.consumedBy">
+                <app-method-reference-info-card 
+                    [entityName]="component.name"
+                    [entityUrl]="generateDocumentationUrl(component)"
+                    [methodReference]="component?.reference"
+                    [component]="component.name">
+                </app-method-reference-info-card>
+            </div>
         </mat-card>
     </mat-tab>
 </mat-tab-group>

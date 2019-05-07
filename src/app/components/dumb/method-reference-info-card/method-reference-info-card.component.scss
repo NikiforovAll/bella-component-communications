@@ -1,0 +1,26 @@
+
+.panel-container{
+    width: 100%;
+    // padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.method-reference-container{
+    height: 300px;
+    width: 100%;
+}
+
+.source-data {
+    white-space: nowrap;
+    overflow: hidden;
+    // text-overflow: ellipsis;
+    max-width: 450px;
+    word-break: break-all;
+    white-space: nowrap;
+}
+.source-data:hover {
+    height: auto;
+    overflow: visible;
+    cursor: pointer;
+}

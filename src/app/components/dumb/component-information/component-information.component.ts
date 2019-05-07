@@ -4,7 +4,7 @@ import { StorageService } from 'src/app/services/storage/storage.service';
 import { GraphData } from 'src/app/models/storage-models/graph-data';
 import { DiagramComponent } from 'src/app/models/storage-models/diagram-component';
 import { Service } from 'src/app/models/storage-models/service';
-import { findComponentForServiceByName, findUsedByComponents, getServiceReferences } from 'src/app/utils/storage-data.utils';
+import { findComponentForServiceByName, findUsedByComponents, getServiceReferences, getServiceReferencesForServices, getServiceReferencesForComponents } from 'src/app/utils/storage-data.utils';
 import { MethodCall, MethodReference } from 'src/app/models/storage-models/method-call';
 @Component({
     selector: 'app-component-information',
@@ -14,7 +14,7 @@ import { MethodCall, MethodReference } from 'src/app/models/storage-models/metho
 })
 export class ComponentInformationComponent implements OnInit {
     @Input() set selectedDiagramComponent(value: DiagramComponent) {
-        //copy
+        // copy
         if (!value) {
             return;
         }
@@ -29,7 +29,11 @@ export class ComponentInformationComponent implements OnInit {
         this.currentDiagramComponent = Object.assign({}, value);
         this.currentDiagramComponent.consumesExtended = this.currentDiagramComponent.consumes.map(assignComponent);
         this.currentDiagramComponent.servicesExtended = this.currentDiagramComponent.services.map(assignComponent);
-        this.currentDiagramComponent.consumedBy = findUsedByComponents(this.cachedData.nodes, this.currentDiagramComponent.name);
+        const usedBy = findUsedByComponents(this.cachedData.nodes, this.currentDiagramComponent.name);
+        usedBy.forEach(c => {
+            (c as any).reference = getServiceReferencesForServices(c.name, value.services.map(s => s.name), this.methodCallCachedData);
+        });
+        this.currentDiagramComponent.consumedBy = usedBy as (DiagramComponent & ComponentExtension)[];
     }
 
     get selectedDiagramComponent(): DiagramComponent {
@@ -39,7 +43,7 @@ export class ComponentInformationComponent implements OnInit {
     public currentDiagramComponent: DiagramComponent & ServiceExtension;
     private externalDocsConfig: ExternalDocumentationConfig;
     private cachedData: GraphData;
-    methodCallCachedData: MethodCall[];
+    private methodCallCachedData: MethodCall[];
 
     constructor(storageService: StorageService) {
         this.externalDocsConfig = BaseConfig.externalDocumentationConfig;
@@ -48,16 +52,18 @@ export class ComponentInformationComponent implements OnInit {
     }
 
     ngOnInit() {}
+
     openComponentDocumentation(baseElement: any, component: string) {
         if (this.instanceOfDiagramComponent(baseElement)) {
             window.open(`${this.externalDocsConfig.baseUrl}/components-api/${baseElement.name}.html#service-reference`, '_blank');
-        } else if (this.instanceOfMethodReference(baseElement)) {
-            const urlTokens = [
-                this.externalDocsConfig.baseUrl,
-                !!component ? `/components-api/${component}.html` : '/component-api-list.html',
-                `#${baseElement.methodName.toLocaleLowerCase()}`,
-            ];
-            window.open(urlTokens.join(''), '_blank');
+        } else {
+            throw new Error('Not instance of component');
+        }
+    }
+
+    generateDocumentationUrl(baseElement: any) {
+        if (this.instanceOfDiagramComponent(baseElement)) {
+            return `${this.externalDocsConfig.baseUrl}/components-api/${baseElement.name}.html#service-reference`;
         } else {
             const selectedService = baseElement as (Service & ExtendedService);
             const urlTokens = [
@@ -65,26 +71,26 @@ export class ComponentInformationComponent implements OnInit {
                 !!selectedService.parentComponent ? `/components-api/${selectedService.parentComponent}.html` : '/component-api-list.html',
                 `#${selectedService.name.toLocaleLowerCase()}`,
             ];
-            window.open(urlTokens.join(''), '_blank');
+            return urlTokens.join('');
         }
     }
 
     private instanceOfDiagramComponent(object: any): object is Service {
         return 'services' in object;
     }
-
-    private instanceOfMethodReference(object: any): object is MethodReference {
-        return 'context' in object;
-    }
 }
 
 interface ServiceExtension {
     consumesExtended?: ExtendedService[];
     servicesExtended?: ExtendedService[];
-    consumedBy?: DiagramComponent[];
+    consumedBy?: (DiagramComponent & ComponentExtension)[];
 }
 
 interface ExtendedService {
     parentComponent: string;
+    reference?: MethodReference[];
+}
+
+interface ComponentExtension {
     reference?: MethodReference[];
 }

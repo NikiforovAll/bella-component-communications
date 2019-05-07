@@ -29,6 +29,7 @@ import { ComponentInformationComponent } from './components/dumb/component-infor
 import { ComponentsDefinitionComponent } from './components/dumb/components-definition/components-definition.component';
 import { AppConfiguration } from './services/app-config.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MethodReferenceInfoCardComponent } from './components/dumb/method-reference-info-card/method-reference-info-card.component';
 
 @NgModule({
     declarations: [
@@ -39,6 +40,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
         ListComponent,
         ComponentInformationComponent,
         ComponentsDefinitionComponent,
+        MethodReferenceInfoCardComponent,
     ],
     imports: [
         HttpClientModule,
