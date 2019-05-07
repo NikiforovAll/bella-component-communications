@@ -7,11 +7,13 @@ export function findComponentForServiceByName(components: DiagramComponent[], se
     return toComponent;
 }
 
-export function findUsedByComponents(components: DiagramComponent[], componentName: string): DiagramComponent[] {
+// inclusive allows to find all references to build complete graph
+
+export function findUsedByComponents(components: DiagramComponent[], componentName: string, inclusive: boolean): DiagramComponent[] {
     const component = components.find(c => c.name === componentName);
     return components
         .filter(c => hasSameServiceAccounts(c.consumes, component.services) ||
-            hasSameServiceAccounts(c.services, component.consumes));
+            (inclusive && hasSameServiceAccounts(c.services, component.consumes)));
 }
 
 export function getServiceReferences(hostComponentName: string, serviceName: string, source: MethodCall[]): MethodReference[] {
@@ -34,6 +36,12 @@ export function getServiceReferencesForServices(
     const result = mc.filter(r => serviceNames.includes(r.serviceName));
     return result;
 }
+
+export function isServiceUsedByComponent(hostComponent: string, serviceName: string, source: MethodCall[]) {
+    return getServiceReferences(hostComponent, serviceName, source).length > 0;
+}
 function hasSameServiceAccounts(array1: Service[], array2: Service[]): boolean {
     return array1.some(s1 => array2.some(s2 => s2.name === s1.name));
 }
+
+

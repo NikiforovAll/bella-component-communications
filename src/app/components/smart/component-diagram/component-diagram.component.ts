@@ -7,6 +7,7 @@ import { ComponentDrawingConfigurationItem } from '../../../models/component-dra
 import { BehaviorSubject } from 'rxjs';
 import { ComponentDiagramGraphLayout } from '../../../enums/component-diagram-graph-layout.enum';
 import { DiagramUsageService } from 'src/app/services/diagram-usage/diagram-usage.service';
+import { MethodCall } from 'src/app/models/storage-models/method-call';
 
 @Component({
     selector: 'app-component-diagram',
@@ -16,6 +17,7 @@ import { DiagramUsageService } from 'src/app/services/diagram-usage/diagram-usag
 })
 export class ComponentDiagramComponent implements OnInit, AfterViewInit {
     public graphData: GraphData;
+    public methodCalls: MethodCall[];
     public svgConfig: SVGConfig;
     public configurationItems$ = new BehaviorSubject<ComponentDrawingConfigurationItem[]>([]);
     public layout$ = new BehaviorSubject<ComponentDiagramGraphLayout>(ComponentDiagramGraphLayout.Circle);
@@ -25,6 +27,7 @@ export class ComponentDiagramComponent implements OnInit, AfterViewInit {
     public ngOnInit(): void {
         this.svgConfig = BaseConfig.svgConfig;
         this.graphData = this.storageService.getComponentData();
+        this.methodCalls = this.storageService.getMethodCallData();
         this.configurationItems$.next(
             this.graphData.nodes.map(node => ({ name: node.name, isChecked: true }))
         );

@@ -35,7 +35,7 @@ export class ListComponent {
 
         const selectedComponentNames = [];
         this.configurationItems.filter(ci => ci.isChecked).forEach(ci => selectedComponentNames
-            .push(...findUsedByComponents(this.cachedData.nodes, ci.name)
+            .push(...findUsedByComponents(this.cachedData.nodes, ci.name, true)
                     .map(c => ({name: c.name, isChecked: true})))
         );
         this.componentsChecked.next(selectedComponentNames);

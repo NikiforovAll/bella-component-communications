@@ -2,12 +2,7 @@ import * as d3 from 'd3';
 import { SVGConfig } from '../../models/svg-config';
 import { ItemRegistry } from '../../models/item-registry';
 import { GraphData } from '../../models/storage-models/graph-data';
-import {
-    polygon,
-    generateLargeScaleGraph,
-    buildTransformTemplate,
-    calculateAbsoluteServiceConnector
-} from '../../utils/utils';
+import { polygon, generateLargeScaleGraph, buildTransformTemplate, calculateAbsoluteServiceConnector } from '../../utils/utils';
 import { IComponentBuilder } from '../../interfaces/IComponentBuilder';
 import { ComponentDiagramGraphLayout } from 'src/app/enums/component-diagram-graph-layout.enum';
 import { DiagramService } from '../../models/diagram-service';
@@ -16,11 +11,13 @@ import { VirtualDOM } from '../../models/virtual-dom';
 import { DiagramComponent } from '../../models/diagram-component';
 import { DiagramLink } from 'src/app/models/diagram-link';
 import { Subject, Observable } from 'rxjs';
+import { isServiceUsedByComponent } from 'src/app/utils/storage-data.utils';
+import { MethodCall } from 'src/app/models/storage-models/method-call';
 
 export class ComponentBuilderService implements IComponentBuilder {
-
     public domItemRegistry: ItemRegistry;
     componentSelected$: Observable<string>;
+    methodCalls: MethodCall[];
 
     public get componentLineHeight(): number {
         return this.svgConfig.componentConfig.textLineHeight;
@@ -36,23 +33,21 @@ export class ComponentBuilderService implements IComponentBuilder {
     }
 
     public build(data: GraphData): void {
-        this.buildFromLayout(data, ComponentDiagramGraphLayout.Circle);
+        this.buildFromLayout(data, null, ComponentDiagramGraphLayout.Circle);
     }
 
-    public buildFromLayout(data: GraphData, layout: ComponentDiagramGraphLayout): void {
+    public buildFromLayout(data: GraphData, methodCalls: MethodCall[], layout: ComponentDiagramGraphLayout): void {
         this.innerContainer = this.svg.append('g').attr('class', 'diagram-root');
+        this.methodCalls = methodCalls;
         this.defineAdditionalElements();
         const dom = this.initializeVirtualDOM(data, layout);
         dom.nodes.forEach(element => {
             const diagramComponent = element as DiagramComponent;
             this.drawComponentElement(diagramComponent);
-            diagramComponent.services.forEach(
-                virtualService => {
-                    const service = virtualService as DiagramService;
-                    this.drawServiceElement(diagramComponent, service);
-                }
-            );
-
+            diagramComponent.services.forEach(virtualService => {
+                const service = virtualService as DiagramService;
+                this.drawServiceElement(diagramComponent, service);
+            });
         });
         dom.nodes.forEach(element => {
             const diagramComponent = element as DiagramComponent;
@@ -78,7 +73,8 @@ export class ComponentBuilderService implements IComponentBuilder {
             .append('rect')
             .attr('height', component.frameHeight)
             .attr('width', component.frameWidth);
-        container.append('g')
+        container
+            .append('g')
             .attr('class', 'service-group')
             .attr('y', this.componentLineHeight);
         container
@@ -104,14 +100,13 @@ export class ComponentBuilderService implements IComponentBuilder {
 
     private drawServiceElement(component: DiagramComponent, service: DiagramService) {
         const serviceItemContainer = this.domItemRegistry
-            .getComponent(component.title).container.select('.service-group')
+            .getComponent(component.title)
+            .container.select('.service-group')
             .append('g')
             .attr('id', service.title)
             .attr('class', 'service-container')
             .attr('transform', buildTransformTemplate(0, service.coordinates.y));
-        const itemContainer = serviceItemContainer
-            .append('g')
-            .attr('transform', buildTransformTemplate(0, this.componentLineHeight / 2));
+        const itemContainer = serviceItemContainer.append('g').attr('transform', buildTransformTemplate(0, this.componentLineHeight / 2));
         itemContainer
             .append('rect')
             .attr('height', service.frameHeight)
@@ -132,8 +127,8 @@ export class ComponentBuilderService implements IComponentBuilder {
 
     private drawServiceLinks(component: DiagramComponent) {
         component.links.forEach(link => {
-            const linkImpl = this.innerContainer.
-                append('line')
+            const linkImpl = this.innerContainer
+                .append('line')
                 .attr('x1', link.start.x)
                 .attr('y1', link.start.y)
                 .attr('x2', link.end.x)
@@ -147,50 +142,41 @@ export class ComponentBuilderService implements IComponentBuilder {
     private initializeVirtualDOM(data: GraphData, layout: ComponentDiagramGraphLayout): VirtualDOM {
         const coordinates = this.calculateComponentCoordinates(data, layout);
         const components = data.nodes.map((componentData, componentIndex) => {
-            const diagramComponent = new DiagramComponent(
-                componentData.name,
-                coordinates[componentIndex],
-                {
-                    frame: {
-                        start: {
-                            x: 0,
-                            y: 0
-                        },
-                        end: {
-                            x: this.svgConfig.componentConfig.width,
-                            y: this.componentLineHeight * (componentData.services.length + 1) + this.svgConfig.textPadding * 3
-                        }
+            const diagramComponent = new DiagramComponent(componentData.name, coordinates[componentIndex], {
+                frame: {
+                    start: {
+                        x: 0,
+                        y: 0,
                     },
-                    updateCallback: (ctx, impl) => {
-                        impl.attr('transform', buildTransformTemplate(ctx.coordinates.x, ctx.coordinates.y));
-                    }
-                }
-            );
-            diagramComponent.services = componentData
-                .services
-                .map(
-                    (serviceData, serviceIndex) => new DiagramService(
-                        serviceData.name,
-                        {
-                            coordinates: { x: 0, y: this.componentLineHeight * (serviceIndex + 1) },
-                            hostedOn: serviceData.on,
-                            frame: {
-                                start: {
-                                    x: 0,
-                                    y: 0
-                                },
-                                end: {
-                                    x: this.svgConfig.componentConfig.width,
-                                    y: this.componentLineHeight
-                                }
+                    end: {
+                        x: this.svgConfig.componentConfig.width,
+                        y: this.componentLineHeight * (componentData.services.length + 1) + this.svgConfig.textPadding * 3,
+                    },
+                },
+                updateCallback: (ctx, impl) => {
+                    impl.attr('transform', buildTransformTemplate(ctx.coordinates.x, ctx.coordinates.y));
+                },
+            });
+            diagramComponent.services = componentData.services.map(
+                (serviceData, serviceIndex) =>
+                    new DiagramService(serviceData.name, {
+                        coordinates: { x: 0, y: this.componentLineHeight * (serviceIndex + 1) },
+                        hostedOn: serviceData.on,
+                        frame: {
+                            start: {
+                                x: 0,
+                                y: 0,
                             },
-                            parentComponent: diagramComponent
-                        }
-                    )
-                );
+                            end: {
+                                x: this.svgConfig.componentConfig.width,
+                                y: this.componentLineHeight,
+                            },
+                        },
+                        parentComponent: diagramComponent,
+                    }),
+            );
 
             return diagramComponent;
-
         });
 
         const hostedServices: DiagramService[] = components
@@ -199,53 +185,48 @@ export class ComponentBuilderService implements IComponentBuilder {
 
         data.nodes.forEach(componentDataItem => {
             const fromComponent = components.find(el => el.title === componentDataItem.name);
-            componentDataItem.consumes.forEach(consumedService => {
-                const toComponent = components.find(
-                    el => el.services
-                        .map(s => s.title)
-                        .includes(consumedService.name)
-                );
-                const toService = hostedServices.find(
-                    s => s.title === consumedService.name
-                );
+            let servicesToInit = componentDataItem.consumes;
+            if (!!this.methodCalls) {
+                servicesToInit = servicesToInit.filter(s => isServiceUsedByComponent(componentDataItem.name, s.name, this.methodCalls));
+            } else {
+                console.log(`MethodCalls not found`);
+            }
+            servicesToInit.forEach(consumedService => {
+                const toComponent = components.find(el => el.services.map(s => s.title).includes(consumedService.name));
+                const toService = hostedServices.find(s => s.title === consumedService.name);
                 if (!!toService) {
                     const serviceConnector = calculateAbsoluteServiceConnector(toComponent, toService);
-                    const currLink = new DiagramLink(
-                        {
-                            start: fromComponent.getConnector(),
-                            end: {
-                                x: serviceConnector.x,
-                                y: serviceConnector.y
-                            },
-                            fromComponent: fromComponent.title,
-                            toComponent: toComponent.title,
-                            toService: toService.title,
-                            updateCallback: (ctx, linkImpl) => {
-                                linkImpl.attr('x1', ctx.start.x)
-                                    .attr('y1', ctx.start.y)
-                                    .attr('x2', ctx.end.x)
-                                    .attr('y2', ctx.end.y);
-                            }
-                        }
-                    );
+                    const currLink = new DiagramLink({
+                        start: fromComponent.getConnector(),
+                        end: {
+                            x: serviceConnector.x,
+                            y: serviceConnector.y,
+                        },
+                        fromComponent: fromComponent.title,
+                        toComponent: toComponent.title,
+                        toService: toService.title,
+                        updateCallback: (ctx, linkImpl) => {
+                            linkImpl
+                                .attr('x1', ctx.start.x)
+                                .attr('y1', ctx.start.y)
+                                .attr('x2', ctx.end.x)
+                                .attr('y2', ctx.end.y);
+                        },
+                    });
                     toComponent.subscribedLinks.push(currLink);
                     fromComponent.links.push(currLink);
                 }
-            }
-            );
+            });
         });
         return {
             nodes: components,
-            type: layout
+            type: layout,
         };
     }
 
     private calculateComponentCoordinates(data: GraphData, layout: ComponentDiagramGraphLayout) {
         let coordinates: ElementCoordinate[];
-        const mapFromArrayToCoordinate =
-            (array: any[]) => array.map(
-                kvp => ({ x: kvp[0], y: kvp[1] })
-            );
+        const mapFromArrayToCoordinate = (array: any[]) => array.map(kvp => ({ x: kvp[0], y: kvp[1] }));
         switch (layout) {
             case ComponentDiagramGraphLayout.Circle: {
                 const center = { x: this.svgConfig.width / 2, y: this.svgConfig.height / 2 };
@@ -308,10 +289,12 @@ export class ComponentBuilderService implements IComponentBuilder {
 
     private applyDraggable() {
         const context = this;
-        const onComponentDragStarted = function (d) {
-            d3.select(this).raise().classed('drag-active', true);
+        const onComponentDragStarted = function(d) {
+            d3.select(this)
+                .raise()
+                .classed('drag-active', true);
         };
-        const onComponentDragProgress = function (d) {
+        const onComponentDragProgress = function(d) {
             const componentId = d3.select(this).attr('id');
             let { element: component } = context.domItemRegistry.getComponent(componentId);
             component = component as DiagramComponent;
@@ -323,23 +306,18 @@ export class ComponentBuilderService implements IComponentBuilder {
             component.subscribedLinks.forEach((link: DiagramLink) => {
                 const toService = component.services.find(s => s.title === link.toService);
                 const serviceConnector = calculateAbsoluteServiceConnector(component, toService);
-                link.setCoordinates(
-                    link.start.x,
-                    link.start.y,
-                    serviceConnector.x,
-                    serviceConnector.y
-                );
+                link.setCoordinates(link.start.x, link.start.y, serviceConnector.x, serviceConnector.y);
             });
         };
-        const onComponentDragFinished = function (d) {
+        const onComponentDragFinished = function(d) {
             d3.select(this).classed('drag-active', false);
         };
-        this.innerContainer.selectAll('.component-container')
-            .call(
-                d3.drag()
-                    .on('start', onComponentDragStarted)
-                    .on('drag', onComponentDragProgress)
-                    .on('end', onComponentDragFinished)
-            );
+        this.innerContainer.selectAll('.component-container').call(
+            d3
+                .drag()
+                .on('start', onComponentDragStarted)
+                .on('drag', onComponentDragProgress)
+                .on('end', onComponentDragFinished),
+        );
     }
 }

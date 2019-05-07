@@ -20,6 +20,7 @@ import { ComponentDiagramGraphLayout } from '../../../enums/component-diagram-gr
 import { IComponentBuilder } from 'src/app/interfaces/IComponentBuilder';
 import { ComponentInformationSidebarService } from 'src/app/services/component-information-sidebar.service';
 import { DiagramComponent as StorageDiagramComponent } from 'src/app/models/storage-models/diagram-component';
+import { MethodCall } from 'src/app/models/storage-models/method-call';
 @Component({
     selector: 'app-diagram',
     templateUrl: './diagram.component.html',
@@ -29,6 +30,7 @@ import { DiagramComponent as StorageDiagramComponent } from 'src/app/models/stor
 export class DiagramComponent implements OnChanges, AfterViewInit {
     @Input() configurationItems: ComponentDrawingConfigurationItem[];
     @Input() graphData: GraphData;
+    @Input() methodCalls: MethodCall[];
     @Input() layout: ComponentDiagramGraphLayout = ComponentDiagramGraphLayout.Circle;
     @Output() public componentSelected = new EventEmitter<StorageDiagramComponent>();
 
@@ -76,7 +78,7 @@ export class DiagramComponent implements OnChanges, AfterViewInit {
             this.configurationItems.filter(el => el.isChecked).map(el => el.name),
         );
         // builder.build(dataToRender);
-        this.builder.buildFromLayout(dataToRender, this.layout);
+        this.builder.buildFromLayout(dataToRender, this.methodCalls, this.layout);
     }
 
     private filterDataByComponentName(data: GraphData, names: string[]) {

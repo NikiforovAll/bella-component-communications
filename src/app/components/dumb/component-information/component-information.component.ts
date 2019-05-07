@@ -29,7 +29,7 @@ export class ComponentInformationComponent implements OnInit {
         this.currentDiagramComponent = Object.assign({}, value);
         this.currentDiagramComponent.consumesExtended = this.currentDiagramComponent.consumes.map(assignComponent);
         this.currentDiagramComponent.servicesExtended = this.currentDiagramComponent.services.map(assignComponent);
-        const usedBy = findUsedByComponents(this.cachedData.nodes, this.currentDiagramComponent.name);
+        const usedBy = findUsedByComponents(this.cachedData.nodes, this.currentDiagramComponent.name, false);
         usedBy.forEach(c => {
             (c as any).reference = getServiceReferencesForServices(c.name, value.services.map(s => s.name), this.methodCallCachedData);
         });
