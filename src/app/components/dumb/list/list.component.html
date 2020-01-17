@@ -3,24 +3,44 @@
         <mat-toolbar>
                 <mat-toolbar-row>
                     <span>Configure</span>
-                </mat-toolbar-row>
-                <mat-toolbar-row >
                     <span>
                         <button
                             (click)="onDrawingConfigurationSelection(true)"
                             mat-button
                             color="primary">
-                            SelectAll
+                            Select
+                        </button>
+                        <span>
+                            <button
+                                (click)="onDrawingConfigurationSelection(false)"
+                                mat-button
+                                color="warn">
+                                Unselect
+                            </button>
+                        </span>
+                    </span>
+                </mat-toolbar-row>
+                <!-- <mat-toolbar-row >
+                    <span>
+                        <button
+                            (click)="onDrawingConfigurationSelection(true)"
+                            mat-button
+                            color="primary">
+                            Select
                         </button>
                     </span>
+                </mat-toolbar-row>
+                <mat-toolbar-row >
                     <span>
                         <button
                             (click)="onDrawingConfigurationSelection(false)"
                             mat-button
                             color="primary">
-                            UnselectAll
+                            Unselect All
                         </button>
                     </span>
+                </mat-toolbar-row > -->
+                <mat-toolbar-row >
                     <span>
                         <button
                             color="primary"
@@ -29,18 +49,19 @@
                             aria-label="Button that displays a tooltip when focused or hovered over"
                             (click)="onBuildDependencies()"
                             mat-button>
-                            Complete
+                            Complete To
                         </button>
                     </span>
-                </mat-toolbar-row>
+                </mat-toolbar-row >
+
         </mat-toolbar>
         <mat-card>
             <mat-card-subtitle>Configuration</mat-card-subtitle>
             <mat-form-field>
                 <mat-label>Select Graph Layout...</mat-label>
                 <mat-select [value]="layout" (selectionChange)="onChangeLayout($event.value)">
-                    <mat-option 
-                        *ngFor="let layoutKey of layoutsKey" 
+                    <mat-option
+                        *ngFor="let layoutKey of layoutsKey"
                         [value]="layoutKey">
                         {{layouts[layoutKey]}}
                     </mat-option>
@@ -50,7 +71,7 @@
         <cdk-virtual-scroll-viewport itemSize="50" class="configuration-items-container">
                 <mat-list role="list">
                     <div *cdkVirtualFor="let component of configurationItems">
-                        <mat-list-item 
+                        <mat-list-item
                             role="listitem">
                             <mat-checkbox
                                 [checked]="component.isChecked"
@@ -61,5 +82,5 @@
                     </div>
                 </mat-list>
         </cdk-virtual-scroll-viewport>
-    </mat-card-content> 
+    </mat-card-content>
 </mat-card>

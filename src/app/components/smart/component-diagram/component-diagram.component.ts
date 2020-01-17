@@ -20,7 +20,7 @@ export class ComponentDiagramComponent implements OnInit, AfterViewInit {
     public methodCalls: MethodCall[];
     public svgConfig: SVGConfig;
     public configurationItems$ = new BehaviorSubject<ComponentDrawingConfigurationItem[]>([]);
-    public layout$ = new BehaviorSubject<ComponentDiagramGraphLayout>(ComponentDiagramGraphLayout.Circle);
+    public layout$ = new BehaviorSubject<ComponentDiagramGraphLayout>(ComponentDiagramGraphLayout.LargeScaleNetwork);
 
     constructor(private storageService: StorageService, private diagramUsageService: DiagramUsageService) {}
 

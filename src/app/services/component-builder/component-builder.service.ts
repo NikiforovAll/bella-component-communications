@@ -230,7 +230,7 @@ export class ComponentBuilderService implements IComponentBuilder {
         switch (layout) {
             case ComponentDiagramGraphLayout.Circle: {
                 const center = { x: this.svgConfig.width / 2, y: this.svgConfig.height / 2 };
-                const radius = this.svgConfig.height - this.svgConfig.margin;
+                const radius = this.svgConfig.height - this.svgConfig.margin - 50;
                 const sidesCount: number = data.nodes.length;
                 coordinates = mapFromArrayToCoordinate(polygon(center.x, center.y, radius, sidesCount));
                 break;

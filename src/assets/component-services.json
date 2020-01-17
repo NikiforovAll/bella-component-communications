@@ -1,0 +1,194 @@
+{
+    "nodes": [
+        {
+            "name": "DunningComponent",
+            "services": [
+                {
+                    "name": "DunningServiceTestApi",
+                    "on": "DunningServiceTestApi"
+                },
+                {
+                    "name": "DunningComponentMigrationTestApi",
+                    "on": "DunningComponentMigrationTestApi"
+                },
+                {
+                    "name": "TestUtilsAPI",
+                    "on": "TestUtilsAPI"
+                },
+                {
+                    "name": "DunningService",
+                    "on": "DunningService"
+                },
+                {
+                    "name": "DunningServiceAsync",
+                    "on": "Kompass"
+                }
+            ],
+            "consumes": [
+                {
+                    "name": "CrmBackendAsync",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "CrmBackend",
+                    "on": "[CrmBackend]"
+                },
+                {
+                    "name": "CrmBackendAdapter",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "InvoiceGeneratorAsync",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "IdGenerator",
+                    "on": "IdGenerator"
+                },
+                {
+                    "name": "DunningNotificationService",
+                    "on": "DunningNotificationService"
+                },
+                {
+                    "name": "BankComponentAsync",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "MailToPayAsync",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "Fulfillment",
+                    "on": "[Fulfillment]"
+                },
+                {
+                    "name": "MailToPay",
+                    "on": "[MailToPay]"
+                },
+                {
+                    "name": "BillingEngineAsync",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "FulfillmentAsync",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "BillingEngine",
+                    "on": "BillingEngine"
+                },
+                {
+                    "name": "InvoiceGenerator",
+                    "on": "InvoiceGenerator"
+                }
+            ]
+        },
+        {
+            "name": "InvoiceGenerator",
+            "services": [
+                {
+                    "name": "InvoiceGeneratorTestApi",
+                    "on": "InvoiceGeneratorTestApi"
+                },
+                {
+                    "name": "InvoiceGeneratorAsync",
+                    "on": "Kompass"
+                },
+                {
+                    "name": "InvoiceGeneratorMigrationTestApi",
+                    "on": "InvoiceGeneratorMigrationTestApi"
+                },
+                {
+                    "name": "TestUtilsAPI",
+                    "on": "TestUtilsAPI"
+                },
+                {
+                    "name": "InvoiceGeneratorFixApi",
+                    "on": "InvoiceGeneratorFixApi"
+                },
+                {
+                    "name": "InvoiceGenerator",
+                    "on": "InvoiceGenerator"
+                }
+            ],
+            "consumes": [
+                {
+                    "name": "CrmBackendAsync",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "CrmBackend",
+                    "on": "CrmBackend"
+                },
+                {
+                    "name": "CrmBackendAdapter",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "IdGenerator",
+                    "on": "IdGenerator"
+                },
+                {
+                    "name": "ReportGenerator",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "BankComponentAsync",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "BankComponent",
+                    "on": "BankComponent"
+                },
+                {
+                    "name": "MailToPayAsync",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "DunningServiceAsync",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "DocumentPrinterComponentAsync",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "MailToPay",
+                    "on": "MailToPay"
+                },
+                {
+                    "name": "BillingEngineAsync",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "InvoiceSender",
+                    "on": "InvoiceSender"
+                },
+                {
+                    "name": "GlAdapter",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "GeneralLedgerAsync",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "FulfillmentAsync",
+                    "on": "[Kompass]"
+                },
+                {
+                    "name": "DocumentPrinterComponent",
+                    "on": "[DocumentPrinterComponent]"
+                },
+                {
+                    "name": "GeneralLedger",
+                    "on": "GeneralLedger"
+                },
+                {
+                    "name": "BillingEngine",
+                    "on": "BillingEngine"
+                }
+            ]
+        }
+    ]
+}

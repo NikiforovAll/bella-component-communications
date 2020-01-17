@@ -13,7 +13,7 @@ export class AppConfiguration {
 
     ensureInit(): Promise<any> {
         const appConfig = `assets/app.config.json`;
-        const payloadConfig = `assets/component-communication.json`;
+        const payloadConfig = `assets/component-services.json`;
         const methodCallConfig = `assets/method-calls.json`;
         const promises: Promise<void>[] = [
             new Promise<void>((resolve, reject) => {

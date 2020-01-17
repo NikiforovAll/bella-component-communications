@@ -12,7 +12,7 @@ import { GraphData } from 'src/app/models/storage-models/graph-data';
 })
 export class ListComponent {
     @Input() configurationItems: ComponentDrawingConfigurationItem[];
-    @Input() layout: ComponentDiagramGraphLayout = ComponentDiagramGraphLayout.Circle;
+    @Input() layout: ComponentDiagramGraphLayout = ComponentDiagramGraphLayout.LargeScaleNetwork;
 
     @Output() changeConfigSelection = new EventEmitter<boolean>();
     @Output() componentChecked = new EventEmitter<ComponentDrawingConfigurationItem>();
