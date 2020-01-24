@@ -39,11 +39,11 @@ BEGIN {
         if(length(service_name) != 0 && (service_name in consumed_services))
         {
             gsub(/"/,"\\\"", $0)
-            serviceInfo["service_name"] = enqoute(service_name)
+            serviceInfo["serviceName"] = enqoute(service_name)
             serviceInfo["context"] = enqoute($0)
             serviceInfo["line"]= enqoute(FNR)
             serviceInfo["file"]= enqoute(FILENAME)
-            serviceInfo["method_name"] = enqoute(method_name)
+            serviceInfo["methodName"] = enqoute(method_name)
 
             serviceInfoTokensCnt=1
             for(info_token in serviceInfo)
