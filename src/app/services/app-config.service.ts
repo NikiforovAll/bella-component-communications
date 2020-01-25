@@ -16,59 +16,42 @@ export class AppConfiguration {
         const payloadConfig = `assets/component-services.json`;
         const methodCallConfig = `assets/method-calls.json`;
         const exportedLSPHostedServices = `assets/bella-lsp-export/hosted-services.json`;
+        const exportedLSPServiceReferences = `assets/bella-lsp-export/service-reference.json`;
+        const exportedLSProcedures = `assets/bella-lsp-export/procedures.json`;
+        const exportedLSReferences = `assets/bella-lsp-export/references.json`;
         const promises: Promise<void>[] = [
-            new Promise<void>((resolve, reject) => {
-                this.httpClient
-                    .get(payloadConfig)
-                    .toPromise()
-                    .then(response => {
-                        this.storage.graphData = response as GraphData;
-                        resolve();
-                    })
-                    .catch((response: any) => {
-                        reject(`Could not load the config file`);
-                    });
+            this.retrieveConfiguration(appConfig).then((response) => {
+                Object.assign(this, response);
+                BaseConfig.externalDocumentationConfig.baseUrl = this.apiDocumentationURL;
             }),
-            new Promise<void>((resolve, reject) => {
-                this.httpClient
-                    .get(methodCallConfig)
-                    .toPromise()
-                    .then(response => {
-                        this.storage.methodCalls = (response as any).nodes as (MethodCall[]);
-                        resolve();
-                    })
-                    .catch((response: any) => {
-                        reject(`Could not load the config file`);
-                    });
+            this.retrieveConfiguration(payloadConfig).then((response) => {
+                this.storage.graphData = response as GraphData;
             }),
-            new Promise<void>((resolve, reject) => {
-                this.httpClient
-                    .get(appConfig)
-                    .toPromise()
-                    .then(response => {
-                        Object.assign(this, response);
-                        BaseConfig.externalDocumentationConfig.baseUrl = this.apiDocumentationURL;
-                        resolve();
-                    })
-                    .catch((response: any) => {
-                        reject(`Could not load the config file`);
-                    });
+            this.retrieveConfiguration(methodCallConfig).then((response) => {
+                this.storage.methodCalls = (response as any).nodes as (MethodCall[]);
             }),
             this.retrieveConfiguration(exportedLSPHostedServices).then((response) => {
                 this.storage.setHostedServices(response);
+            }),
+            this.retrieveConfiguration(exportedLSPServiceReferences).then((response) => {
+                this.storage.setServiceReferences(response);
+            }),
+            this.retrieveConfiguration(exportedLSProcedures).then((response) => {
+                this.storage.setProcedureReferences(response);
+            }),
+            this.retrieveConfiguration(exportedLSReferences).then((response) => {
+                this.storage.setInvocationReferences(response);
             })
         ];
         return Promise.all(promises);
     }
 
     private retrieveConfiguration(configUrl: string): Promise<any> {
-        return new Promise<any>((resolve, reject) => {
-            this.httpClient
-                .get(configUrl)
-                .toPromise()
-                .catch((response: any) => {
-                    reject(`Could not load the config file`);
-                });
-        });
+        return this.httpClient
+            .get(configUrl)
+            .toPromise()
+            .catch((response: any) => {
+                throw new Error(`Could not load the config file`);
+            });
     }
 }
