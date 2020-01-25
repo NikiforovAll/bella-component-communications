@@ -1,0 +1,7022 @@
+[
+  {
+    "serviceType": "hosted",
+    "serviceName": "MyNleService",
+    "serviceTransportName": "MyNleService",
+    "name": "MyNleService",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "PartnerPortalService",
+    "serviceTransportName": "PartnerPortalService",
+    "name": "PartnerPortalService",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "CrmService",
+    "serviceTransportName": "CrmService",
+    "name": "CrmService",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "ApiGatewayMigrationApiAsync",
+    "serviceTransportName": "Kompass",
+    "name": "ApiGatewayMigrationApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "ResellerApiService",
+    "serviceTransportName": "ResellerApiService",
+    "name": "ResellerApiService",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "[CrmBackend]",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngine",
+    "serviceTransportName": "[BillingEngine]",
+    "name": "BillingEngine",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "ProductCatalog",
+    "serviceTransportName": "[ProductCatalog]",
+    "name": "ProductCatalog",
+    "range": {
+      "startPosition": {
+        "row": 9,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 9,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGenerator",
+    "serviceTransportName": "[InvoiceGenerator]",
+    "name": "InvoiceGenerator",
+    "range": {
+      "startPosition": {
+        "row": 10,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 10,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Fulfillment",
+    "serviceTransportName": "[Fulfillment]",
+    "name": "Fulfillment",
+    "range": {
+      "startPosition": {
+        "row": 11,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 11,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdentityServer",
+    "serviceTransportName": "[IdentityServer]",
+    "name": "IdentityServer",
+    "range": {
+      "startPosition": {
+        "row": 12,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 12,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridService",
+    "serviceTransportName": "[SendgridService]",
+    "name": "SendgridService",
+    "range": {
+      "startPosition": {
+        "row": 13,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 13,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "SendgridServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 14,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 14,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SapAccountBalanceService",
+    "serviceTransportName": "[SapAccountBalanceService]",
+    "name": "SapAccountBalanceService",
+    "range": {
+      "startPosition": {
+        "row": 15,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 15,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "TaskManager",
+    "serviceTransportName": "[TaskManager]",
+    "name": "TaskManager",
+    "range": {
+      "startPosition": {
+        "row": 16,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 16,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailToPay",
+    "serviceTransportName": "[MailToPay]",
+    "name": "MailToPay",
+    "range": {
+      "startPosition": {
+        "row": 17,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 17,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BlackListService",
+    "serviceTransportName": "[BlackListService]",
+    "name": "BlackListService",
+    "range": {
+      "startPosition": {
+        "row": 18,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 18,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Cdr",
+    "serviceTransportName": "[Cdr]",
+    "name": "Cdr",
+    "range": {
+      "startPosition": {
+        "row": 19,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 19,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FileStorageComponent",
+    "serviceTransportName": "[FileStorageComponent]",
+    "name": "FileStorageComponent",
+    "range": {
+      "startPosition": {
+        "row": 20,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 20,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailStorage",
+    "serviceTransportName": "[MailStorage]",
+    "name": "MailStorage",
+    "range": {
+      "startPosition": {
+        "row": 21,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 21,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BankComponent",
+    "serviceTransportName": "[BankComponent]",
+    "name": "BankComponent",
+    "range": {
+      "startPosition": {
+        "row": 22,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 22,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "PlanningstoolServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "PlanningstoolServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 23,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 23,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "PlanningstoolService",
+    "serviceTransportName": "[PlanningstoolService]",
+    "name": "PlanningstoolService",
+    "range": {
+      "startPosition": {
+        "row": 24,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 24,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DunningService",
+    "serviceTransportName": "[DunningService]",
+    "name": "DunningService",
+    "range": {
+      "startPosition": {
+        "row": 25,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 25,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "VideoOnDemand",
+    "serviceTransportName": "[VideoOnDemand]",
+    "name": "VideoOnDemand",
+    "range": {
+      "startPosition": {
+        "row": 26,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 26,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngineAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BillingEngineAsync",
+    "range": {
+      "startPosition": {
+        "row": 27,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 27,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FulfillmentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "FulfillmentAsync",
+    "range": {
+      "startPosition": {
+        "row": 28,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 28,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngineMigrationApiAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BillingEngineMigrationApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 29,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 29,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendMigrationApiAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendMigrationApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 30,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 30,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BankComponentMigrationApiAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BankComponentMigrationApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 31,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 31,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FulfillmentMigrationApiAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "FulfillmentMigrationApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 32,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 32,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGeneratorAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "InvoiceGeneratorAsync",
+    "range": {
+      "startPosition": {
+        "row": 33,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 33,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GeneralLedger",
+    "serviceTransportName": "[GeneralLedger]",
+    "name": "GeneralLedger",
+    "range": {
+      "startPosition": {
+        "row": 34,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 34,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DunningServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "DunningServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 35,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 35,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendIncomingEmailFixed",
+    "serviceTransportName": "CrmBackendIncomingEmailFixed",
+    "name": "CrmBackendIncomingEmailFixed",
+    "range": {
+      "startPosition": {
+        "row": 36,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 36,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ApiGateway/ApiGatewaySrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "BankComponent",
+    "serviceTransportName": "BankComponent",
+    "name": "BankComponent",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "CamtService",
+    "serviceTransportName": "Kompass",
+    "name": "CamtService",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "BankComponentAsync",
+    "serviceTransportName": "Kompass",
+    "name": "BankComponentAsync",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "BankComponentMigrationApiAsync",
+    "serviceTransportName": "Kompass",
+    "name": "BankComponentMigrationApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "BankComponentMigrationTestApi",
+    "serviceTransportName": "BankComponentMigrationTestApi",
+    "name": "BankComponentMigrationTestApi",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "BankComponentFixApi",
+    "serviceTransportName": "BankComponentFixApi",
+    "name": "BankComponentFixApi",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngine",
+    "serviceTransportName": "[BillingEngine]",
+    "name": "BillingEngine",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEnginePatchingService",
+    "serviceTransportName": "[BillingEnginePatchingService]",
+    "name": "BillingEnginePatchingService",
+    "range": {
+      "startPosition": {
+        "row": 9,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 9,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngineAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BillingEngineAsync",
+    "range": {
+      "startPosition": {
+        "row": 10,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 10,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "[CrmBackend]",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 11,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 11,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAsync",
+    "range": {
+      "startPosition": {
+        "row": 12,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 12,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DunningService",
+    "serviceTransportName": "[DunningService]",
+    "name": "DunningService",
+    "range": {
+      "startPosition": {
+        "row": 13,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 13,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "PainFileService",
+    "serviceTransportName": "[Kompass]",
+    "name": "PainFileService",
+    "range": {
+      "startPosition": {
+        "row": 14,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 14,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGenerator",
+    "serviceTransportName": "[InvoiceGenerator]",
+    "name": "InvoiceGenerator",
+    "range": {
+      "startPosition": {
+        "row": 15,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 15,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdGenerator",
+    "serviceTransportName": "[IdGenerator]",
+    "name": "IdGenerator",
+    "range": {
+      "startPosition": {
+        "row": 16,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 16,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GeneralLedger",
+    "serviceTransportName": "[GeneralLedger]",
+    "name": "GeneralLedger",
+    "range": {
+      "startPosition": {
+        "row": 17,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 17,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "StatementFiles",
+    "serviceTransportName": "[Kompass]",
+    "name": "StatementFiles",
+    "range": {
+      "startPosition": {
+        "row": 18,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 18,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailToPay",
+    "serviceTransportName": "[MailToPay]",
+    "name": "MailToPay",
+    "range": {
+      "startPosition": {
+        "row": 19,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 19,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridService",
+    "serviceTransportName": "[SendgridService]",
+    "name": "SendgridService",
+    "range": {
+      "startPosition": {
+        "row": 20,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 20,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "SendgridServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 21,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 21,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Fulfillment",
+    "serviceTransportName": "[Fulfillment]",
+    "name": "Fulfillment",
+    "range": {
+      "startPosition": {
+        "row": 22,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 22,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FulfillmentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "FulfillmentAsync",
+    "range": {
+      "startPosition": {
+        "row": 23,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 23,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "ApiGatewayMigrationApiAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "ApiGatewayMigrationApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 24,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 24,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "OldBEMigrationServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "OldBEMigrationServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 25,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 25,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailToPayAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "MailToPayAsync",
+    "range": {
+      "startPosition": {
+        "row": 26,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 26,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GeneralLedgerAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "GeneralLedgerAsync",
+    "range": {
+      "startPosition": {
+        "row": 27,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 27,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGeneratorFixApi",
+    "serviceTransportName": "InvoiceGeneratorFixApi",
+    "name": "InvoiceGeneratorFixApi",
+    "range": {
+      "startPosition": {
+        "row": 28,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 28,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DunningServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "DunningServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 29,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 29,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGeneratorAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "InvoiceGeneratorAsync",
+    "range": {
+      "startPosition": {
+        "row": 30,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 30,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GlAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "GlAdapter",
+    "range": {
+      "startPosition": {
+        "row": 32,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 32,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "NutsHomeServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "NutsHomeServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 34,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 34,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAdapter",
+    "range": {
+      "startPosition": {
+        "row": 35,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 35,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BankComponent/BankComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "BillingEngine",
+    "serviceTransportName": "BillingEngine",
+    "name": "BillingEngine",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "BillingEngineFixApi",
+    "serviceTransportName": "BillingEngineFixApi",
+    "name": "BillingEngineFixApi",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "BillingEngineProductCatalogApi",
+    "serviceTransportName": "BillingEngineProductCatalogApi",
+    "name": "BillingEngineProductCatalogApi",
+    "range": {
+      "startPosition": {
+        "row": 12,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 12,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "BillingEngineTestApi",
+    "serviceTransportName": "BillingEngineTestApi",
+    "name": "BillingEngineTestApi",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "BillingEngineAsync",
+    "serviceTransportName": "Kompass",
+    "name": "BillingEngineAsync",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngineMigrationApiAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BillingEngineMigrationApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 59,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 59,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "BillingEngineMigrationTestApi",
+    "serviceTransportName": "BillingEngineMigrationTestApi",
+    "name": "BillingEngineMigrationTestApi",
+    "range": {
+      "startPosition": {
+        "row": 9,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 9,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "BillingEnginePatchingService",
+    "serviceTransportName": "BillingEnginePatchingService",
+    "name": "BillingEnginePatchingService",
+    "range": {
+      "startPosition": {
+        "row": 10,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 10,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngineServiceContractApiAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BillingEngineServiceContractApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 52,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 52,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BankComponent",
+    "serviceTransportName": "[BankComponent]",
+    "name": "BankComponent",
+    "range": {
+      "startPosition": {
+        "row": 14,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 14,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Cdr",
+    "serviceTransportName": "[Cdr]",
+    "name": "Cdr",
+    "range": {
+      "startPosition": {
+        "row": 15,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 15,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "[CrmBackend]",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 16,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 16,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAsync",
+    "range": {
+      "startPosition": {
+        "row": 17,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 17,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DunningService",
+    "serviceTransportName": "[DunningService]",
+    "name": "DunningService",
+    "range": {
+      "startPosition": {
+        "row": 18,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 18,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridService",
+    "serviceTransportName": "[SendgridService]",
+    "name": "SendgridService",
+    "range": {
+      "startPosition": {
+        "row": 19,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 19,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "SendgridServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 20,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 20,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdGenerator",
+    "serviceTransportName": "[IdGenerator]",
+    "name": "IdGenerator",
+    "range": {
+      "startPosition": {
+        "row": 21,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 21,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGenerator",
+    "serviceTransportName": "[InvoiceGenerator]",
+    "name": "InvoiceGenerator",
+    "range": {
+      "startPosition": {
+        "row": 22,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 22,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGeneratorAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "InvoiceGeneratorAsync",
+    "range": {
+      "startPosition": {
+        "row": 23,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 23,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "ProductCatalog",
+    "serviceTransportName": "[ProductCatalog]",
+    "name": "ProductCatalog",
+    "range": {
+      "startPosition": {
+        "row": 24,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 24,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "NutsHomeService",
+    "serviceTransportName": "[NutsHomeService]",
+    "name": "NutsHomeService",
+    "range": {
+      "startPosition": {
+        "row": 25,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 25,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "NutsHomeServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "NutsHomeServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 26,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 26,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GeneralLedger",
+    "serviceTransportName": "[GeneralLedger]",
+    "name": "GeneralLedger",
+    "range": {
+      "startPosition": {
+        "row": 27,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 27,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "VideoOnDemand",
+    "serviceTransportName": "[VideoOnDemand]",
+    "name": "VideoOnDemand",
+    "range": {
+      "startPosition": {
+        "row": 28,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 28,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "UncollectableAmountService",
+    "serviceTransportName": "[UncollectableAmountService]",
+    "name": "UncollectableAmountService",
+    "range": {
+      "startPosition": {
+        "row": 29,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 29,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DocumentPrinterComponent",
+    "serviceTransportName": "[DocumentPrinterComponent]",
+    "name": "DocumentPrinterComponent",
+    "range": {
+      "startPosition": {
+        "row": 30,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 30,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "TaskManager",
+    "serviceTransportName": "TaskManager",
+    "name": "TaskManager",
+    "range": {
+      "startPosition": {
+        "row": 31,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 31,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailToPay",
+    "serviceTransportName": "MailToPay",
+    "name": "MailToPay",
+    "range": {
+      "startPosition": {
+        "row": 32,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 32,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DunningServiceTestApi",
+    "serviceTransportName": "DunningServiceTestApi",
+    "name": "DunningServiceTestApi",
+    "range": {
+      "startPosition": {
+        "row": 33,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 33,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CdrAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "CdrAsync",
+    "range": {
+      "startPosition": {
+        "row": 35,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 35,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CallsAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "CallsAdapter",
+    "range": {
+      "startPosition": {
+        "row": 36,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 36,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DocumentPrinterComponentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "DocumentPrinterComponentAsync",
+    "range": {
+      "startPosition": {
+        "row": 37,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 37,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "VideoOnDemandAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "VideoOnDemandAsync",
+    "range": {
+      "startPosition": {
+        "row": 38,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 38,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DunningServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "DunningServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 39,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 39,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FulfillmentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "FulfillmentAsync",
+    "range": {
+      "startPosition": {
+        "row": 40,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 40,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Fulfillment",
+    "serviceTransportName": "[Fulfillment]",
+    "name": "Fulfillment",
+    "range": {
+      "startPosition": {
+        "row": 41,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 41,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BankComponentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BankComponentAsync",
+    "range": {
+      "startPosition": {
+        "row": 42,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 42,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "TaskManagerAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "TaskManagerAsync",
+    "range": {
+      "startPosition": {
+        "row": 43,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 43,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FulfillmentServiceContractAsyncApi",
+    "serviceTransportName": "[Kompass]",
+    "name": "FulfillmentServiceContractAsyncApi",
+    "range": {
+      "startPosition": {
+        "row": 44,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 44,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "ReportGenerator",
+    "serviceTransportName": "[Kompass]",
+    "name": "ReportGenerator",
+    "range": {
+      "startPosition": {
+        "row": 46,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 46,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "ApiGatewayMigrationApiAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "ApiGatewayMigrationApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 47,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 47,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FileStorageComponent",
+    "serviceTransportName": "[FileStorageComponent]",
+    "name": "FileStorageComponent",
+    "range": {
+      "startPosition": {
+        "row": 48,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 48,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "OldBEMigrationServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "OldBEMigrationServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 49,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 49,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GeneralLedgerAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "GeneralLedgerAsync",
+    "range": {
+      "startPosition": {
+        "row": 50,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 50,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGeneratorFixApi",
+    "serviceTransportName": "InvoiceGeneratorFixApi",
+    "name": "InvoiceGeneratorFixApi",
+    "range": {
+      "startPosition": {
+        "row": 51,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 51,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GlAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "GlAdapter",
+    "range": {
+      "startPosition": {
+        "row": 54,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 54,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "VideoOnDemandAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "VideoOnDemandAdapter",
+    "range": {
+      "startPosition": {
+        "row": 55,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 55,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAdapter",
+    "range": {
+      "startPosition": {
+        "row": 56,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 56,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailStorage",
+    "serviceTransportName": "[MailStorage]",
+    "name": "MailStorage",
+    "range": {
+      "startPosition": {
+        "row": 57,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 57,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GroupDomainApiAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "GroupDomainApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 58,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 58,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BillingEngine/BillingEngineSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "BlackListService",
+    "serviceTransportName": "BlackListService",
+    "name": "BlackListService",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BlackList/BlackListSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "BlackListServiceAsync",
+    "serviceTransportName": "Kompass",
+    "name": "BlackListServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BlackList/BlackListSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "DunningNotificationService",
+    "serviceTransportName": "DunningNotificationService",
+    "name": "DunningNotificationService",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BlackList/BlackListSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "UncollectableAmountService",
+    "serviceTransportName": "UncollectableAmountService",
+    "name": "UncollectableAmountService",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BlackList/BlackListSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BlackList/BlackListSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "[CrmBackend]",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BlackList/BlackListSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FulfillmentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "FulfillmentAsync",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/BlackList/BlackListSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "Cdr",
+    "serviceTransportName": "Cdr",
+    "name": "Cdr",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Cdr/CdrSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "CdrAsync",
+    "serviceTransportName": "Kompass",
+    "name": "CdrAsync",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Cdr/CdrSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CallsAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "CallsAdapter",
+    "range": {
+      "startPosition": {
+        "row": 12,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 12,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Cdr/CdrSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "CallsAdapterTestApi",
+    "serviceTransportName": "CallsAdapterTestApi",
+    "name": "CallsAdapterTestApi",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Cdr/CdrSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "CallDataRecordsMigrationTestApi",
+    "serviceTransportName": "CallDataRecordsMigrationTestApi",
+    "name": "CallDataRecordsMigrationTestApi",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Cdr/CdrSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngine",
+    "serviceTransportName": "[BillingEngine]",
+    "name": "BillingEngine",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Cdr/CdrSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngineAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BillingEngineAsync",
+    "range": {
+      "startPosition": {
+        "row": 9,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 9,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Cdr/CdrSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CdrConnector",
+    "serviceTransportName": "[CdrConnector]",
+    "name": "CdrConnector",
+    "range": {
+      "startPosition": {
+        "row": 11,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 11,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Cdr/CdrSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "ProductCatalog",
+    "serviceTransportName": "[ProductCatalog]",
+    "name": "ProductCatalog",
+    "range": {
+      "startPosition": {
+        "row": 14,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 14,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Cdr/CdrSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "ServiceCallsStorage",
+    "serviceTransportName": "[Kompass]",
+    "name": "ServiceCallsStorage",
+    "range": {
+      "startPosition": {
+        "row": 15,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 15,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Cdr/CdrSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DocumentPrinterComponentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "DocumentPrinterComponentAsync",
+    "range": {
+      "startPosition": {
+        "row": 16,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 16,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Cdr/CdrSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "CrmBackend",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "CrmBackendAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAsync",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "CrmBackendMigrationApiAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendMigrationApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "CrmBackendMigrationTestApi",
+    "serviceTransportName": "CrmBackendMigrationTestApi",
+    "name": "CrmBackendMigrationTestApi",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAdapter",
+    "range": {
+      "startPosition": {
+        "row": 24,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 24,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "CrmBackendIncomingEmailFixed",
+    "serviceTransportName": "CrmBackendIncomingEmailFixed",
+    "name": "CrmBackendIncomingEmailFixed",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Fulfillment",
+    "serviceTransportName": "Fulfillment",
+    "name": "Fulfillment",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdGenerator",
+    "serviceTransportName": "[IdGenerator]",
+    "name": "IdGenerator",
+    "range": {
+      "startPosition": {
+        "row": 9,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 9,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FileStorageComponent",
+    "serviceTransportName": "[FileStorageComponent]",
+    "name": "FileStorageComponent",
+    "range": {
+      "startPosition": {
+        "row": 10,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 10,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdentityServer",
+    "serviceTransportName": "[IdentityServer]",
+    "name": "IdentityServer",
+    "range": {
+      "startPosition": {
+        "row": 11,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 11,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdentityServerAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "IdentityServerAsync",
+    "range": {
+      "startPosition": {
+        "row": 12,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 12,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngine",
+    "serviceTransportName": "[BillingEngine]",
+    "name": "BillingEngine",
+    "range": {
+      "startPosition": {
+        "row": 13,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 13,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridService",
+    "serviceTransportName": "[SendgridService]",
+    "name": "SendgridService",
+    "range": {
+      "startPosition": {
+        "row": 14,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 14,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "SendgridServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 15,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 15,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailStorageAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "MailStorageAsync",
+    "range": {
+      "startPosition": {
+        "row": 16,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 16,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DocumentPrinterComponentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "DocumentPrinterComponentAsync",
+    "range": {
+      "startPosition": {
+        "row": 17,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 17,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BankComponent",
+    "serviceTransportName": "[BankComponent]",
+    "name": "BankComponent",
+    "range": {
+      "startPosition": {
+        "row": 18,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 18,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGenerator",
+    "serviceTransportName": "[InvoiceGenerator]",
+    "name": "InvoiceGenerator",
+    "range": {
+      "startPosition": {
+        "row": 19,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 19,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "ReportGenerator",
+    "serviceTransportName": "[Kompass]",
+    "name": "ReportGenerator",
+    "range": {
+      "startPosition": {
+        "row": 20,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 20,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "ApiGatewayMigrationApiAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "ApiGatewayMigrationApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 21,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 21,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "TaskManager",
+    "serviceTransportName": "[TaskManager]",
+    "name": "TaskManager",
+    "range": {
+      "startPosition": {
+        "row": 22,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 22,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "OldBEMigrationServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "OldBEMigrationServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 23,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 23,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailStorage",
+    "serviceTransportName": "[MailStorage]",
+    "name": "MailStorage",
+    "range": {
+      "startPosition": {
+        "row": 25,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 25,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/CRMBackend/CRMBackendSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "DocumentPrinterComponent",
+    "serviceTransportName": "DocumentPrinterComponent",
+    "name": "DocumentPrinterComponent",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DocumentPrinterComponent/DocumentPrinterComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "DocumentPrinterComponentAsync",
+    "serviceTransportName": "Kompass",
+    "name": "DocumentPrinterComponentAsync",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DocumentPrinterComponent/DocumentPrinterComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DocumentPrinterComponent/DocumentPrinterComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Fulfillment",
+    "serviceTransportName": "[Fulfillment]",
+    "name": "Fulfillment",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DocumentPrinterComponent/DocumentPrinterComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngine",
+    "serviceTransportName": "[BillingEngine]",
+    "name": "BillingEngine",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DocumentPrinterComponent/DocumentPrinterComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "ProductCatalog",
+    "serviceTransportName": "[ProductCatalog]",
+    "name": "ProductCatalog",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DocumentPrinterComponent/DocumentPrinterComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DocumentPrinterService",
+    "serviceTransportName": "[Kompass]",
+    "name": "DocumentPrinterService",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DocumentPrinterComponent/DocumentPrinterComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FileStorageComponent",
+    "serviceTransportName": "[FileStorageComponent]",
+    "name": "FileStorageComponent",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DocumentPrinterComponent/DocumentPrinterComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BankComponentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BankComponentAsync",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngine",
+    "serviceTransportName": "BillingEngine",
+    "name": "BillingEngine",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngineAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BillingEngineAsync",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "[CrmBackend]",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DunningNotificationService",
+    "serviceTransportName": "DunningNotificationService",
+    "name": "DunningNotificationService",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Fulfillment",
+    "serviceTransportName": "[Fulfillment]",
+    "name": "Fulfillment",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FulfillmentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "FulfillmentAsync",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdGenerator",
+    "serviceTransportName": "IdGenerator",
+    "name": "IdGenerator",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGenerator",
+    "serviceTransportName": "InvoiceGenerator",
+    "name": "InvoiceGenerator",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailToPay",
+    "serviceTransportName": "[MailToPay]",
+    "name": "MailToPay",
+    "range": {
+      "startPosition": {
+        "row": 9,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 9,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailToPayAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "MailToPayAsync",
+    "range": {
+      "startPosition": {
+        "row": 10,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 10,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAsync",
+    "range": {
+      "startPosition": {
+        "row": 11,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 11,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGeneratorAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "InvoiceGeneratorAsync",
+    "range": {
+      "startPosition": {
+        "row": 12,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 12,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAdapter",
+    "range": {
+      "startPosition": {
+        "row": 13,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 13,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "DunningService",
+    "serviceTransportName": "DunningService",
+    "name": "DunningService",
+    "range": {
+      "startPosition": {
+        "row": 15,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 15,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "DunningServiceAsync",
+    "serviceTransportName": "Kompass",
+    "name": "DunningServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 16,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 16,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 17,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 17,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "DunningComponentMigrationTestApi",
+    "serviceTransportName": "DunningComponentMigrationTestApi",
+    "name": "DunningComponentMigrationTestApi",
+    "range": {
+      "startPosition": {
+        "row": 18,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 18,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "DunningServiceTestApi",
+    "serviceTransportName": "DunningServiceTestApi",
+    "name": "DunningServiceTestApi",
+    "range": {
+      "startPosition": {
+        "row": 19,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 19,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/DunningComponent/DunningComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "FileStorageComponent",
+    "serviceTransportName": "FileStorageComponent",
+    "name": "FileStorageComponent",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/FileStorageComponent/FileStorageComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "FileStorageComponentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "FileStorageComponentAsync",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/FileStorageComponent/FileStorageComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FileStorageReceieverComponentService",
+    "serviceTransportName": "[FileStorageReceieverComponentService]",
+    "name": "FileStorageReceieverComponentService",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/FileStorageComponent/FileStorageComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "[CrmBackend]",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/FileStorageComponent/FileStorageComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAsync",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/FileStorageComponent/FileStorageComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Fulfillment",
+    "serviceTransportName": "[Fulfillment]",
+    "name": "Fulfillment",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/FileStorageComponent/FileStorageComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridService",
+    "serviceTransportName": "[SendgridService]",
+    "name": "SendgridService",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/FileStorageComponent/FileStorageComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "SendgridServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/FileStorageComponent/FileStorageComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGenerator",
+    "serviceTransportName": "[InvoiceGenerator]",
+    "name": "InvoiceGenerator",
+    "range": {
+      "startPosition": {
+        "row": 9,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 9,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/FileStorageComponent/FileStorageComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdentityServer",
+    "serviceTransportName": "[IdentityServer]",
+    "name": "IdentityServer",
+    "range": {
+      "startPosition": {
+        "row": 10,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 10,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/FileStorageComponent/FileStorageComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGeneratorAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "InvoiceGeneratorAsync",
+    "range": {
+      "startPosition": {
+        "row": 11,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 11,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/FileStorageComponent/FileStorageComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAdapter",
+    "range": {
+      "startPosition": {
+        "row": 12,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 12,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/FileStorageComponent/FileStorageComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "Fulfillment",
+    "serviceTransportName": "Fulfillment",
+    "name": "Fulfillment",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "FulfillmentFixApi",
+    "serviceTransportName": "FulfillmentFixApi",
+    "name": "FulfillmentFixApi",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "FulfillmentTestApi",
+    "serviceTransportName": "FulfillmentTestApi",
+    "name": "FulfillmentTestApi",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FulfillmentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "FulfillmentAsync",
+    "range": {
+      "startPosition": {
+        "row": 18,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 18,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "FulfillmentNleNlApi",
+    "serviceTransportName": "FulfillmentNleNlApi",
+    "name": "FulfillmentNleNlApi",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "MigrationApi",
+    "serviceTransportName": "MigrationApi",
+    "name": "MigrationApi",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "FulfillmentMigrationApiAsync",
+    "serviceTransportName": "Kompass",
+    "name": "FulfillmentMigrationApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FulfillmentServiceContractAsyncApi",
+    "serviceTransportName": "[Kompass]",
+    "name": "FulfillmentServiceContractAsyncApi",
+    "range": {
+      "startPosition": {
+        "row": 22,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 22,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "FulfillmentServiceContractApi",
+    "serviceTransportName": "FulfillmentServiceContractApi",
+    "name": "FulfillmentServiceContractApi",
+    "range": {
+      "startPosition": {
+        "row": 9,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 9,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "CoinHandlerAsync",
+    "serviceTransportName": "Kompass",
+    "name": "CoinHandlerAsync",
+    "range": {
+      "startPosition": {
+        "row": 10,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 10,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "FulfillmentProductCatalogApi",
+    "serviceTransportName": "FulfillmentProductCatalogApi",
+    "name": "FulfillmentProductCatalogApi",
+    "range": {
+      "startPosition": {
+        "row": 11,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 11,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngineAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BillingEngineAsync",
+    "range": {
+      "startPosition": {
+        "row": 13,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 13,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "OverstappenService",
+    "serviceTransportName": "[Kompass]",
+    "name": "OverstappenService",
+    "range": {
+      "startPosition": {
+        "row": 14,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 14,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "PlanningstoolServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "PlanningstoolServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 15,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 15,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CobsServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "CobsServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 16,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 16,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CobsMigrationServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "CobsMigrationServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 17,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 17,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MendixNotificationServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "MendixNotificationServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 19,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 19,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAsync",
+    "range": {
+      "startPosition": {
+        "row": 20,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 20,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "TaskManagerAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "TaskManagerAsync",
+    "range": {
+      "startPosition": {
+        "row": 21,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 21,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BankComponent",
+    "serviceTransportName": "[BankComponent]",
+    "name": "BankComponent",
+    "range": {
+      "startPosition": {
+        "row": 25,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 25,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngine",
+    "serviceTransportName": "[BillingEngine]",
+    "name": "BillingEngine",
+    "range": {
+      "startPosition": {
+        "row": 26,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 26,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEnginePatchingService",
+    "serviceTransportName": "[BillingEnginePatchingService]",
+    "name": "BillingEnginePatchingService",
+    "range": {
+      "startPosition": {
+        "row": 27,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 27,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "[CrmBackend]",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 28,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 28,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdGenerator",
+    "serviceTransportName": "[IdGenerator]",
+    "name": "IdGenerator",
+    "range": {
+      "startPosition": {
+        "row": 29,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 29,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "PlugwiseService",
+    "serviceTransportName": "[PlugwiseService]",
+    "name": "PlugwiseService",
+    "range": {
+      "startPosition": {
+        "row": 30,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 30,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "ProductCatalog",
+    "serviceTransportName": "[ProductCatalog]",
+    "name": "ProductCatalog",
+    "range": {
+      "startPosition": {
+        "row": 31,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 31,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FutureConnectionsService",
+    "serviceTransportName": "FutureConnectionsService",
+    "name": "FutureConnectionsService",
+    "range": {
+      "startPosition": {
+        "row": 32,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 32,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CobsService",
+    "serviceTransportName": "[CobsService]",
+    "name": "CobsService",
+    "range": {
+      "startPosition": {
+        "row": 33,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 33,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "TaskManager",
+    "serviceTransportName": "[TaskManager]",
+    "name": "TaskManager",
+    "range": {
+      "startPosition": {
+        "row": 34,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 34,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BlackListService",
+    "serviceTransportName": "[BlackListService]",
+    "name": "BlackListService",
+    "range": {
+      "startPosition": {
+        "row": 35,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 35,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BlackListServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BlackListServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 36,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 36,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CreditCheckService",
+    "serviceTransportName": "[CreditCheckService]",
+    "name": "CreditCheckService",
+    "range": {
+      "startPosition": {
+        "row": 37,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 37,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CreditCheckServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "CreditCheckServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 38,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 38,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdentityServer",
+    "serviceTransportName": "[IdentityServer]",
+    "name": "IdentityServer",
+    "range": {
+      "startPosition": {
+        "row": 39,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 39,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGenerator",
+    "serviceTransportName": "[InvoiceGenerator]",
+    "name": "InvoiceGenerator",
+    "range": {
+      "startPosition": {
+        "row": 40,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 40,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailToPay",
+    "serviceTransportName": "[MailToPay]",
+    "name": "MailToPay",
+    "range": {
+      "startPosition": {
+        "row": 41,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 41,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridService",
+    "serviceTransportName": "[SendgridService]",
+    "name": "SendgridService",
+    "range": {
+      "startPosition": {
+        "row": 42,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 42,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "SendgridServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 43,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 43,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DocumentPrinterComponent",
+    "serviceTransportName": "[DocumentPrinterComponent]",
+    "name": "DocumentPrinterComponent",
+    "range": {
+      "startPosition": {
+        "row": 44,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 44,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "PlanningstoolService",
+    "serviceTransportName": "[PlanningstoolService]",
+    "name": "PlanningstoolService",
+    "range": {
+      "startPosition": {
+        "row": 45,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 45,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "ApiGatewayMigrationApiAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "ApiGatewayMigrationApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 46,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 46,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGeneratorAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "InvoiceGeneratorAsync",
+    "range": {
+      "startPosition": {
+        "row": 47,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 47,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngineServiceContractApiAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BillingEngineServiceContractApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 48,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 48,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "VideoOnDemandConnectorAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "VideoOnDemandConnectorAsync",
+    "range": {
+      "startPosition": {
+        "row": 50,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 50,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAdapter",
+    "range": {
+      "startPosition": {
+        "row": 51,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 51,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GroupDomainApiAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "GroupDomainApiAsync",
+    "range": {
+      "startPosition": {
+        "row": 53,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 53,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/Fulfillment/FulfillmentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "GeneralLedger",
+    "serviceTransportName": "GeneralLedger",
+    "name": "GeneralLedger",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/GeneralLedger/GeneralLedgerSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "GeneralLedgerAsync",
+    "serviceTransportName": "Kompass",
+    "name": "GeneralLedgerAsync",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/GeneralLedger/GeneralLedgerSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "GeneralLedgerMigrationTestApi",
+    "serviceTransportName": "GeneralLedgerMigrationTestApi",
+    "name": "GeneralLedgerMigrationTestApi",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/GeneralLedger/GeneralLedgerSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GlAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "GlAdapter",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/GeneralLedger/GeneralLedgerSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGenerator",
+    "serviceTransportName": "[InvoiceGenerator]",
+    "name": "InvoiceGenerator",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/GeneralLedger/GeneralLedgerSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "IdentityServer",
+    "serviceTransportName": "IdentityServer",
+    "name": "IdentityServer",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/IdentityServer/IdentityServerSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/IdentityServer/IdentityServerSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "IdentityServerAsync",
+    "serviceTransportName": "Kompass",
+    "name": "IdentityServerAsync",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/IdentityServer/IdentityServerSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "IdentityServerFixApi",
+    "serviceTransportName": "IdentityServerFixApi",
+    "name": "IdentityServerFixApi",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/IdentityServer/IdentityServerSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "[CrmBackend]",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/IdentityServer/IdentityServerSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridService",
+    "serviceTransportName": "[SendgridService]",
+    "name": "SendgridService",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/IdentityServer/IdentityServerSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "SendgridServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/IdentityServer/IdentityServerSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "IdGenerator",
+    "serviceTransportName": "IdGenerator",
+    "name": "IdGenerator",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/IdGenerator/IdGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/IdGenerator/IdGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngine",
+    "serviceTransportName": "[BillingEngine]",
+    "name": "BillingEngine",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/IdGenerator/IdGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "[CrmBackend]",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/IdGenerator/IdGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Fulfillment",
+    "serviceTransportName": "[Fulfillment]",
+    "name": "Fulfillment",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/IdGenerator/IdGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "InvoiceGenerator",
+    "serviceTransportName": "InvoiceGenerator",
+    "name": "InvoiceGenerator",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "InvoiceGeneratorMigrationTestApi",
+    "serviceTransportName": "InvoiceGeneratorMigrationTestApi",
+    "name": "InvoiceGeneratorMigrationTestApi",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "InvoiceGeneratorAsync",
+    "serviceTransportName": "Kompass",
+    "name": "InvoiceGeneratorAsync",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "InvoiceGeneratorTestApi",
+    "serviceTransportName": "InvoiceGeneratorTestApi",
+    "name": "InvoiceGeneratorTestApi",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "InvoiceGeneratorFixApi",
+    "serviceTransportName": "InvoiceGeneratorFixApi",
+    "name": "InvoiceGeneratorFixApi",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BankComponent",
+    "serviceTransportName": "BankComponent",
+    "name": "BankComponent",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BankComponentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BankComponentAsync",
+    "range": {
+      "startPosition": {
+        "row": 9,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 9,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngine",
+    "serviceTransportName": "BillingEngine",
+    "name": "BillingEngine",
+    "range": {
+      "startPosition": {
+        "row": 10,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 10,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "CrmBackend",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 11,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 11,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceSender",
+    "serviceTransportName": "InvoiceSender",
+    "name": "InvoiceSender",
+    "range": {
+      "startPosition": {
+        "row": 12,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 12,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailToPay",
+    "serviceTransportName": "MailToPay",
+    "name": "MailToPay",
+    "range": {
+      "startPosition": {
+        "row": 13,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 13,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GeneralLedger",
+    "serviceTransportName": "GeneralLedger",
+    "name": "GeneralLedger",
+    "range": {
+      "startPosition": {
+        "row": 14,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 14,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdGenerator",
+    "serviceTransportName": "IdGenerator",
+    "name": "IdGenerator",
+    "range": {
+      "startPosition": {
+        "row": 15,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 15,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DocumentPrinterComponent",
+    "serviceTransportName": "[DocumentPrinterComponent]",
+    "name": "DocumentPrinterComponent",
+    "range": {
+      "startPosition": {
+        "row": 16,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 16,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DocumentPrinterComponentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "DocumentPrinterComponentAsync",
+    "range": {
+      "startPosition": {
+        "row": 17,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 17,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DunningServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "DunningServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 18,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 18,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "ReportGenerator",
+    "serviceTransportName": "[Kompass]",
+    "name": "ReportGenerator",
+    "range": {
+      "startPosition": {
+        "row": 19,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 19,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FulfillmentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "FulfillmentAsync",
+    "range": {
+      "startPosition": {
+        "row": 20,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 20,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngineAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BillingEngineAsync",
+    "range": {
+      "startPosition": {
+        "row": 21,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 21,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailToPayAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "MailToPayAsync",
+    "range": {
+      "startPosition": {
+        "row": 22,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 22,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GeneralLedgerAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "GeneralLedgerAsync",
+    "range": {
+      "startPosition": {
+        "row": 23,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 23,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAsync",
+    "range": {
+      "startPosition": {
+        "row": 24,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 24,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GlAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "GlAdapter",
+    "range": {
+      "startPosition": {
+        "row": 26,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 26,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAdapter",
+    "range": {
+      "startPosition": {
+        "row": 27,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 27,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/InvoiceGenerator/InvoiceGeneratorSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "MailStorage",
+    "serviceTransportName": "MailStorage",
+    "name": "MailStorage",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailStorage/MailStorageSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "MailStorageAsync",
+    "serviceTransportName": "Kompass",
+    "name": "MailStorageAsync",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailStorage/MailStorageSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailStorageConnector",
+    "serviceTransportName": "[Kompass]",
+    "name": "MailStorageConnector",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailStorage/MailStorageSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "[CrmBackend]",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailStorage/MailStorageSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "TaskManager",
+    "serviceTransportName": "[TaskManager]",
+    "name": "TaskManager",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailStorage/MailStorageSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FileStorageComponent",
+    "serviceTransportName": "[FileStorageComponent]",
+    "name": "FileStorageComponent",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailStorage/MailStorageSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "TaskManagerAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "TaskManagerAsync",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailStorage/MailStorageSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "OutgoingMailService",
+    "serviceTransportName": "OutgoingMailService",
+    "name": "OutgoingMailService",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailStorage/MailStorageSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendIncomingEmailFixed",
+    "serviceTransportName": "CrmBackendIncomingEmailFixed",
+    "name": "CrmBackendIncomingEmailFixed",
+    "range": {
+      "startPosition": {
+        "row": 9,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 9,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailStorage/MailStorageSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "MailToPay",
+    "serviceTransportName": "MailToPay",
+    "name": "MailToPay",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "MailToPayAsync",
+    "serviceTransportName": "Kompass",
+    "name": "MailToPayAsync",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "MailToPayMigrationTestApi",
+    "serviceTransportName": "MailToPayMigrationTestApi",
+    "name": "MailToPayMigrationTestApi",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailToPayService",
+    "serviceTransportName": "[MailToPayService]",
+    "name": "MailToPayService",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MailToPayServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "MailToPayServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "[CrmBackend]",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdGenerator",
+    "serviceTransportName": "[IdGenerator]",
+    "name": "IdGenerator",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngine",
+    "serviceTransportName": "[BillingEngine]",
+    "name": "BillingEngine",
+    "range": {
+      "startPosition": {
+        "row": 9,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 9,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BankComponent",
+    "serviceTransportName": "[BankComponent]",
+    "name": "BankComponent",
+    "range": {
+      "startPosition": {
+        "row": 10,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 10,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGenerator",
+    "serviceTransportName": "[InvoiceGenerator]",
+    "name": "InvoiceGenerator",
+    "range": {
+      "startPosition": {
+        "row": 11,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 11,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GeneralLedgerAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "GeneralLedgerAsync",
+    "range": {
+      "startPosition": {
+        "row": 12,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 12,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BankComponentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BankComponentAsync",
+    "range": {
+      "startPosition": {
+        "row": 13,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 13,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InvoiceGeneratorAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "InvoiceGeneratorAsync",
+    "range": {
+      "startPosition": {
+        "row": 14,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 14,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngineAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BillingEngineAsync",
+    "range": {
+      "startPosition": {
+        "row": 15,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 15,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GlAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "GlAdapter",
+    "range": {
+      "startPosition": {
+        "row": 17,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 17,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/MailToPay/MailToPaySrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "NleNlApiService",
+    "serviceTransportName": "NleNlApiService",
+    "name": "NleNlApiService",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/NleNlApiComponent/NleNlApiComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BankComponent",
+    "serviceTransportName": "BankComponent",
+    "name": "BankComponent",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/NleNlApiComponent/NleNlApiComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdentityServer",
+    "serviceTransportName": "IdentityServer",
+    "name": "IdentityServer",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/NleNlApiComponent/NleNlApiComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FulfillmentNleNlApi",
+    "serviceTransportName": "FulfillmentNleNlApi",
+    "name": "FulfillmentNleNlApi",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/NleNlApiComponent/NleNlApiComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Fulfillment",
+    "serviceTransportName": "Fulfillment",
+    "name": "Fulfillment",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/NleNlApiComponent/NleNlApiComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngine",
+    "serviceTransportName": "BillingEngine",
+    "name": "BillingEngine",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/NleNlApiComponent/NleNlApiComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "CrmBackend",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/NleNlApiComponent/NleNlApiComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "ProductCatalog",
+    "serviceTransportName": "ProductCatalog",
+    "name": "ProductCatalog",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/NleNlApiComponent/NleNlApiComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "OldBEMigrationService",
+    "serviceTransportName": "OldBEMigrationService",
+    "name": "OldBEMigrationService",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/OldBEMigrationComponent/OldBEMigrationComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "OldBEMigrationServiceAsync",
+    "serviceTransportName": "Kompass",
+    "name": "OldBEMigrationServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/OldBEMigrationComponent/OldBEMigrationComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "MigrationConnectorService",
+    "serviceTransportName": "[Kompass]",
+    "name": "MigrationConnectorService",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/OldBEMigrationComponent/OldBEMigrationComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAsync",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/OldBEMigrationComponent/OldBEMigrationComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngineAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BillingEngineAsync",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/OldBEMigrationComponent/OldBEMigrationComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BankComponentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BankComponentAsync",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/OldBEMigrationComponent/OldBEMigrationComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAdapter",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/OldBEMigrationComponent/OldBEMigrationComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "PlanningstoolService",
+    "serviceTransportName": "PlanningstoolService",
+    "name": "PlanningstoolService",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PlanningstoolComponent/PlanningstoolComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PlanningstoolComponent/PlanningstoolComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "PlanningstoolServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "PlanningstoolServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PlanningstoolComponent/PlanningstoolComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "PlanningstoolServiceAsyncTest",
+    "serviceTransportName": "[PlanningstoolServiceAsyncTest]",
+    "name": "PlanningstoolServiceAsyncTest",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PlanningstoolComponent/PlanningstoolComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FulfillmentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "FulfillmentAsync",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PlanningstoolComponent/PlanningstoolComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridService",
+    "serviceTransportName": "[SendgridService]",
+    "name": "SendgridService",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PlanningstoolComponent/PlanningstoolComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "SendgridServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PlanningstoolComponent/PlanningstoolComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "[CrmBackend]",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PlanningstoolComponent/PlanningstoolComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Fulfillment",
+    "serviceTransportName": "[Fulfillment]",
+    "name": "Fulfillment",
+    "range": {
+      "startPosition": {
+        "row": 9,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 9,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PlanningstoolComponent/PlanningstoolComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "InstallationProviderConnector",
+    "serviceTransportName": "[Kompass]",
+    "name": "InstallationProviderConnector",
+    "range": {
+      "startPosition": {
+        "row": 10,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 10,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PlanningstoolComponent/PlanningstoolComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "TaskManager",
+    "serviceTransportName": "[TaskManager]",
+    "name": "TaskManager",
+    "range": {
+      "startPosition": {
+        "row": 11,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 11,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PlanningstoolComponent/PlanningstoolComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdGenerator",
+    "serviceTransportName": "[IdGenerator]",
+    "name": "IdGenerator",
+    "range": {
+      "startPosition": {
+        "row": 12,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 12,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PlanningstoolComponent/PlanningstoolComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngine",
+    "serviceTransportName": "[BillingEngine]",
+    "name": "BillingEngine",
+    "range": {
+      "startPosition": {
+        "row": 13,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 13,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PlanningstoolComponent/PlanningstoolComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAsync",
+    "range": {
+      "startPosition": {
+        "row": 14,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 14,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PlanningstoolComponent/PlanningstoolComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAdapter",
+    "range": {
+      "startPosition": {
+        "row": 15,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 15,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PlanningstoolComponent/PlanningstoolComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "PollingComponent",
+    "serviceTransportName": "PollingComponent",
+    "name": "PollingComponent",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PollingComponent/PollingComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PollingComponent/PollingComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CobsService",
+    "serviceTransportName": "[CobsService]",
+    "name": "CobsService",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PollingComponent/PollingComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FulfillmentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "FulfillmentAsync",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/PollingComponent/PollingComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "ProductCatalog",
+    "serviceTransportName": "ProductCatalog",
+    "name": "ProductCatalog",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ProductCatalog/ProductCatalogSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "ProductCatalogPatchingService",
+    "serviceTransportName": "ProductCatalogPatchingService",
+    "name": "ProductCatalogPatchingService",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ProductCatalog/ProductCatalogSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ProductCatalog/ProductCatalogSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Fulfillment",
+    "serviceTransportName": "[Fulfillment]",
+    "name": "Fulfillment",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ProductCatalog/ProductCatalogSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngine",
+    "serviceTransportName": "[BillingEngine]",
+    "name": "BillingEngine",
+    "range": {
+      "startPosition": {
+        "row": 9,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 9,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ProductCatalog/ProductCatalogSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GeneralLedger",
+    "serviceTransportName": "[GeneralLedger]",
+    "name": "GeneralLedger",
+    "range": {
+      "startPosition": {
+        "row": 10,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 10,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ProductCatalog/ProductCatalogSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Cdr",
+    "serviceTransportName": "[Cdr]",
+    "name": "Cdr",
+    "range": {
+      "startPosition": {
+        "row": 11,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 11,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ProductCatalog/ProductCatalogSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CobsService",
+    "serviceTransportName": "[CobsService]",
+    "name": "CobsService",
+    "range": {
+      "startPosition": {
+        "row": 12,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 12,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ProductCatalog/ProductCatalogSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "[CrmBackend]",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 13,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 13,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ProductCatalog/ProductCatalogSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdentityServer",
+    "serviceTransportName": "[IdentityServer]",
+    "name": "IdentityServer",
+    "range": {
+      "startPosition": {
+        "row": 14,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 14,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/ProductCatalog/ProductCatalogSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "SendgridService",
+    "serviceTransportName": "[SendgridService]",
+    "name": "SendgridService",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/SendgridComponent/SendgridComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "SendgridServiceAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "SendgridServiceAsync",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/SendgridComponent/SendgridComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/SendgridComponent/SendgridComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "DeliveringEmailsLogService",
+    "serviceTransportName": "[Kompass]",
+    "name": "DeliveringEmailsLogService",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/SendgridComponent/SendgridComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "[CrmBackend]",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/SendgridComponent/SendgridComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdentityServer",
+    "serviceTransportName": "[IdentityServer]",
+    "name": "IdentityServer",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/SendgridComponent/SendgridComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "SendgridComponentService",
+    "serviceTransportName": "[Kompass]",
+    "name": "SendgridComponentService",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/SendgridComponent/SendgridComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Fulfillment",
+    "serviceTransportName": "[Fulfillment]",
+    "name": "Fulfillment",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/SendgridComponent/SendgridComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "FileStorageComponent",
+    "serviceTransportName": "[FileStorageComponent]",
+    "name": "FileStorageComponent",
+    "range": {
+      "startPosition": {
+        "row": 9,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 9,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/SendgridComponent/SendgridComponentSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TaskManager",
+    "serviceTransportName": "TaskManager",
+    "name": "TaskManager",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/TaskManager/TaskManagerSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/TaskManager/TaskManagerSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "TaskManagerAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "TaskManagerAsync",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/TaskManager/TaskManagerSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "Fulfillment",
+    "serviceTransportName": "[Fulfillment]",
+    "name": "Fulfillment",
+    "range": {
+      "startPosition": {
+        "row": 4,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 4,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/TaskManager/TaskManagerSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "IdGenerator",
+    "serviceTransportName": "[IdGenerator]",
+    "name": "IdGenerator",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/TaskManager/TaskManagerSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackend",
+    "serviceTransportName": "[CrmBackend]",
+    "name": "CrmBackend",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/TaskManager/TaskManagerSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "PlanningstoolService",
+    "serviceTransportName": "[PlanningstoolService]",
+    "name": "PlanningstoolService",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/TaskManager/TaskManagerSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestApi",
+    "serviceTransportName": "[TestApi]",
+    "name": "TestApi",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/TestApiComponent/TestApiSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "GeneralLedgerAdapterTestApi",
+    "serviceTransportName": "GeneralLedgerAdapter",
+    "name": "GeneralLedgerAdapterTestApi",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/TestApiComponent/TestApiSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "CrmBackendAdapterTestApi",
+    "serviceTransportName": "CrmBackendAdapter",
+    "name": "CrmBackendAdapterTestApi",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/TestApiComponent/TestApiSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "VideoOnDemandAdapterTestApi",
+    "serviceTransportName": "VideoOnDemandAdapter",
+    "name": "VideoOnDemandAdapterTestApi",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/TestApiComponent/TestApiSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "GlAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "GlAdapter",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/TestApiComponent/TestApiSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "CrmBackendAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "CrmBackendAdapter",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/TestApiComponent/TestApiSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "VideoOnDemandAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "VideoOnDemandAdapter",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/TestApiComponent/TestApiSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "VideoOnDemand",
+    "serviceTransportName": "VideoOnDemand",
+    "name": "VideoOnDemand",
+    "range": {
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/VideoOnDemand/VideoOnDemandSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "VideoOnDemandAsync",
+    "serviceTransportName": "Kompass",
+    "name": "VideoOnDemandAsync",
+    "range": {
+      "startPosition": {
+        "row": 1,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 1,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/VideoOnDemand/VideoOnDemandSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "VideoOnDemandMigrationTestApi",
+    "serviceTransportName": "VideoOnDemandMigrationTestApi",
+    "name": "VideoOnDemandMigrationTestApi",
+    "range": {
+      "startPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/VideoOnDemand/VideoOnDemandSrc/Services.bs"
+  },
+  {
+    "serviceType": "hosted",
+    "serviceName": "TestUtilsAPI",
+    "serviceTransportName": "TestUtilsAPI",
+    "name": "TestUtilsAPI",
+    "range": {
+      "startPosition": {
+        "row": 3,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 3,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/VideoOnDemand/VideoOnDemandSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "VideoOnDemandConnectorAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "VideoOnDemandConnectorAsync",
+    "range": {
+      "startPosition": {
+        "row": 5,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 5,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/VideoOnDemand/VideoOnDemandSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "BillingEngineAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "BillingEngineAsync",
+    "range": {
+      "startPosition": {
+        "row": 6,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 6,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/VideoOnDemand/VideoOnDemandSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "DocumentPrinterComponentAsync",
+    "serviceTransportName": "[Kompass]",
+    "name": "DocumentPrinterComponentAsync",
+    "range": {
+      "startPosition": {
+        "row": 7,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 7,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/VideoOnDemand/VideoOnDemandSrc/Services.bs"
+  },
+  {
+    "serviceType": "external",
+    "serviceName": "VideoOnDemandAdapter",
+    "serviceTransportName": "[Kompass]",
+    "name": "VideoOnDemandAdapter",
+    "range": {
+      "startPosition": {
+        "row": 8,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 8,
+        "col": 9007199254740991
+      }
+    },
+    "type": 0,
+    "uri": "file:///c%3A/Nikiforov/dev/nuts-bella/src/Domain/components/VideoOnDemand/VideoOnDemandSrc/Services.bs"
+  }
+]

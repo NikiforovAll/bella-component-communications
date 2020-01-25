@@ -2,11 +2,16 @@ import { Injectable } from '@angular/core';
 // import data from '../../data.json';
 import { GraphData } from '../../models/storage-models/graph-data';
 import { MethodCall } from '../../models/storage-models/method-call';
-
+import { BaseDeclaration, MemberComposite, BellaReference } from 'bella-grammar';
 @Injectable({
     providedIn: 'root',
 })
 export class StorageService {
+
+    hostedServices: NamespacedDeclarations;
+    data: GraphData;
+    methodCalls: MethodCall[];
+
     public set graphData(v: GraphData) {
         this.data = v;
     }
@@ -15,9 +20,13 @@ export class StorageService {
         this.methodCalls = d;
     }
 
-    data: GraphData;
+    public setHostedServices(payload: NamespacedDeclarations) {
+        this.hostedServices = payload;
+    }
 
-    methodCalls: MethodCall[];
+    public getHostedServices() {
+        return this.hostedServices;
+    }
 
     constructor() {}
 
@@ -30,3 +39,47 @@ export class StorageService {
     }
 
 }
+
+export interface NamespacedDeclarations {
+    namespace: string;
+    procedures: KeyedDeclaration[];
+}
+
+export interface NamespacedReferences {
+    namespace: string;
+    references: LocatedBellaReference[];
+}
+
+
+export interface KeyedDeclaration extends BaseDeclaration, MemberComposite {
+    uri: string;
+    parentName?: string;
+}
+
+export interface LocatedResource {
+    uri: string;
+}
+
+export interface LocatedBellaReference extends BellaReference, LocatedResource {}
+
+
+// export interface BaseDeclaration {
+//     range: Range;
+//     name: string;
+//     type: DeclarationType;
+// }
+
+// export interface Range {
+//     startPosition: Position,
+//     endPosition: Position
+// }
+
+// export interface Position {
+//     row: number;
+//     col: number
+// }
+
+// export interface MemberComposite {
+//     members?: BaseDeclaration [];
+// }
+

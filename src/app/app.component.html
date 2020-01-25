@@ -10,6 +10,7 @@
         <mat-toolbar>Menu</mat-toolbar>
         <mat-nav-list>
             <a mat-list-item routerLink="/diagram">Draw Diagram</a>
+            <a mat-list-item routerLink="/present-invocation-chains">Build Call Stack</a>
             <a mat-list-item routerLink="/data">View Components</a>
         </mat-nav-list>
     </mat-sidenav>
@@ -23,7 +24,7 @@
         role="region"
         class="sidenav-info"
     >
-    <app-component-information 
+    <app-component-information
         [selectedDiagramComponent]="sidebarService.selectedComponent$ | async">
     </app-component-information>
     </mat-sidenav>

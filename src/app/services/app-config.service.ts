@@ -15,6 +15,7 @@ export class AppConfiguration {
         const appConfig = `assets/app.config.json`;
         const payloadConfig = `assets/component-services.json`;
         const methodCallConfig = `assets/method-calls.json`;
+        const exportedLSPHostedServices = `assets/bella-lsp-export/hosted-services.json`;
         const promises: Promise<void>[] = [
             new Promise<void>((resolve, reject) => {
                 this.httpClient
@@ -53,7 +54,21 @@ export class AppConfiguration {
                         reject(`Could not load the config file`);
                     });
             }),
+            this.retrieveConfiguration(exportedLSPHostedServices).then((response) => {
+                this.storage.setHostedServices(response);
+            })
         ];
         return Promise.all(promises);
+    }
+
+    private retrieveConfiguration(configUrl: string): Promise<any> {
+        return new Promise<any>((resolve, reject) => {
+            this.httpClient
+                .get(configUrl)
+                .toPromise()
+                .catch((response: any) => {
+                    reject(`Could not load the config file`);
+                });
+        });
     }
 }
