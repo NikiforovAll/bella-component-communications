@@ -33,6 +33,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MethodReferenceInfoCardComponent } from './components/dumb/method-reference-info-card/method-reference-info-card.component';
 import { InvocationChainBuilderComponent } from './components/smart/invocation-chain-builder/invocation-chain-builder.component';
 import { ProcedureContainerComponent } from './components/dumb/procedure-container/procedure-container.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -51,6 +52,7 @@ import { ProcedureContainerComponent } from './components/dumb/procedure-contain
         HttpClientModule,
         BrowserModule,
         AppRoutingModule,
+        FormsModule,
         BrowserAnimationsModule,
         LayoutModule,
         MatToolbarModule,

@@ -23,6 +23,7 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
+  <mat-checkbox [(ngModel)]="isSimpleInvocationContainer" matTooltip="Preserves only invocations with external calls">Simplify</mat-checkbox>
   <button
       (click)="buildContainer()"
       matTooltip="Use (alt + arrow_keys) to navigate history of diagrams"
@@ -30,7 +31,7 @@
       color="primary">
       Build
   </button>
-  <mat-chip-list style="display: inline-block;">
+  <mat-chip-list style="display: inline-block; margin-left: 10px;">
     <mat-chip matTooltip="Maximum stack depth for internal and external procedure calls" [matTooltipPosition]="'right'">MaxDepth: 5</mat-chip>
   </mat-chip-list>
   <!-- <button

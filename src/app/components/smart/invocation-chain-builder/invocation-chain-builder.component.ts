@@ -19,7 +19,7 @@ export class InvocationChainBuilderComponent implements OnInit {
   groupedProcedures: NamespacedDeclarations[];
   groupedReferences: NamespacedReferences[];
   rootInvocationContainers: InvocationContainer[];
-
+  isSimpleInvocationContainer: boolean;
   constructor(
     private storage: StorageService,
     private route: ActivatedRoute,
@@ -74,15 +74,23 @@ export class InvocationChainBuilderComponent implements OnInit {
     }
     // TODO: MAJOR - handle recursion and overloads correctly, or at least notify about that
     const rootName = InvocationUtils.getProcedureTruncatedName(this.selectedProcedure);
-    const container = InvocationUtils.buildInvocationContainer(
+    let containers = InvocationUtils.buildInvocationContainer(
       this.groupedReferences,
       this.groupedServices,
       this.groupedProcedures,
       this.selectedComponent,
       rootName,
       maxDepth);
-    this.rootInvocationContainers = container;
-    // this.ref.markForCheck();
+    const numberOfNotSimplifiedContainers = containers.length;
+    if (this.isSimpleInvocationContainer) {
+      containers = InvocationUtils.simplifyContainers(containers);
+    }
+    this.rootInvocationContainers = containers;
+    if (containers.length === 0 && numberOfNotSimplifiedContainers > 0) {
+      this.snackBar.open('No external communications. Try to build without \"Simply\" flag', '', {
+        duration: 3 * 1000
+      });
+    }
   }
 
   public changeQuery() {
@@ -102,6 +110,30 @@ export class InvocationChainBuilderComponent implements OnInit {
 
 // tslint:disable-next-line: no-namespace
 export namespace InvocationUtils {
+
+  export function simplifyContainers(invocationContainers: InvocationContainer[]) {
+    if (!invocationContainers || invocationContainers.length === 0) {
+      return [];
+    }
+    let containerResult = invocationContainers.filter(c => {
+      let match = !!c.channel;
+      const innerContainers = this.simplifyContainers(c.refs);
+      match = match || innerContainers.length > 0;
+      return match;
+    }).map(c => {
+      // TODO: consider builder pattern
+      const ic = new InvocationContainer(c.content,
+        InvocationUtils.simplifyContainers(c.refs), c.component);
+      ic.setCommunication(c.channel);
+      ic.setOverload(c.isOverloaded);
+      ic.setInvocationContainerState(c.state);
+      return ic;
+    });
+    // if (containerResult.length === 0) {
+    //   containerResult = invocationContainers.refs;
+    // }
+    return containerResult as InvocationContainer[];
+  }
 
   export function buildInvocationContainer(
     referenceContext: NamespacedReferences[],
