@@ -3,6 +3,7 @@ import { StorageService, NamespacedDeclarations, KeyedDeclaration, DeclarationTy
 import { ActivatedRoute, Router } from '@angular/router';
 import { InvocationContainer, InvocationContainerState, CommunicationPattern } from 'src/app/models/invocation-builder-models/invocation-container.model';
 import { namespace } from 'd3';
+import { MatSnackBar } from '@angular/material';
 @Component({
   selector: 'app-invocation-chain-builder',
   templateUrl: './invocation-chain-builder.component.html',
@@ -23,7 +24,8 @@ export class InvocationChainBuilderComponent implements OnInit {
     private storage: StorageService,
     private route: ActivatedRoute,
     private router: Router,
-    private ref: ChangeDetectorRef) {
+    private snackBar: MatSnackBar,
+    ref: ChangeDetectorRef) {
     this.init();
     this.route.queryParams.subscribe(params => {
       const { component, service, procedure } = params;
@@ -31,6 +33,10 @@ export class InvocationChainBuilderComponent implements OnInit {
       this.selectedService = service;
       this.selectedProcedure = procedure;
       this.buildContainer();
+      ref.markForCheck();
+    });
+    this.snackBar.open('Use (alt + arrow_keys) to navigate history of diagrams', '', {
+      duration: 3 * 1000
     });
   }
 
@@ -62,7 +68,10 @@ export class InvocationChainBuilderComponent implements OnInit {
 
   buildContainer() {
     const maxDepth = 5;
-
+    if (!this.selectedProcedure) {
+      this.rootInvocationContainers = [];
+      return;
+    }
     // TODO: MAJOR - handle recursion and overloads correctly, or at least notify about that
     const rootName = InvocationUtils.getProcedureTruncatedName(this.selectedProcedure);
     const container = InvocationUtils.buildInvocationContainer(

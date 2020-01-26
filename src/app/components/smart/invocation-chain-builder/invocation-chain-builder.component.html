@@ -25,12 +25,13 @@
   </mat-form-field>
   <button
       (click)="buildContainer()"
+      matTooltip="Use (alt + arrow_keys) to navigate history of diagrams"
       mat-button
       color="primary">
       Build
   </button>
   <mat-chip-list style="display: inline-block;">
-    <mat-chip>MaxDepth: 5</mat-chip>
+    <mat-chip matTooltip="Maximum stack depth for internal and external procedure calls" [matTooltipPosition]="'right'">MaxDepth: 5</mat-chip>
   </mat-chip-list>
   <!-- <button
       (click)="navigateBack()"
