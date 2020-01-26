@@ -1,0 +1,39 @@
+<div class="invocation-container">
+
+  <mat-expansion-panel *ngIf="container.refs.length > 0" class="procedure-container">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <span class="header-token">{{container.content.name}}</span>
+        <span *ngIf="isInternalProcedure()">
+          <button mat-button (click)="openComponentDocumentation(); $event.stopPropagation()">
+            <mat-icon>link</mat-icon>
+          </button>
+        </span>
+        <button mat-button (click)="zoomInToContainer(); $event.stopPropagation()">
+          <mat-icon>subdirectory_arrow_right</mat-icon>
+        </button>
+        <span class="warning-message header-token">
+          {{container.getWarningMessage()}}
+        </span>
+      </mat-panel-title>
+      <mat-panel-description>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-procedure-container [container]="innerContainer" *ngFor="let innerContainer of container.refs">
+    </app-procedure-container>
+  </mat-expansion-panel>
+
+  <mat-card class="procedure-container" *ngIf="!container.refs.length">
+    <!-- <mat-toolbar> -->
+      <span>{{container.content.name}}</span>
+      <span *ngIf="isInternalProcedure()">
+        <button mat-button (click)="openComponentDocumentation()">
+          <mat-icon>link</mat-icon>
+        </button>
+      </span>
+      <span class="warning-message">
+        {{container.getWarningMessage()}}
+      </span>
+    <!-- </mat-toolbar> -->
+  </mat-card>
+</div>

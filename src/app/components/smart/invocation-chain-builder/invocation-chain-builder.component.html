@@ -18,9 +18,19 @@
   <mat-form-field>
     <mat-label>Procedure...</mat-label>
     <mat-select [(value)]="selectedProcedure" (selectionChange)="changeQuery()">
-      <mat-option *ngFor="let procedure of getProcedureForService(selectedComponent, selectedService)" [value]="procedure.name">
+      <mat-option *ngFor="let procedure of getServiceEntries(selectedComponent, selectedService)" [value]="procedure.name">
         {{procedure.name}}
       </mat-option>
     </mat-select>
   </mat-form-field>
+  <button
+      (click)="buildContainer()"
+      mat-button
+      color="primary">
+      Build
+  </button>
 </mat-card>
+
+<div class="root-container" *ngFor="let rootInvocationContainer of rootInvocationContainers">
+  <app-procedure-container [container]="rootInvocationContainer"></app-procedure-container>
+</div>

@@ -31,6 +31,7 @@ import { AppConfiguration } from './services/app-config.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MethodReferenceInfoCardComponent } from './components/dumb/method-reference-info-card/method-reference-info-card.component';
 import { InvocationChainBuilderComponent } from './components/smart/invocation-chain-builder/invocation-chain-builder.component';
+import { ProcedureContainerComponent } from './components/dumb/procedure-container/procedure-container.component';
 
 @NgModule({
     declarations: [
@@ -43,6 +44,7 @@ import { InvocationChainBuilderComponent } from './components/smart/invocation-c
         ComponentsDefinitionComponent,
         MethodReferenceInfoCardComponent,
         InvocationChainBuilderComponent,
+        ProcedureContainerComponent,
     ],
     imports: [
         HttpClientModule,
