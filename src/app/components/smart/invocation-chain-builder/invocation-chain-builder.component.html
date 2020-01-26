@@ -29,8 +29,18 @@
       color="primary">
       Build
   </button>
+  <mat-chip-list style="display: inline-block;">
+    <mat-chip>MaxDepth: 5</mat-chip>
+  </mat-chip-list>
+  <!-- <button
+      (click)="navigateBack()"
+      mat-button
+      color="primary">
+      Go Back
+      <mat-icon>keyboard_backspace</mat-icon>
+  </button> -->
 </mat-card>
 
 <div class="root-container" *ngFor="let rootInvocationContainer of rootInvocationContainers">
-  <app-procedure-container [container]="rootInvocationContainer"></app-procedure-container>
+  <app-procedure-container [container]="rootInvocationContainer" [isShowZoomToControl]="false"></app-procedure-container>
 </div>

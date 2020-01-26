@@ -19,6 +19,7 @@ import {
     MatTooltipModule,
     MatSelectModule,
     MatSnackBarModule,
+    MatChipsModule,
 } from '@angular/material';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { ComponentDiagramComponent } from './components/smart/component-diagram/component-diagram.component';
@@ -66,6 +67,7 @@ import { ProcedureContainerComponent } from './components/dumb/procedure-contain
         MatTooltipModule,
         MatSelectModule,
         MatSnackBarModule,
+        MatChipsModule,
         ScrollingModule,
     ],
     providers: [

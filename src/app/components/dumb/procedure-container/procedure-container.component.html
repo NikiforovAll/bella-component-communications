@@ -1,7 +1,7 @@
 <div class="invocation-container">
 
   <mat-expansion-panel *ngIf="container.refs.length > 0" class="procedure-container">
-    <mat-expansion-panel-header>
+    <mat-expansion-panel-header [ngClass]="{'sync-invocation': containerCommunicationPattern() == communicationPattern.Sync, 'async-invocation': containerCommunicationPattern() == communicationPattern.Async}">
       <mat-panel-title>
         <span class="header-token">{{container.content.name}}</span>
         <span *ngIf="isInternalProcedure()">
@@ -9,21 +9,26 @@
             <mat-icon>link</mat-icon>
           </button>
         </span>
-        <button mat-button (click)="zoomInToContainer(); $event.stopPropagation()">
-          <mat-icon>subdirectory_arrow_right</mat-icon>
-        </button>
+        <span *ngIf="isShowZoomToControl">
+          <button mat-button (click)="zoomInToContainer(); $event.stopPropagation()">
+            <mat-icon>subdirectory_arrow_right</mat-icon>
+          </button>
+        </span>
         <span class="warning-message header-token">
           {{container.getWarningMessage()}}
         </span>
       </mat-panel-title>
       <mat-panel-description>
+        <span class="header-token container-channel">
+          {{container.channel}}
+        </span>
       </mat-panel-description>
     </mat-expansion-panel-header>
     <app-procedure-container [container]="innerContainer" *ngFor="let innerContainer of container.refs">
     </app-procedure-container>
   </mat-expansion-panel>
 
-  <mat-card class="procedure-container" *ngIf="!container.refs.length">
+  <mat-card class="procedure-container" [ngClass]="{'sync-invocation': containerCommunicationPattern() == communicationPattern.Sync, 'async-invocation': containerCommunicationPattern() == communicationPattern.Async}" *ngIf="!container.refs.length">
     <!-- <mat-toolbar> -->
       <span>{{container.content.name}}</span>
       <span *ngIf="isInternalProcedure()">
@@ -31,8 +36,16 @@
           <mat-icon>link</mat-icon>
         </button>
       </span>
+      <span *ngIf="isShowZoomToControl">
+        <button mat-button (click)="zoomInToContainer(); $event.stopPropagation()">
+          <mat-icon>subdirectory_arrow_right</mat-icon>
+        </button>
+      </span>
       <span class="warning-message">
         {{container.getWarningMessage()}}
+      </span>
+      <span class="container-channel">
+        {{container.channel}}
       </span>
     <!-- </mat-toolbar> -->
   </mat-card>

@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { StorageService, NamespacedDeclarations, KeyedDeclaration, DeclarationType, LocatedBellaReference, NamespacedReferences } from 'src/app/services/storage/storage.service';
+import { Component, OnInit, NgZone, ChangeDetectorRef  } from '@angular/core';
+import { StorageService, NamespacedDeclarations, KeyedDeclaration, DeclarationType, LocatedBellaReference, NamespacedReferences, BellaReferenceType } from 'src/app/services/storage/storage.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { InvocationContainer, InvocationContainerState } from 'src/app/models/invocation-builder-models/invocation-container.model';
+import { InvocationContainer, InvocationContainerState, CommunicationPattern } from 'src/app/models/invocation-builder-models/invocation-container.model';
 import { namespace } from 'd3';
 @Component({
   selector: 'app-invocation-chain-builder',
@@ -22,7 +22,8 @@ export class InvocationChainBuilderComponent implements OnInit {
   constructor(
     private storage: StorageService,
     private route: ActivatedRoute,
-    private router: Router) {
+    private router: Router,
+    private ref: ChangeDetectorRef) {
     this.init();
     this.route.queryParams.subscribe(params => {
       const { component, service, procedure } = params;
@@ -60,17 +61,19 @@ export class InvocationChainBuilderComponent implements OnInit {
   }
 
   buildContainer() {
-    const maxDepth = 25;
+    const maxDepth = 5;
 
     // TODO: MAJOR - handle recursion and overloads correctly, or at least notify about that
     const rootName = InvocationUtils.getProcedureTruncatedName(this.selectedProcedure);
     const container = InvocationUtils.buildInvocationContainer(
       this.groupedReferences,
+      this.groupedServices,
       this.groupedProcedures,
       this.selectedComponent,
       rootName,
       maxDepth);
     this.rootInvocationContainers = container;
+    // this.ref.markForCheck();
   }
 
   public changeQuery() {
@@ -83,6 +86,9 @@ export class InvocationChainBuilderComponent implements OnInit {
     });
   }
 
+  public navigateBack() {
+    this.router.navigate(['../'], { relativeTo: this.route.parent });
+  }
 }
 
 // tslint:disable-next-line: no-namespace
@@ -90,6 +96,7 @@ export namespace InvocationUtils {
 
   export function buildInvocationContainer(
     referenceContext: NamespacedReferences[],
+    groupedServices: NamespacedDeclarations[],
     declarationContext: NamespacedDeclarations[],
     componentName: string,
     entityToFind: string,
@@ -102,14 +109,15 @@ export namespace InvocationUtils {
     const isOverloaded = bases.length > 1;
     for (const base of bases) {
       result.push(
-        buildContainerInner(declarationContext, componentName, base,
+        buildContainerInner(groupedServices, declarationContext, componentName, base,
           entityToFind, referenceContext, currentDepth, isOverloaded));
     }
     return result;
   }
 
   function buildContainerInner(
-    declarationContext: NamespacedDeclarations[],
+    groupedServices: NamespacedDeclarations[],
+    groupedProcedures: NamespacedDeclarations[],
     componentName: string,
     base: KeyedDeclaration,
     entityToFind: string,
@@ -118,33 +126,66 @@ export namespace InvocationUtils {
     isOverloaded: boolean) {
     const filterReferencesForProcedure = (ref: LocatedBellaReference) => {
       let match = !ref.isDeclaration;
-      const procedures = InvocationUtils.getProcedure(declarationContext, componentName, ref.nameTo);
-      match = match && !!procedures;
+      let match2 = match;
+      const procedures = InvocationUtils.getProcedure(groupedProcedures, componentName, ref.nameTo);
+      match = match && !!procedures && procedures.length > 0;
       match = match && ref.uri === base.uri;
-      return match;
+      match2 = match2 && ref.referenceType === BellaReferenceType.NestedReference;
+      const component2 = InvocationUtils
+        .getComponentForService(groupedServices, ref.nameTo);
+      const ref2 = ref as any;
+      if (component2) {
+        const procedures2 = InvocationUtils
+          .getProcedure(groupedProcedures, component2.namespace, ref2.childTo);
+        match2 = match2 && !!procedures2;
+      } else {
+        match2 = match2 && false;
+      }
+      return match || match2;
     };
     const refs = getReferencesForProcedure(entityToFind, componentName, referenceContext)
       .filter(filterReferencesForProcedure);
     const nestedContainer = refs
       .map(r => {
-        // TODO: prepare for recursion
-        const isRecursionEncountered = InvocationUtils.getProcedureTruncatedName(base.name) === r.nameTo;
-        if (isRecursionEncountered) {
-          const innerResult = new InvocationContainer(base, [], componentName);
-          innerResult.setInvocationContainerState(InvocationContainerState.RecursionEncounter);
-          innerResult.setOverload(isOverloaded);
-          return [innerResult];
+        if (r.referenceType && r.referenceType === BellaReferenceType.NestedReference) {
+          const component2 = InvocationUtils
+            .getComponentForService(groupedServices, r.nameTo);
+          const ref2 = r as any;
+          const isRecursionEncountered = InvocationUtils.getProcedureTruncatedName(base.name) === ref2.childTo &&
+            componentName === InvocationUtils.getComponentForService(groupedServices, ref2.nameTo).namespace;
+          if (isRecursionEncountered) {
+            const innerResult = new InvocationContainer(base, [], component2.namespace);
+            innerResult.setInvocationContainerState(InvocationContainerState.RecursionEncounter);
+            innerResult.setCommunication(r.nameTo);
+            return [innerResult];
+          } else {
+            const innerContainers = buildInvocationContainer(
+              referenceContext, groupedServices, groupedProcedures,
+              component2.namespace, ref2.childTo, currentDepth);
+            if (innerContainers) {
+              innerContainers.forEach(innerContainer => innerContainer.setCommunication(
+                r.nameTo
+              ));
+            }
+            return innerContainers;
+          }
+        } else {
+          // TODO: prepare for recursion
+          const isRecursionEncountered = InvocationUtils.getProcedureTruncatedName(base.name) === r.nameTo;
+          if (isRecursionEncountered) {
+            const innerResult = new InvocationContainer(base, [], componentName);
+            innerResult.setInvocationContainerState(InvocationContainerState.RecursionEncounter);
+            innerResult.setOverload(isOverloaded);
+            return [innerResult];
+          }
+          const innerContainers = buildInvocationContainer(
+            referenceContext, groupedServices, groupedProcedures, componentName, r.nameTo, currentDepth);
+          return innerContainers;
         }
-        const innerContainer = buildInvocationContainer(
-          referenceContext, declarationContext, componentName, r.nameTo, currentDepth);
-        return innerContainer;
       })
       .reduce((acc, val) => acc.concat(val), [])
       .filter(container => !!container);
-    const service = InvocationUtils.getServiceForProcedure(declarationContext, componentName, base.name);
-    const result = new InvocationContainer(
-      base, nestedContainer, componentName,
-      service ? service.name : undefined);
+    const result = new InvocationContainer(base, nestedContainer, componentName);
     result.setOverload(isOverloaded);
     return result;
   }
@@ -195,10 +236,20 @@ export namespace InvocationUtils {
     return foundService ? foundService.members : [];
   }
 
-  export function getServiceForProcedure(groupedServices: NamespacedDeclarations[], cmp: string, procedureName: string) {
+  export function getServiceEntryForProcedure(groupedServices: NamespacedDeclarations[], cmp: string, procedureName: string) {
     return InvocationUtils.getServicesForComponent(groupedServices, cmp)
       .map(s => s.members)
       .reduce((acc, val) => acc.concat(val), [])
       .find(p => p.name && p.name === InvocationUtils.getProcedureTruncatedName(procedureName));
+  }
+
+  export function  getServiceForProcedure(groupedServices: NamespacedDeclarations[], cmp: string, procedureName: string) {
+    return InvocationUtils.getServicesForComponent(groupedServices, cmp)
+      .find(service => service.members
+        && service.members.some(serviceEntry => serviceEntry.name === InvocationUtils.getProcedureTruncatedName(procedureName)));
+  }
+
+  export function getComponentForService(groupedServices: NamespacedDeclarations[], service: string) {
+    return groupedServices.find(namespaced => namespaced.procedures.some(s => s.name === service));
   }
 }

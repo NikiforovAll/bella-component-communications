@@ -4,12 +4,14 @@ import { InvocationUtils } from 'src/app/components/smart/invocation-chain-build
 export class InvocationContainer {
     state: InvocationContainerState;
     isOverloaded: boolean;
+    channel: string;
+    caller: string;
+    // communicationPattern: CommunicationPattern;
 
     constructor(
         public content: KeyedDeclaration,
         public refs: InvocationContainer[],
-        public component: string,
-        public service?: string) {}
+        public component: string) {}
 
     public get contentName() {
         return InvocationUtils.getProcedureTruncatedName(this.content.name);
@@ -20,6 +22,15 @@ export class InvocationContainer {
 
     public setOverload(isOverloaded: boolean) {
         this.isOverloaded = isOverloaded;
+    }
+
+    /**
+     * @param channel service that precedes external call
+     */
+    public setCommunication(channel: string) {
+        this.channel = channel;
+        // this.caller = caller;
+        // this.communicationPattern = CommunicationPattern.Sync;
     }
 
     public getWarningMessage() {
@@ -33,10 +44,12 @@ export class InvocationContainer {
         }
         return tokens.join('\t');
     }
-
-
 }
 
+export enum CommunicationPattern {
+    Sync,
+    Async
+}
 export enum InvocationContainerState {
     Standard,
     RecursionEncounter
