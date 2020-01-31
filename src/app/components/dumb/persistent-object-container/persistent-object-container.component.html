@@ -1,0 +1,26 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <span class="header-token">{{container.name}}</span>
+      <span>
+        <button mat-button (click)="zoomInToContainer(); $event.stopPropagation()">
+          <mat-icon>subdirectory_arrow_right</mat-icon>
+        </button>
+      </span>
+    </mat-panel-title>
+    <mat-panel-description>
+      <span class="header-token">{{container.uri}}</span>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+
+  <mat-card class="">
+    <!-- {{container.returnType | json }} -->
+    <pre>{{container.returnType | json }}</pre>
+  </mat-card>
+  <mat-card class="" *ngIf="container.fields && container.fields.length > 0">
+    {{container.fields | json }}
+  </mat-card>
+
+</mat-expansion-panel>
+

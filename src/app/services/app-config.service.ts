@@ -18,7 +18,8 @@ export class AppConfiguration {
         const exportedLSPHostedServices = `assets/bella-lsp-export/hosted-services.json`;
         const exportedLSPServiceReferences = `assets/bella-lsp-export/service-reference.json`;
         const exportedLSProcedures = `assets/bella-lsp-export/procedures.json`;
-        const exportedLSReferences = `assets/bella-lsp-export/references.json`;
+        const referencesLSObjects = `assets/bella-lsp-export/references.json`;
+        const exportedLSObjects = `assets/bella-lsp-export/objects.json`;
         const promises: Promise<void>[] = [
             this.retrieveConfiguration(appConfig).then((response) => {
                 Object.assign(this, response);
@@ -39,9 +40,12 @@ export class AppConfiguration {
             this.retrieveConfiguration(exportedLSProcedures).then((response) => {
                 this.storage.setProcedureReferences(response);
             }),
-            this.retrieveConfiguration(exportedLSReferences).then((response) => {
+            this.retrieveConfiguration(referencesLSObjects).then((response) => {
                 this.storage.setInvocationReferences(response);
-            })
+            }),
+            this.retrieveConfiguration(exportedLSObjects).then((response) => {
+                this.storage.setObjectDeclarations(response);
+            }),
         ];
         return Promise.all(promises);
     }

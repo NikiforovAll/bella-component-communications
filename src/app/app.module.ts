@@ -34,6 +34,9 @@ import { MethodReferenceInfoCardComponent } from './components/dumb/method-refer
 import { InvocationChainBuilderComponent } from './components/smart/invocation-chain-builder/invocation-chain-builder.component';
 import { ProcedureContainerComponent } from './components/dumb/procedure-container/procedure-container.component';
 import { FormsModule } from '@angular/forms';
+import { PersistentObjectExplorerComponent } from './components/smart/persistent-object-explorer/persistent-object-explorer.component';
+import { PersistentObjectContainerComponent } from './components/dumb/persistent-object-container/persistent-object-container.component';
+import { PrettyPrintPipe } from './pipes/pretty-print.pipe';
 
 @NgModule({
     declarations: [
@@ -47,6 +50,9 @@ import { FormsModule } from '@angular/forms';
         MethodReferenceInfoCardComponent,
         InvocationChainBuilderComponent,
         ProcedureContainerComponent,
+        PersistentObjectExplorerComponent,
+        PersistentObjectContainerComponent,
+        PrettyPrintPipe
     ],
     imports: [
         HttpClientModule,
@@ -70,6 +76,7 @@ import { FormsModule } from '@angular/forms';
         MatSelectModule,
         MatSnackBarModule,
         MatChipsModule,
+        // MatInput,
         ScrollingModule,
     ],
     providers: [

@@ -6,6 +6,7 @@ import { ComponentDiagramComponent } from './components/smart/component-diagram/
 import {
     InvocationChainBuilderComponent,
 } from './components/smart/invocation-chain-builder/invocation-chain-builder.component';
+import { PersistentObjectExplorerComponent } from './components/smart/persistent-object-explorer/persistent-object-explorer.component';
 
 const routes: Routes = [
     {
@@ -24,6 +25,10 @@ const routes: Routes = [
     {
         path: 'present-invocation-chains',
         component: InvocationChainBuilderComponent,
+    },
+    {
+        path: 'persistent-objects',
+        component: PersistentObjectExplorerComponent
     },
 ];
 

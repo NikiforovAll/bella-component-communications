@@ -12,6 +12,7 @@ export class StorageService {
     private serviceReferences: NamespacedDeclarations[];
     private procedureReference: NamespacedDeclarations[];
     private invocationReferences: NamespacedReferences[];
+    private objectDeclarations: NamespacedDeclarations[];
 
     data: GraphData;
     methodCalls: MethodCall[];
@@ -43,6 +44,7 @@ export class StorageService {
     public setProcedureReferences(payload: NamespacedDeclarations[]) {
         this.procedureReference = payload;
     }
+
     public getProcedureReferences() {
         return this.procedureReference;
     }
@@ -53,6 +55,14 @@ export class StorageService {
 
     public getInvocationReferences() {
         return this.invocationReferences;
+    }
+
+    public getObjectDeclarations() {
+        return this.objectDeclarations;
+    }
+
+    public setObjectDeclarations(payload: NamespacedDeclarations[]) {
+        this.objectDeclarations = payload;
     }
 
     constructor() {}
@@ -79,7 +89,7 @@ export interface NamespacedReferences {
 
 
 export interface KeyedDeclaration extends BaseDeclaration, MemberComposite {
-    uri: string;
+    uri?: string;
     parentName?: string;
 }
 
