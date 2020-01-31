@@ -1,7 +1,7 @@
 [
   {
     "namespace": "bankcomponent",
-    "procedures": [
+    "declarations": [
       {
         "name": "BankComponent",
         "range": {
@@ -2461,7 +2461,7 @@
   },
   {
     "namespace": "apigateway",
-    "procedures": [
+    "declarations": [
       {
         "name": "MyNleService",
         "range": {
@@ -18691,7 +18691,7 @@
   },
   {
     "namespace": "common",
-    "procedures": [
+    "declarations": [
       {
         "name": "CamtService",
         "range": {
@@ -21072,7 +21072,7 @@
   },
   {
     "namespace": "blacklist",
-    "procedures": [
+    "declarations": [
       {
         "name": "BlackListService",
         "range": {
@@ -21445,7 +21445,7 @@
   },
   {
     "namespace": "billingengine",
-    "procedures": [
+    "declarations": [
       {
         "name": "BillingEngine",
         "range": {
@@ -31846,7 +31846,7 @@
   },
   {
     "namespace": "cdr",
-    "procedures": [
+    "declarations": [
       {
         "name": "Cdr",
         "range": {
@@ -32926,7 +32926,7 @@
   },
   {
     "namespace": "crmbackend",
-    "procedures": [
+    "declarations": [
       {
         "name": "CrmBackend",
         "range": {
@@ -36543,7 +36543,7 @@
   },
   {
     "namespace": "documentprintercomponent",
-    "procedures": [
+    "declarations": [
       {
         "name": "DocumentPrinterComponent",
         "range": {
@@ -37019,7 +37019,7 @@
   },
   {
     "namespace": "dunningcomponent",
-    "procedures": [
+    "declarations": [
       {
         "name": "DunningService",
         "range": {
@@ -38322,7 +38322,7 @@
   },
   {
     "namespace": "filestoragecomponent",
-    "procedures": [
+    "declarations": [
       {
         "name": "FileStorageComponent",
         "range": {
@@ -38738,7 +38738,7 @@
   },
   {
     "namespace": "fulfillment",
-    "procedures": [
+    "declarations": [
       {
         "name": "Fulfillment",
         "range": {
@@ -53106,7 +53106,7 @@
   },
   {
     "namespace": "idgenerator",
-    "procedures": [
+    "declarations": [
       {
         "name": "IdGenerator",
         "range": {
@@ -53218,7 +53218,7 @@
   },
   {
     "namespace": "identityserver",
-    "procedures": [
+    "declarations": [
       {
         "name": "IdentityServer",
         "range": {
@@ -55284,7 +55284,7 @@
   },
   {
     "namespace": "generalledger",
-    "procedures": [
+    "declarations": [
       {
         "name": "GeneralLedger",
         "range": {
@@ -57937,7 +57937,7 @@
   },
   {
     "namespace": "invoicegenerator",
-    "procedures": [
+    "declarations": [
       {
         "name": "InvoiceSender",
         "range": {
@@ -61074,7 +61074,7 @@
   },
   {
     "namespace": "mailstorage",
-    "procedures": [
+    "declarations": [
       {
         "name": "MailStorage",
         "range": {
@@ -61760,7 +61760,7 @@
   },
   {
     "namespace": "mailtopay",
-    "procedures": [
+    "declarations": [
       {
         "name": "MailToPay",
         "range": {
@@ -63200,7 +63200,7 @@
   },
   {
     "namespace": "oldbemigrationcomponent",
-    "procedures": [
+    "declarations": [
       {
         "name": "OldBEMigrationService",
         "range": {
@@ -64036,7 +64036,7 @@
   },
   {
     "namespace": "pollingcomponent",
-    "procedures": [
+    "declarations": [
       {
         "name": "PollingComponent",
         "range": {
@@ -64178,7 +64178,7 @@
   },
   {
     "namespace": "planningstoolcomponent",
-    "procedures": [
+    "declarations": [
       {
         "name": "PlanningstoolService",
         "range": {
@@ -66934,7 +66934,7 @@
   },
   {
     "namespace": "productcatalog",
-    "procedures": [
+    "declarations": [
       {
         "name": "ProductCatalog",
         "range": {
@@ -71726,7 +71726,7 @@
   },
   {
     "namespace": "sendgridcomponent",
-    "procedures": [
+    "declarations": [
       {
         "name": "SendgridComponentService",
         "range": {
@@ -74709,7 +74709,7 @@
   },
   {
     "namespace": "taskmanager",
-    "procedures": [
+    "declarations": [
       {
         "name": "TaskManager",
         "range": {
@@ -76428,7 +76428,7 @@
   },
   {
     "namespace": "videoondemand",
-    "procedures": [
+    "declarations": [
       {
         "name": "VideoOnDemand",
         "range": {
@@ -77011,7 +77011,7 @@
   },
   {
     "namespace": "testapicomponent",
-    "procedures": [
+    "declarations": [
       {
         "name": "TestApi",
         "range": {

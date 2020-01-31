@@ -248,7 +248,7 @@ export namespace InvocationUtils {
     }
     return context
       .find(namespaced => namespaced.namespace === componentName)
-      .procedures
+      .declarations
       .filter(procedure => getProcedureTruncatedName(procedure.name) === procedureName &&
         procedure.type === DeclarationType.Procedure);
   }
@@ -265,7 +265,7 @@ export namespace InvocationUtils {
       return;
     }
     return groupedServices.find((namespacedServices) => namespacedServices.namespace === cmp)
-      .procedures.filter((service) => service.type === DeclarationType.Service);
+      .declarations.filter((service) => service.type === DeclarationType.Service);
   }
 
   export function getServiceEntries(groupedServices: NamespacedDeclarations[], cmp: string, serviceName: string) {
@@ -291,6 +291,6 @@ export namespace InvocationUtils {
   }
 
   export function getComponentForService(groupedServices: NamespacedDeclarations[], service: string) {
-    return groupedServices.find(namespaced => namespaced.procedures.some(s => s.name === service));
+    return groupedServices.find(namespaced => namespaced.declarations.some(s => s.name === service));
   }
 }

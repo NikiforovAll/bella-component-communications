@@ -69,7 +69,7 @@ export class StorageService {
 
 export interface NamespacedDeclarations {
     namespace: string;
-    procedures: KeyedDeclaration[];
+    declarations: KeyedDeclaration[];
 }
 
 export interface NamespacedReferences {
