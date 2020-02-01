@@ -17,6 +17,9 @@ export class PersistentObjectExplorerComponent implements OnInit {
   objectsToPresent: PersistentObjectViewModel[];
   selectedObject: any;
 
+  includesQuery: string;
+  expanded: false;
+
   constructor(
     private storage: StorageService,
     private route: ActivatedRoute,
@@ -54,7 +57,9 @@ export class PersistentObjectExplorerComponent implements OnInit {
     this.objectsToPresent = this.allObjectsGrouped
       .find(namespaced => namespaced.namespace === this.selectedComponent).declarations
       .filter(declaration => declaration.type === DeclarationType.PersistentObject)
-      .map(declaration => PersistentObjectUtils.toPersistentObjectViewModel(declaration, this.allObjects));
+      .map(declaration => PersistentObjectUtils
+          .toPersistentObjectViewModel(declaration, this.allObjects, this.includesQuery))
+      .filter(declaration => !!declaration);
   }
 
   changeQuery() {

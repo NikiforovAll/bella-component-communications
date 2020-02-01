@@ -13,6 +13,9 @@ export class PersistentObjectContainerComponent implements OnInit {
   @Input()
   container: PersistentObjectViewModel;
 
+  @Input()
+  expanded = false;
+
   constructor(private router: Router) { }
 
   ngOnInit() {

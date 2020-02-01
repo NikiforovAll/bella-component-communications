@@ -15,7 +15,10 @@ export class ObjectField {
 // tslint:disable-next-line: no-namespace
 export namespace PersistentObjectUtils {
 
-    export function toPersistentObjectViewModel(declaration: KeyedDeclaration, registry: KeyedDeclaration[]): PersistentObjectViewModel {
+    export function toPersistentObjectViewModel(
+        declaration: KeyedDeclaration,
+        registry: KeyedDeclaration[],
+        searchQuery?: string): PersistentObjectViewModel {
         let extendedDeclaration = (declaration as any) as ExtendedDeclaration;
         let result = {
             name: declaration.name,
@@ -31,7 +34,31 @@ export namespace PersistentObjectUtils {
                     })) : undefined
         };
 
-        return format(simplify(result));
+        const simplified = simplify(result);
+        return isMatchedDeclaration(simplified, searchQuery) ? format(simplified) : undefined;
+        // return format(simplified);
+    }
+
+    function isMatchedDeclaration(model: PersistentObjectViewModel | undefined, searchQuery: string) {
+        if (!searchQuery) {
+            return true;
+        }
+        if (!model || !model.name) {
+            return false;
+        }
+        return model.name.toLowerCase().includes(searchQuery.toLowerCase())
+            || isMatchedDeclaration(model.returnType, searchQuery)
+            || (model.fields && model.fields.some(f => isMatchedDeclaration(f.value, searchQuery)));
+
+        // if (model.name.includes(searchQuery)) {
+        //     return true;
+        // }
+        // let filteredReturnType = isMatchedDeclaration(model.returnType, searchQuery);
+        // let filteredFields = model.fields.map(f => isMatchedDeclaration(f.value, searchQuery));
+
+        // if (!filteredReturnType && filteredFields.length === 0) {
+        //     return undefined;
+        // }
     }
 
     function simplify(model: PersistentObjectViewModel): PersistentObjectViewModel | any {

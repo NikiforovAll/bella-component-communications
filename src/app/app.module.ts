@@ -20,6 +20,9 @@ import {
     MatSelectModule,
     MatSnackBarModule,
     MatChipsModule,
+    MatInput,
+    MatFormFieldModule,
+    MatInputModule,
 } from '@angular/material';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { ComponentDiagramComponent } from './components/smart/component-diagram/component-diagram.component';
@@ -76,7 +79,8 @@ import { PrettyPrintPipe } from './pipes/pretty-print.pipe';
         MatSelectModule,
         MatSnackBarModule,
         MatChipsModule,
-        // MatInput,
+        MatFormFieldModule,
+        MatInputModule,
         ScrollingModule,
     ],
     providers: [
