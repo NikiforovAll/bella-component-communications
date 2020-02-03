@@ -23,9 +23,9 @@ export namespace PersistentObjectUtils {
         let result = {
             name: declaration.name,
             uri: declaration.uri,
-            returnType: searchPersistentViewModel(getDeclarationNameFromReturnType(
+            returnType: extendedDeclaration.returnType ? searchPersistentViewModel(getDeclarationNameFromReturnType(
                 extendedDeclaration.returnType.fullQualifier
-            ), registry),
+            ), registry) : undefined,
             fields: declaration
                 .members ? declaration
                     .members
