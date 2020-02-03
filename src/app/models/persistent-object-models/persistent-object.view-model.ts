@@ -1,4 +1,4 @@
-import { BaseDeclaration, KeyedDeclaration } from 'src/app/services/storage/storage.service';
+import { BaseDeclaration, KeyedDeclaration, DeclarationType } from 'src/app/services/storage/storage.service';
 
 export class PersistentObjectViewModel {
     fields?: ObjectField[];
@@ -29,13 +29,15 @@ export namespace PersistentObjectUtils {
             fields: declaration
                 .members ? declaration
                     .members
-                    .map(declarationMember => ({
-                        value: searchPersistentViewModel(declarationMember.name, registry)
+                    .map((declarationMember: any) => ({
+                        value: searchPersistentViewModel(declarationMember.returnType.name, registry)
                     })) : undefined
         };
 
-        const simplified = simplify(result);
+        const simplified = result;
+        // const simplified = simplify(result);
         return isMatchedDeclaration(simplified, searchQuery) ? format(simplified) : undefined;
+        // return isMatchedDeclaration(simplified, searchQuery) ? simplified : undefined;
         // return format(simplified);
     }
 
@@ -93,7 +95,7 @@ export namespace PersistentObjectUtils {
         if (!field) {
             return undefined;
         }
-        if ( typeof field.value.returnType === 'string') {
+        if (typeof field.value.returnType === 'string') {
             const blank = {};
             blank[field.value.name] = { returnType: field.value.returnType };
             return blank;
@@ -103,7 +105,14 @@ export namespace PersistentObjectUtils {
     }
 
     export function searchPersistentViewModel(name: string, registry: KeyedDeclaration[]): PersistentObjectViewModel {
-        const declaration = registry.find(d => d.name === name);
+        // if (!name) {
+        //     return {
+        //         name,
+        //         isTerminal: true
+        //     };
+        // }
+        const declaration = registry.find(d => (d.name.toLowerCase() === name.toLocaleLowerCase()
+            && d.type === DeclarationType.Object) || d.name === name && d.type === DeclarationType.ObjectField);
         if (!declaration) {
             // throw new Error('Object declaration is not found');
             return {
@@ -131,8 +140,9 @@ export namespace PersistentObjectUtils {
             fields: declaration
                 .members ? declaration
                     .members
-                    .map(declarationMember => ({
+                    .map((declarationMember: any) => ({
                         value: searchPersistentViewModel(declarationMember.name, registry)
+                        || searchPersistentViewModel(declarationMember.returnType.name, registry)
                     })) : undefined
         };
     }
