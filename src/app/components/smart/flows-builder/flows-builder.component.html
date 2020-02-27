@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-form-field>
+    <mat-label>Component...</mat-label>
+    <mat-select [(value)]="selectedComponent">
+      <mat-option *ngFor="let cmp of components" [value]="cmp">
+        {{cmp}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Service...</mat-label>
+    <mat-select [(value)]="selectedService">
+      <mat-option *ngFor="let service of getServicesForComponent(selectedComponent)" [value]="service.name">
+        {{service.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Procedure...</mat-label>
+    <mat-select [(value)]="selectedProcedure" (selectionChange)="changeQuery()">
+      <mat-option *ngFor="let procedure of getServiceEntries(selectedComponent, selectedService)" [value]="procedure.name">
+        {{procedure.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button (click)="buildRoot()" mat-button (keydown.enter)="buildRoot()" color="primary">
+    Build
+  </button>
+</mat-card>
+<!-- <div class="root-container" *ngFor="let node of graph">
+  <pre>{{node | json }}</pre>
+</div> -->
+<div class="cy" #cy>
+
+</div>

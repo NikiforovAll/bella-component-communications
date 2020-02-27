@@ -7,6 +7,7 @@ import {
     InvocationChainBuilderComponent,
 } from './components/smart/invocation-chain-builder/invocation-chain-builder.component';
 import { PersistentObjectExplorerComponent } from './components/smart/persistent-object-explorer/persistent-object-explorer.component';
+import { FlowsBuilderComponent } from './components/smart/flows-builder/flows-builder.component';
 
 const routes: Routes = [
     {
@@ -29,6 +30,10 @@ const routes: Routes = [
     {
         path: 'persistent-objects',
         component: PersistentObjectExplorerComponent
+    },
+    {
+        path: 'flows',
+        component: FlowsBuilderComponent
     },
 ];
 

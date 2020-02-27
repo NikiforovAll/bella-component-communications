@@ -39,6 +39,7 @@ import { ProcedureContainerComponent } from './components/dumb/procedure-contain
 import { FormsModule } from '@angular/forms';
 import { PersistentObjectExplorerComponent } from './components/smart/persistent-object-explorer/persistent-object-explorer.component';
 import { PersistentObjectContainerComponent } from './components/dumb/persistent-object-container/persistent-object-container.component';
+import { FlowsBuilderComponent } from './components/smart/flows-builder/flows-builder.component';
 import { PrettyPrintPipe } from './pipes/pretty-print.pipe';
 
 @NgModule({
@@ -55,7 +56,8 @@ import { PrettyPrintPipe } from './pipes/pretty-print.pipe';
         ProcedureContainerComponent,
         PersistentObjectExplorerComponent,
         PersistentObjectContainerComponent,
-        PrettyPrintPipe
+        FlowsBuilderComponent,
+        PrettyPrintPipe,
     ],
     imports: [
         HttpClientModule,
