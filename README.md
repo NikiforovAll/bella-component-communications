@@ -12,7 +12,7 @@ This solutions contains multiple folders:
 * bella-language-server/server - csharp implementation of LSP
 * bella-tmLanguage - tmLanguage highlighting for Bella
 * bella-grammars - bella grammar written in antlr4 and packaged as typescript module
-* bella-generator - code generator/scaffolder for bella
+* bella-generator - code generator/scaffolder for bella. Source repository for git-submodule: https://github.com/NikiforovAll/generator-bella
 
 
 
