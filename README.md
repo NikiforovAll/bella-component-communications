@@ -1,31 +1,10 @@
 # ComponentCommunication
 
-## Development server
+Bella is domain specific programming language developed and maintained internally by HYS-Enterprise. The goal of this programming language is to provide business rule engine based on Service Oriented Architecture (SOA) approach. Bella solution is transpiled to C# + WCF + RBMQ (wrapped to work with WCF)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![image](https://user-images.githubusercontent.com/8037439/83200718-9d7ca700-a14c-11ea-89ee-705f9b31a0f1.png)
 
-## Code scaffolding
+![image](https://user-images.githubusercontent.com/8037439/83201127-838f9400-a14d-11ea-8705-917b855c455b.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![image](https://user-images.githubusercontent.com/8037439/83201212-b043ab80-a14d-11ea-9ee8-76f3dee3f15b.png)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## TODO
-
-* IMPLEMENT: get method invocation chain for (componentName, methodName)
-
-* KNOWN_ISSUE: it is not possible to determine service to service link when service is called in internal procedure
-* KNOWN_ISSUE: trailing comma
-
-### DONE
-
-* add layout for large graphs - ✔
-* Add sidebar with possibility to select components - ✔
-* Fetch definition of component communication form source - ✔
-  * <https://stackoverflow.com/questions/16178366/d3-js-set-initial-zoom-level>
-* Component is not re-drawing diagram correctly - ✔
-* Fix length of main container, should fit screen - ✔
-* bug with layout changes - ✔
-* zooming, proper size selection. - ✔
